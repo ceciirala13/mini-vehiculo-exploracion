@@ -6,7 +6,7 @@ Magnetometro
 Giroscopio
 Drivers p/ los motores
 usb-c port
-gps?
+gps : https://www.mouser.com/ProductDetail/Telit-Cinterion/SL871LS3232R001?qs=TiOZkKH1s2T4vNseu08kBg%3D%3D
 ADC : https://www.mouser.com/ProductDetail/Texas-Instruments/ADC128S052CIMTX-NOPB?qs=7X5t%252BdzoRHC9R6eDc%252BRESA%3D%3D  #???
 IMU : https://www.mouser.com/ProductDetail/CEVA/BNO086?qs=ulEaXIWI0c%2FqTo1scjodAw%3D%3D
 Sensor de presion/humedad/temperatura : https://www.mouser.com/ProductDetail/Bosch-Sensortec/BME280?qs=2OnyuXx6vpj2fK9HX7qb3g%3D%3D
