@@ -279,7 +279,7 @@
         "name": "COMMS",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "priority": 0,
-        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "schematic_color": "rgb(255, 169, 33)",
         "wire_width": 6
       },
       {
@@ -288,7 +288,7 @@
         "name": "POWER_DIST",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "priority": 1,
-        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "schematic_color": "rgb(20, 99, 10)",
         "wire_width": 6
       },
       {
@@ -297,7 +297,7 @@
         "name": "POWER_GND",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "priority": 2,
-        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "schematic_color": "rgb(4, 0, 0)",
         "wire_width": 6
       },
       {
@@ -306,7 +306,7 @@
         "name": "POWER_PLANES",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "priority": 3,
-        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "schematic_color": "rgb(173, 22, 255)",
         "wire_width": 6
       },
       {
@@ -315,7 +315,7 @@
         "name": "POWER_SUPPLY",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "priority": 4,
-        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "schematic_color": "rgb(253, 0, 0)",
         "wire_width": 6
       },
       {
@@ -324,7 +324,7 @@
         "name": "SIGNAL",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "priority": 5,
-        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "schematic_color": "rgb(1, 255, 0)",
         "wire_width": 6
       },
       {
@@ -333,7 +333,7 @@
         "name": "USB",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "priority": 6,
-        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "schematic_color": "rgb(0, 245, 255)",
         "wire_width": 6
       }
     ],
@@ -342,7 +342,16 @@
     },
     "net_colors": null,
     "netclass_assignments": null,
-    "netclass_patterns": []
+    "netclass_patterns": [
+      {
+        "netclass": "POWER_GND",
+        "pattern": "GND"
+      },
+      {
+        "netclass": "POWER_SUPPLY",
+        "pattern": "+3.3V"
+      }
+    ]
   },
   "pcbnew": {
     "last_paths": {

@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP BNO086
+D Accelerometer, Gyroscope, Magnetometer, Temperature, 9 Axis Sensor IC, SPI Output
+K
+F 
+$ENDCMP
+#
+#End Doc Library
