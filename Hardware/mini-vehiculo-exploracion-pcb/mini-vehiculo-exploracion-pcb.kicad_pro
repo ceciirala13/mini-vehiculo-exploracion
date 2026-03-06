@@ -551,6 +551,10 @@
       {
         "netclass": "POWER_SUPPLY",
         "pattern": "+3.3V"
+      },
+      {
+        "netclass": "POWER_SUPPLY",
+        "pattern": "/3V3"
       }
     ]
   },
