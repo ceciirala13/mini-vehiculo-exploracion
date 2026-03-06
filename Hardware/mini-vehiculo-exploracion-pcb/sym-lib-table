@@ -2,4 +2,6 @@
   (version 7)
   (lib (name "BNO086")(type "KiCad")(uri "${KIPRJMOD}/Assets/BNO086/BNO086.kicad_sym")(options "")(descr ""))
   (lib (name "DRV8873HPWPRQ1")(type "KiCad")(uri "${KIPRJMOD}/Assets/DRV8873HPWPRQ1/DRV8873HPWPRQ1.kicad_sym")(options "")(descr ""))
+  (lib (name "ESP32-S3-WROOM-1-N8R2")(type "KiCad")(uri "${KIPRJMOD}/Assets/ESP32/ESP32-S3-WROOM-1-N8R2.kicad_sym")(options "")(descr ""))
+  (lib (name "ArducamMINIOV2640")(type "KiCad")(uri "${KIPRJMOD}/Assets/ArducamMINIOV2640/ArducamMINIOV2640.kicad_sym")(options "")(descr ""))
 )
