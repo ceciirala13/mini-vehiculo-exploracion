@@ -1,5 +1,5 @@
 (sym_lib_table
   (version 7)
-  (lib (name "ESP32-S3-WROOM-1-N8R8")(type "KiCad")(uri "${KIPRJMOD}/Assets/ESP32S3-WROOM1/ESP32-S3-WROOM-1-N8R8.kicad_sym")(options "")(descr ""))
   (lib (name "BNO086")(type "KiCad")(uri "${KIPRJMOD}/Assets/BNO086/BNO086.kicad_sym")(options "")(descr ""))
+  (lib (name "DRV8873HPWPRQ1")(type "KiCad")(uri "${KIPRJMOD}/Assets/DRV8873HPWPRQ1/DRV8873HPWPRQ1.kicad_sym")(options "")(descr ""))
 )
