@@ -1,0 +1,16 @@
+.BME280 :1 ;Board Mount Humidity Sensors
+BME280
+*STM HM
+*NGS
+*PLB 1="GND_1" 2="CSB" 3="SDI" 4="SCK" 5="SDO" 6="VDDIO" 7="GND_2" 8="VDD"
+*MXP 8
+*DFN BME280
+~!Mouser Part Number (262-BME280)
+~!Link Mouser Price/Stock (https://www.mouser.co.uk/ProductDetail/Bosch-Sensortec/BME280?qs=2OnyuXx6vpj2fK9HX7qb3g%3D%3D)
+~!Manufacturer_Name (BOSCH)
+~!Manufacturer_Part_Number (BME280)
+~!Link Datasheet (https://datasheet.datasheetarchive.com/originals/distributors/DKDS-24/462906.pdf)
+~!Height (-)
+~!3D_Model (BME280)
+BME280
+1.1!G 2.1!I 3.1!U 4.1!U 5.1!U 6.1!P 7.1!G 8.1!P 

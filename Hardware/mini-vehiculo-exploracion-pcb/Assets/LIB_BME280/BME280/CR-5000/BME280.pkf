@@ -1,0 +1,10 @@
+(unit MM)
+
+(package "BME280"
+    (type UNDEF)
+    (uver 2)
+    (mountForm default
+        (footprintRef "BME280")
+        (spec "default")
+    )
+)

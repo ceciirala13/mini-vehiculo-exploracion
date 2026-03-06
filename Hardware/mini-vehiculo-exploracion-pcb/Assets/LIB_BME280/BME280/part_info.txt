@@ -1,0 +1,9 @@
+Manufacturer=BOSCH
+PartNumber=BME280
+PartCategory=Hygrometer
+PackageCategory=Other
+PinCount=8
+Version=1.1
+Released=2016-05-23 16:10:47
+Downloaded=2026-03-06 23:52:57
+3D=Y
