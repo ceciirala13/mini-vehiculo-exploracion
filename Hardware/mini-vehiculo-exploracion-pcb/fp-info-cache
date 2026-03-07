@@ -1,4 +1,4 @@
-27220790564997175
+27222562453602015
 ArducamMINIOV2640
 ArducamMINIOV2640
 Molex KK-254 Interconnect System, old/engineering part number: AE-6410-08A example for new part number: 22-27-2081, 8 Pins (http://www.molex.com/pdm_docs/sd/022272021_sd.pdf), generated with kicad-footprint-generator
@@ -20,6 +20,13 @@ audio belton reverb
 0
 7
 7
+BNO086
+BNO086
+BNO086-1
+Undefined or Miscellaneous
+0
+28
+28
 Battery
 BatteryClip_Keystone_54_D16-19mm
 Battery clip for batteries with a diameter between 16-19 mm: https://www.keyelco.com/product.cfm/product_id/826
