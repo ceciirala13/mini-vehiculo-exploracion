@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP BME690
+D Multiple Function Sensor Modules BME690 is the gas sensor with Artificial Intelligence (AI) and integrated high-linearity and high-accuracy  pressure, humidity and temperature sensors.
+K
+F https://www.bosch-sensortec.com/products/environmental-sensors/gas-sensors/bme690/#documents
+$ENDCMP
+#
+#End Doc Library
