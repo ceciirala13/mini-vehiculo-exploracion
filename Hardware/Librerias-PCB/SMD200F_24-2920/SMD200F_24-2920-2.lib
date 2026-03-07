@@ -1,0 +1,24 @@
+EESchema-LIBRARY Version 2.3
+#encoding utf-8
+#SamacSys ECAD Model SMD200F_24-2920-2
+#/1152824/1909854/2.50/2/3/Fuse
+DEF SMD200F_24-2920-2 F 0 30 Y Y 1 F N
+F0 "F" 550 250 50 H V L CNN
+F1 "SMD200F_24-2920-2" 550 150 50 H V L CNN
+F2 "SMD200F2429202" 550 50 50 H I L CNN
+F3 "https://www.littelfuse.com/media?resourcetype=datasheets&itemid=e664881a-0c68-4836-928b-7ed2f0c2a6da&filename=littelfuse-ptc-smd-datasheet" 550 -50 50 H I L CNN
+F4 "LITTELFUSE - SMD200F/24-2920-2 - Resettable Fuse, PPTC, 2920 (7351 Metric), PolySwitch SMD Series, 24 VDC, 2 A, 4 A, 5 s" 550 -150 50 H I L CNN "Description"
+F5 "3" 550 -250 50 H I L CNN "Height"
+F6 "650-SMD200F/2429202" 550 -350 50 H I L CNN "Mouser Part Number"
+F7 "https://www.mouser.co.uk/ProductDetail/Littelfuse/SMD200F-24-2920-2?qs=WTEd434rUSU6D3j%2FZW4mUA%3D%3D" 550 -450 50 H I L CNN "Mouser Price/Stock"
+F8 "LITTELFUSE" 550 -550 50 H I L CNN "Manufacturer_Name"
+F9 "SMD200F/24-2920-2" 550 -650 50 H I L CNN "Manufacturer_Part_Number"
+DRAW
+X ~ 1 0 0 200 R 50 50 0 0 P
+X ~ 2 700 0 200 L 50 50 0 0 P
+P 5 0 1 6 200 50 500 50 500 -50 200 -50 200 50 N
+P 2 0 1 6 200 0 500 0 N
+ENDDRAW
+ENDDEF
+#
+#End Library
