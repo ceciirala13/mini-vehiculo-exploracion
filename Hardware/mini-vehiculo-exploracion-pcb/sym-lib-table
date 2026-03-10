@@ -5,4 +5,5 @@
   (lib (name "ESP32-S3-WROOM-1-N8R2")(type "KiCad")(uri "${KIPRJMOD}/Assets/ESP32/ESP32-S3-WROOM-1-N8R2.kicad_sym")(options "")(descr ""))
   (lib (name "ArducamMINIOV2640")(type "KiCad")(uri "${KIPRJMOD}/Assets/ArducamMINIOV2640/ArducamMINIOV2640.kicad_sym")(options "")(descr ""))
   (lib (name "830003000")(type "KiCad")(uri "${KIPRJMOD}/Assets/830003000/830003000.kicad_sym")(options "")(descr ""))
+  (lib (name "BME690")(type "KiCad")(uri "${KIPRJMOD}/Assets/BME690/BME690.kicad_sym")(options "")(descr ""))
 )
