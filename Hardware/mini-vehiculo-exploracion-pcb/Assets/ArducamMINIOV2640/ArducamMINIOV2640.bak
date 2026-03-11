@@ -81,8 +81,8 @@
 		)
 		(symbol "ArducamMINIOV2640_1_1"
 			(rectangle
-				(start 0.8636 7.747)
-				(end 0 7.493)
+				(start 0 7.747)
+				(end 0.8636 7.493)
 				(stroke
 					(width 0.1524)
 					(type default)
@@ -264,10 +264,74 @@
 					(type none)
 				)
 			)
+			(text "CS"
+				(at 7.366 7.874 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(text "SCK"
+				(at 8.128 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(text "GND"
+				(at 8.128 -2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(text "VCC"
+				(at 8.128 -4.826 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(text "SDA"
+				(at 8.128 -7.62 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(text "SCL"
+				(at 8.128 -9.906 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(text "MOSI"
+				(at 8.382 5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(text "MISO"
+				(at 8.382 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
 			(pin passive line
 				(at 5.08 7.62 180)
 				(length 3.81)
-				(name "Pin_1"
+				(name "CS"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -285,7 +349,7 @@
 			(pin passive line
 				(at 5.08 5.08 180)
 				(length 3.81)
-				(name "Pin_2"
+				(name "MOSI"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -303,7 +367,7 @@
 			(pin passive line
 				(at 5.08 2.54 180)
 				(length 3.81)
-				(name "Pin_3"
+				(name "MISO"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -321,7 +385,7 @@
 			(pin passive line
 				(at 5.08 0 180)
 				(length 3.81)
-				(name "Pin_4"
+				(name "SCK"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -339,7 +403,7 @@
 			(pin passive line
 				(at 5.08 -2.54 180)
 				(length 3.81)
-				(name "Pin_5"
+				(name "GND"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -357,7 +421,7 @@
 			(pin passive line
 				(at 5.08 -5.08 180)
 				(length 3.81)
-				(name "Pin_6"
+				(name "VCC"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -375,7 +439,7 @@
 			(pin passive line
 				(at 5.08 -7.62 180)
 				(length 3.81)
-				(name "Pin_7"
+				(name "SDA"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -393,7 +457,7 @@
 			(pin passive line
 				(at 5.08 -10.16 180)
 				(length 3.81)
-				(name "Pin_8"
+				(name "SCL"
 					(effects
 						(font
 							(size 1.27 1.27)
