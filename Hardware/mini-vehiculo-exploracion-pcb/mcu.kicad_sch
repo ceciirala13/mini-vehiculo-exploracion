@@ -2690,6 +2690,28 @@
 			(embedded_fonts no)
 		)
 	)
+	(text "Planilla OK"
+		(exclude_from_sim no)
+		(at 94.488 25.146 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(color 245 0 255 1)
+			)
+		)
+		(uuid "1c90ec37-96f1-4a14-9ec7-4d4830e13599")
+	)
+	(text "Planilla OK"
+		(exclude_from_sim no)
+		(at 133.096 84.074 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(color 245 0 255 1)
+			)
+		)
+		(uuid "26bf0f3b-6da0-4a46-bfb1-1a18c7c060e7")
+	)
 	(text "En el datsheet especifica que se deberia \nusar para que la alimentacion del ESP sea \nestable durante el encendido"
 		(exclude_from_sim no)
 		(at 88.392 71.882 0)

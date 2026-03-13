@@ -2777,6 +2777,17 @@
 		)
 		(uuid "10533f9e-5bba-49af-8501-594bc10fc184")
 	)
+	(text "Planilla OK"
+		(exclude_from_sim no)
+		(at 212.852 77.978 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(color 255 0 235 1)
+			)
+		)
+		(uuid "37915a3a-c59c-4c13-b972-93832dbe050d")
+	)
 	(text "BNO "
 		(exclude_from_sim no)
 		(at 191.516 40.894 0)
@@ -2797,6 +2808,17 @@
 		)
 		(uuid "64e10b6f-7121-46e3-bece-dadb53039a8d")
 	)
+	(text "Planilla OK"
+		(exclude_from_sim no)
+		(at 63.246 16.256 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(color 255 0 235 1)
+			)
+		)
+		(uuid "689e784b-6426-40bc-a436-6e0f6d206156")
+	)
 	(text "Control de error M1"
 		(exclude_from_sim no)
 		(at 272.034 41.148 0)
@@ -2806,6 +2828,28 @@
 			)
 		)
 		(uuid "79e5bde5-cc3c-441c-83a6-eba285c38607")
+	)
+	(text "Planilla OK"
+		(exclude_from_sim no)
+		(at 73.406 89.154 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(color 255 0 235 1)
+			)
+		)
+		(uuid "7aa121a9-30d7-4ecd-bea9-11852e61d09a")
+	)
+	(text "Planilla OK"
+		(exclude_from_sim no)
+		(at 53.594 159.004 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(color 255 0 235 1)
+			)
+		)
+		(uuid "96b3f4e4-109b-45e3-9941-88ade4247a08")
 	)
 	(text "Futuro RC"
 		(exclude_from_sim no)
@@ -2826,6 +2870,17 @@
 			)
 		)
 		(uuid "b998b17b-7fe4-4b97-b1d7-ca88bac6b8b6")
+	)
+	(text "Planilla OK"
+		(exclude_from_sim no)
+		(at 98.044 88.392 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(color 255 0 235 1)
+			)
+		)
+		(uuid "bd38b31c-7c09-4c24-b49e-efd4de613e24")
 	)
 	(text "Interrupt del sensor \n[Activación low]\n"
 		(exclude_from_sim no)
