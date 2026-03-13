@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP FDMC4435BZ
+D 100% UIL Tested ; Termination is Lead-free and RoHS Compliant ; Max rDS(on) = 37.0m at VGS = -4.5V, ID = -6.3A ; HBM ESD protection level >7kV typical ; High power and current handling capability ; Max rDS(on) = 20.0m at VGS = -10V, ID = -8.5A ; High performance trench technology for extremely low rDS(on) ; Extended VGSS range (-25V) for battery applications
+K
+F https://www.onsemi.com/pub/Collateral/FDMC4435BZ-D.PDF
+$ENDCMP
+#
+#End Doc Library

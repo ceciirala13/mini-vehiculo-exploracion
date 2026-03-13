@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP AP7361C-33ER-13
+D Linear Voltage Regulator IC Positive Fixed 1 Output 1A SOT-223R
+K
+F https://www.diodes.com//assets/Datasheets/AP7361C.pdf
+$ENDCMP
+#
+#End Doc Library

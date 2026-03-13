@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP SMD200F_24-2920-2
+D LITTELFUSE - SMD200F/24-2920-2 - Resettable Fuse, PPTC, 2920 (7351 Metric), PolySwitch SMD Series, 24 VDC, 2 A, 4 A, 5 s
+K
+F https://www.littelfuse.com/media?resourcetype=datasheets&itemid=e664881a-0c68-4836-928b-7ed2f0c2a6da&filename=littelfuse-ptc-smd-datasheet
+$ENDCMP
+#
+#End Doc Library
