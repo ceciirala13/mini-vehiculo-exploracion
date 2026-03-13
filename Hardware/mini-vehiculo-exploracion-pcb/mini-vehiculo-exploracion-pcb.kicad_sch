@@ -3335,6 +3335,16 @@
 	)
 	(wire
 		(pts
+			(xy 187.96 31.75) (xy 208.28 31.75)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0aa968ef-29c9-43e4-af08-1cf74be2b0a1")
+	)
+	(wire
+		(pts
 			(xy 100.33 111.76) (xy 115.57 111.76)
 		)
 		(stroke
@@ -4992,6 +5002,28 @@
 			(justify right bottom)
 		)
 		(uuid "fffb0cae-e9df-4b2c-9e6f-b4b8007e7015")
+	)
+	(global_label "ESP_IO0"
+		(shape input)
+		(at 187.96 31.75 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "0c758011-7745-45ea-b550-bdcb83fdcdb9")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 177.2339 31.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
 	)
 	(global_label "GND"
 		(shape input)
