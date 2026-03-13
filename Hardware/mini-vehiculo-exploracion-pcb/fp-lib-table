@@ -1,4 +1,10 @@
 (fp_lib_table
   (version 7)
-  (lib (name "ESP32S3-WROOM1")(type "KiCad")(uri "${KIPRJMOD}/Assets/ESP32S3-WROOM1")(options "")(descr ""))
+  (lib (name "ArducamMINIOV2640")(type "KiCad")(uri "${KIPRJMOD}/Assets/ArducamMINIOV2640")(options "")(descr ""))
+  (lib (name "BNO086")(type "KiCad")(uri "${KIPRJMOD}/Assets/BNO086")(options "")(descr ""))
+  (lib (name "USB_UJ20-C-H-G-SMT-P16-TR")(type "KiCad")(uri "${KIPRJMOD}/Assets/USB_UJ20-C-H-G-SMT-P16-TR")(options "")(descr ""))
+  (lib (name "USB_PROTECTION_SOT23-6L_STM")(type "KiCad")(uri "${KIPRJMOD}/Assets/USB_PROTECTION_SOT23-6L_STM")(options "")(descr ""))
+  (lib (name "USB_FerriteBead_IND_BLM21_MUR")(type "KiCad")(uri "${KIPRJMOD}/Assets/USB_FerriteBead_IND_BLM21_MUR")(options "")(descr ""))
+  (lib (name "USB_fuse_C1Q-1")(type "KiCad")(uri "${KIPRJMOD}/Assets/USB_fuse_C1Q-1")(options "")(descr ""))
+  (lib (name "USB_diode_SD1206S040S1R0")(type "KiCad")(uri "${KIPRJMOD}/Assets/USB_diode_SD1206S040S1R0")(options "")(descr ""))
 )

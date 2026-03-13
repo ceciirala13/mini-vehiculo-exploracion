@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP 830003000
+D WE-XTAL Quartz Crystal 85SMX; 8.7 x 3.7mm; 32.7680 kHz; Tol = +/-20 ppm; Stab = +/-- ppm Load Cap = 12.5 pF;
+K
+F https://www.we-online.com/catalog/datasheet/830003000.pdf
+$ENDCMP
+#
+#End Doc Library
