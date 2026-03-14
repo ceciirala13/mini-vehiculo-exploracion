@@ -3992,7 +3992,7 @@
 				)
 			)
 		)
-		(property "Value" "1uF"
+		(property "Value" "22uF"
 			(at 43.18 41.656 90)
 			(effects
 				(font
@@ -4194,7 +4194,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "100nF"
+		(property "Value" "0.1uF"
 			(at 125.73 153.6699 0)
 			(effects
 				(font
@@ -4330,7 +4330,7 @@
 				)
 			)
 		)
-		(property "Value" "1uF"
+		(property "Value" "0.1uF"
 			(at 71.374 68.58 90)
 			(effects
 				(font
@@ -4847,7 +4847,7 @@
 				)
 			)
 		)
-		(property "Value" "1uF"
+		(property "Value" "0.1uF"
 			(at 53.34 41.656 90)
 			(effects
 				(font
