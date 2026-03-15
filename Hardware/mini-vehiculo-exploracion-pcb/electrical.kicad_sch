@@ -430,6 +430,214 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "SamacSys_Parts:AP7361C-33ER-13"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "IC"
+				(at 26.67 7.62 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Value" "AP7361C-33ER-13"
+				(at 26.67 5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Footprint" "SOT230P700X180-4N"
+				(at 26.67 -94.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "https://www.diodes.com//assets/Datasheets/AP7361C.pdf"
+				(at 26.67 -194.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Description" "Linear Voltage Regulator IC Positive Fixed 1 Output 1A SOT-223R"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Height" "1.8"
+				(at 26.67 -394.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Manufacturer_Name" "Diodes Incorporated"
+				(at 26.67 -494.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Manufacturer_Part_Number" "AP7361C-33ER-13"
+				(at 26.67 -594.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Mouser Part Number" "621-AP7361C-33ER-13"
+				(at 26.67 -694.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Diodes-Incorporated/AP7361C-33ER-13?qs=60RJRzIpcl8A1pMqYmc7oA%3D%3D"
+				(at 26.67 -794.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Arrow Part Number" "AP7361C-33ER-13"
+				(at 26.67 -894.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Arrow Price/Stock" "https://www.arrow.com/en/products/ap7361c-33er-13/diodes-incorporated"
+				(at 26.67 -994.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(symbol "AP7361C-33ER-13_1_1"
+				(rectangle
+					(start 5.08 2.54)
+					(end 25.4 -7.62)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(pin passive line
+					(at 0 0 0)
+					(length 5.08)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -2.54 0)
+					(length 5.08)
+					(name "OUT_1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -5.08 0)
+					(length 5.08)
+					(name "IN"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 30.48 0 180)
+					(length 5.08)
+					(name "OUT_2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "SamacSys_Parts:TPS564257DRLR"
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -796,6 +1004,32 @@
 		)
 		(uuid "21b76405-e4b5-4053-9dfc-304b34640ceb")
 	)
+	(text_box "LDO 5V a 3,3V"
+		(exclude_from_sim no)
+		(at 166.37 20.32 0)
+		(size 101.6 69.85)
+		(margins 0.9525 0.9525 0.9525 0.9525)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(type none)
+		)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "d5624305-f909-4054-aece-f9bb00d13afc")
+	)
+	(junction
+		(at 210.82 63.5)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "0663df6a-f801-4929-a3f9-795d4dadef5d")
+	)
 	(junction
 		(at 43.18 39.37)
 		(diameter 0)
@@ -827,6 +1061,12 @@
 		(uuid "7268a1b6-25a2-401b-bc34-cc82debff24d")
 	)
 	(junction
+		(at 193.04 63.5)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "96a5c777-32e2-4c50-8076-5bf20a16c79a")
+	)
+	(junction
 		(at 55.88 39.37)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -837,6 +1077,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "a889ec5b-1f25-47c2-a7e3-c92a8a3c80b7")
+	)
+	(junction
+		(at 226.06 63.5)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "ad1adda0-57f9-41c0-bc67-a28f3fbb7e68")
 	)
 	(junction
 		(at 55.88 53.34)
@@ -898,6 +1144,16 @@
 	)
 	(wire
 		(pts
+			(xy 193.04 63.5) (xy 210.82 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "04ae980e-6d9f-43f8-8ce4-4e5e011361bb")
+	)
+	(wire
+		(pts
 			(xy 146.05 35.56) (xy 140.97 35.56)
 		)
 		(stroke
@@ -945,6 +1201,16 @@
 			(type default)
 		)
 		(uuid "18a15425-6508-427e-9cc1-8dd35176e2f6")
+	)
+	(wire
+		(pts
+			(xy 193.04 40.64) (xy 193.04 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1bdf6e3e-35da-4594-aafd-a99b33289c12")
 	)
 	(wire
 		(pts
@@ -1088,6 +1354,16 @@
 	)
 	(wire
 		(pts
+			(xy 185.42 49.53) (xy 185.42 45.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "72ed8a47-82f2-4389-af7c-735e6c845f35")
+	)
+	(wire
+		(pts
 			(xy 66.04 38.1) (xy 66.04 72.39)
 		)
 		(stroke
@@ -1188,6 +1464,16 @@
 	)
 	(wire
 		(pts
+			(xy 195.58 40.64) (xy 193.04 40.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "90786518-e359-42dc-b21b-2db8ad45aca7")
+	)
+	(wire
+		(pts
 			(xy 125.73 52.07) (xy 125.73 55.88)
 		)
 		(stroke
@@ -1248,6 +1534,16 @@
 	)
 	(wire
 		(pts
+			(xy 236.22 63.5) (xy 226.06 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a58cbaa4-7aec-4c93-a6a0-9b1d81784700")
+	)
+	(wire
+		(pts
 			(xy 43.18 49.53) (xy 43.18 39.37)
 		)
 		(stroke
@@ -1265,6 +1561,36 @@
 			(type default)
 		)
 		(uuid "b3330c40-acb1-46cd-b5b4-8e6245c0b889")
+	)
+	(wire
+		(pts
+			(xy 186.69 43.18) (xy 186.69 30.48)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b4b878b5-8217-4cdc-abc1-10b2542acf2c")
+	)
+	(wire
+		(pts
+			(xy 186.69 30.48) (xy 236.22 30.48)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b70421b5-d4ba-4811-b7d0-2c1c2aa011cc")
+	)
+	(wire
+		(pts
+			(xy 195.58 43.18) (xy 186.69 43.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b7e33b47-1d18-42ce-bad6-764b7120cd7f")
 	)
 	(wire
 		(pts
@@ -1288,6 +1614,16 @@
 	)
 	(wire
 		(pts
+			(xy 226.06 63.5) (xy 226.06 40.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bfa45f85-d7bd-48e4-8b1b-2c47fb3b9784")
+	)
+	(wire
+		(pts
 			(xy 55.88 50.8) (xy 55.88 53.34)
 		)
 		(stroke
@@ -1298,6 +1634,16 @@
 	)
 	(wire
 		(pts
+			(xy 236.22 44.45) (xy 236.22 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d17f0542-6a5e-4ac1-946d-f7d102994971")
+	)
+	(wire
+		(pts
 			(xy 33.02 57.15) (xy 33.02 72.39)
 		)
 		(stroke
@@ -1305,6 +1651,16 @@
 			(type default)
 		)
 		(uuid "d538491b-20b3-4041-892c-d3bd523b3789")
+	)
+	(wire
+		(pts
+			(xy 185.42 45.72) (xy 195.58 45.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d587f94a-373e-477c-97d3-9016108dc8af")
 	)
 	(wire
 		(pts
@@ -1378,6 +1734,16 @@
 	)
 	(wire
 		(pts
+			(xy 185.42 57.15) (xy 185.42 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ea245e53-f7ee-4f6f-a175-c60113a5eaa6")
+	)
+	(wire
+		(pts
 			(xy 59.69 33.02) (xy 59.69 39.37)
 		)
 		(stroke
@@ -1388,6 +1754,26 @@
 	)
 	(wire
 		(pts
+			(xy 185.42 63.5) (xy 193.04 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f0a50294-e8ba-4385-afa7-24ae3ff40055")
+	)
+	(wire
+		(pts
+			(xy 236.22 30.48) (xy 236.22 36.83)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f5f21b63-30b8-4db6-8eac-5f1793246b12")
+	)
+	(wire
+		(pts
 			(xy 91.44 38.1) (xy 101.6 38.1)
 		)
 		(stroke
@@ -1395,6 +1781,16 @@
 			(type default)
 		)
 		(uuid "f6bc17d2-151e-466b-9a14-e073bf9b34b4")
+	)
+	(wire
+		(pts
+			(xy 210.82 63.5) (xy 226.06 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f987e7b6-9642-495d-9400-f51b242b4493")
 	)
 	(wire
 		(pts
@@ -1417,6 +1813,16 @@
 		(uuid "55bdd8f1-8abe-40c0-b5e2-5f228b5eede0")
 	)
 	(label "V_IN"
+		(at 185.42 45.72 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "bbec4ef6-33f7-462e-a1c2-cf68bfe755df")
+	)
+	(label "V_IN"
 		(at 33.02 39.37 0)
 		(effects
 			(font
@@ -1425,6 +1831,16 @@
 			(justify left bottom)
 		)
 		(uuid "c665c596-fca6-4162-b3bf-537fad2318cc")
+	)
+	(label "V_OUT"
+		(at 236.22 30.48 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "dade056d-9c0b-498a-8cb7-db469461fc55")
 	)
 	(symbol
 		(lib_id "Device:C")
@@ -1567,6 +1983,72 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 210.82 63.5 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "0cbc0520-929c-4d41-a4e4-d682c5fe72ec")
+		(property "Reference" "#PWR022"
+			(at 210.82 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 210.82 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 210.82 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 210.82 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 210.82 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "c14df706-9618-4d13-b641-3ce57f8135b5")
+		)
+		(instances
+			(project ""
+				(path "/3cb3b833-c38f-47b4-b7e9-f0e6337b7613/d054e30f-93c7-4141-9b1f-3289ce35fefa"
+					(reference "#PWR022")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R")
 		(at 125.73 59.69 0)
 		(unit 1)
@@ -1631,6 +2113,76 @@
 			(project "mini-vehiculo-exploracion-pcb"
 				(path "/3cb3b833-c38f-47b4-b7e9-f0e6337b7613/d054e30f-93c7-4141-9b1f-3289ce35fefa"
 					(reference "R17")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 185.42 53.34 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "21f79eb2-7ae3-4eed-9c9f-450e1393a326")
+		(property "Reference" "C19"
+			(at 189.23 52.0699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "C"
+			(at 189.23 54.6099 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 186.3852 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 185.42 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 185.42 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "5bf93f95-6659-4ab3-9b6d-05af9910b8cd")
+		)
+		(pin "1"
+			(uuid "aeb3bfcb-d236-420e-9f5c-415a7f494562")
+		)
+		(instances
+			(project ""
+				(path "/3cb3b833-c38f-47b4-b7e9-f0e6337b7613/d054e30f-93c7-4141-9b1f-3289ce35fefa"
+					(reference "C19")
 					(unit 1)
 				)
 			)
@@ -2066,6 +2618,76 @@
 	)
 	(symbol
 		(lib_id "Device:C")
+		(at 236.22 40.64 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "a5acd7dc-0fdc-4d4d-b3dc-f05e0bdbd245")
+		(property "Reference" "C20"
+			(at 240.03 39.3699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "C"
+			(at 240.03 41.9099 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 237.1852 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 236.22 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 236.22 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "40f58c5e-3cc1-4dfd-8b42-462a6923310e")
+		)
+		(pin "1"
+			(uuid "f7614687-a132-40aa-9e3a-b20fa1772ce8")
+		)
+		(instances
+			(project "mini-vehiculo-exploracion-pcb"
+				(path "/3cb3b833-c38f-47b4-b7e9-f0e6337b7613/d054e30f-93c7-4141-9b1f-3289ce35fefa"
+					(reference "C20")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
 		(at 43.18 53.34 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -2129,6 +2751,152 @@
 			(project "mini-vehiculo-exploracion-pcb"
 				(path "/3cb3b833-c38f-47b4-b7e9-f0e6337b7613/d054e30f-93c7-4141-9b1f-3289ce35fefa"
 					(reference "C15")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "SamacSys_Parts:AP7361C-33ER-13")
+		(at 195.58 40.64 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "ab90bbbf-1c16-49f4-9434-befd207377d0")
+		(property "Reference" "IC3"
+			(at 210.82 33.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "AP7361C-33ER-13"
+			(at 210.82 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "SOT230P700X180-4N"
+			(at 222.25 135.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.diodes.com//assets/Datasheets/AP7361C.pdf"
+			(at 222.25 235.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Description" "Linear Voltage Regulator IC Positive Fixed 1 Output 1A SOT-223R"
+			(at 195.58 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Height" "1.8"
+			(at 222.25 435.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Name" "Diodes Incorporated"
+			(at 222.25 535.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Part_Number" "AP7361C-33ER-13"
+			(at 222.25 635.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "621-AP7361C-33ER-13"
+			(at 222.25 735.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Diodes-Incorporated/AP7361C-33ER-13?qs=60RJRzIpcl8A1pMqYmc7oA%3D%3D"
+			(at 222.25 835.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Arrow Part Number" "AP7361C-33ER-13"
+			(at 222.25 935.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Arrow Price/Stock" "https://www.arrow.com/en/products/ap7361c-33er-13/diodes-incorporated"
+			(at 222.25 1035.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "3b42601f-f5b1-49c8-b1b9-3e5f479f0e0b")
+		)
+		(pin "2"
+			(uuid "f1580e77-4f1d-4339-becf-dbdd14e37543")
+		)
+		(pin "4"
+			(uuid "75a29d90-b9a3-4e96-aa8b-ad617f0b58fa")
+		)
+		(pin "3"
+			(uuid "eda7301d-0686-43f5-8e8c-ce1d1b6731bb")
+		)
+		(instances
+			(project ""
+				(path "/3cb3b833-c38f-47b4-b7e9-f0e6337b7613/d054e30f-93c7-4141-9b1f-3289ce35fefa"
+					(reference "IC3")
 					(unit 1)
 				)
 			)
