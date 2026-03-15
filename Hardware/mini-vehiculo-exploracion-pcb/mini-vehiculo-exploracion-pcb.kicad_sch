@@ -7640,6 +7640,48 @@
 			)
 		)
 	)
+	(sheet
+		(at 205.74 130.81)
+		(size 33.02 16.51)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "d054e30f-93c7-4141-9b1f-3289ce35fefa")
+		(property "Sheetname" "Electrical"
+			(at 205.74 130.0984 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "electrical.kicad_sch"
+			(at 205.74 147.9046 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "mini-vehiculo-exploracion-pcb"
+				(path "/3cb3b833-c38f-47b4-b7e9-f0e6337b7613"
+					(page "3")
+				)
+			)
+		)
+	)
 	(sheet_instances
 		(path "/"
 			(page "1")
