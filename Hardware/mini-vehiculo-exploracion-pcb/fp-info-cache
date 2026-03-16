@@ -1,4 +1,4 @@
-27249163134626759
+27273987360022505
 830003000
 830003000
 830003000-2
@@ -74689,6 +74689,27 @@ threaded screw
 0
 4
 1
+NCV68061SNAIT1G
+SOT95P275X110-6N
+TSOP-6 CASE318G-02 ISSUE V
+Integrated Circuit
+0
+6
+6
+NTMFS4C324NT1G
+NVMFS5C442NLWFAFT1G
+DFN5 5x6, 1.27P  (SO−8FL) CASE 488AA ISSUE N
+MOSFET (N-Channel)
+0
+9
+9
+NVMFS5C442NLAFT1G-YE
+NVMFS5C430NAFT1GYE
+DFNW5 5x6 CASE 507BE ISSUE O
+MOSFET (N-Channel)
+0
+9
+9
 NetTie
 NetTie-2_SMD_Pad0.5mm
 Net tie, 2 pin, 0.5mm square SMD pads
@@ -75984,6 +76005,13 @@ DIL DIP PDIP 2.54mm 7.62mm 300mil
 0
 4
 4
+PTVS13VP1UTP-QX
+SODFL4725X110N
+(SOD128)
+Diode
+0
+2
+2
 Package_BGA
 Alliance_TFBGA-36_6x8mm_Layout6x8_P0.75mm
 Alliance TFBGA-36, NSMD, 6.0x8.0mm, 36 Ball, 6x8 Layout, 0.75mm Pitch, generated with kicad-footprint-generator ipc_bga_generator.py, https://www.alliancememory.com/wp-content/uploads/pdf/AS6C1008_Mar_2023V1.2.pdf#page=13
@@ -98692,6 +98720,76 @@ rotary encoder illuminated switch vertical
 0
 9
 8
+SMD200F_24-2920
+SMD200F2429202
+SMD200F/24-2920-2-3
+Fuse
+0
+2
+2
+SamacSys_Parts
+NE555DR
+D (R-PDSO-G8)
+Integrated Circuit
+0
+8
+8
+SamacSys_Parts
+NVMFS5C430NAFT1GYE
+DFNW5 5x6 CASE 507BE ISSUE O
+MOSFET (N-Channel)
+0
+9
+9
+SamacSys_Parts
+NVMFS5C442NLWFAFT1G
+DFN5 5x6, 1.27P  (SO−8FL) CASE 488AA ISSUE N
+MOSFET (N-Channel)
+0
+9
+9
+SamacSys_Parts
+SMD030F20182
+SMD030F-2018-2
+Fuse
+0
+2
+2
+SamacSys_Parts
+SMD200F2429202
+SMD200F/24-2920-2-3
+Fuse
+0
+2
+2
+SamacSys_Parts
+SODFL4725X110N
+(SOD128)
+Diode
+0
+2
+2
+SamacSys_Parts
+SOIC127P600X175-8N
+SOP_8_2022
+MOSFET (P-Channel)
+0
+8
+8
+SamacSys_Parts
+SOT230P700X180-4N
+3-Pin SOT-223
+Integrated Circuit
+0
+4
+4
+SamacSys_Parts
+SOTFL50P160X60-6N
+DRL0006A
+Integrated Circuit
+0
+6
+6
 Sensor
 ASAIR_AM2302_P2.54mm_Lead2.75mm_TabDown
 Temperature and humidity module, http://akizukidenshi.com/download/ds/aosong/AM2302.pdf
