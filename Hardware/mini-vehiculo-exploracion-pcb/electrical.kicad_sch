@@ -2057,6 +2057,16 @@
 	)
 	(wire
 		(pts
+			(xy 90.17 118.11) (xy 93.98 118.11)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "06b45e49-ac55-4729-b7e6-784eec24475c")
+	)
+	(wire
+		(pts
 			(xy 101.6 38.1) (xy 101.6 52.07)
 		)
 		(stroke
@@ -2134,6 +2144,16 @@
 			(type default)
 		)
 		(uuid "1f069e4d-cb92-4163-94cb-bc977b8b8550")
+	)
+	(wire
+		(pts
+			(xy 93.98 118.11) (xy 93.98 133.35)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "21e4beec-9911-4709-b43d-f0761656b153")
 	)
 	(wire
 		(pts
@@ -2434,6 +2454,16 @@
 			(type default)
 		)
 		(uuid "83fbd7d4-c3ce-4434-91f0-4fb8bdad2211")
+	)
+	(wire
+		(pts
+			(xy 93.98 133.35) (xy 95.25 133.35)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "870565de-6b3b-466f-ada9-ccc802da92ce")
 	)
 	(wire
 		(pts
@@ -3243,7 +3273,7 @@
 	)
 	(symbol
 		(lib_id "NVMFS5C442NLAFT1G-YE:NVMFS5C442NLAFT1G-YE")
-		(at 96.52 149.86 0)
+		(at 95.25 125.73 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -3252,7 +3282,7 @@
 		(fields_autoplaced yes)
 		(uuid "34a3a44c-2d2e-4341-97e2-4c30a7d1e88a")
 		(property "Reference" "Q1"
-			(at 109.22 142.24 0)
+			(at 107.95 118.11 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3260,7 +3290,7 @@
 			)
 		)
 		(property "Value" "NVMFS5C442NLAFT1G-YE"
-			(at 109.22 144.78 0)
+			(at 107.95 120.65 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3268,7 +3298,7 @@
 			)
 		)
 		(property "Footprint" "NVMFS5C430NAFT1GYE"
-			(at 118.11 244.78 0)
+			(at 116.84 220.65 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3278,7 +3308,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.onsemi.com/pub/Collateral/NVMFS5C442NL-D.PDF"
-			(at 118.11 344.78 0)
+			(at 116.84 320.65 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3288,7 +3318,7 @@
 			)
 		)
 		(property "Description" "Small Footprint (5x6 mm); Low RDS(on); AECQ101 Qualified and PPAP Capable; NVMFS5C442NLWF  Wettable Flank Option; Low QG and Capacitance; RoHS Compliant"
-			(at 96.52 149.86 0)
+			(at 95.25 125.73 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3297,7 +3327,7 @@
 			)
 		)
 		(property "Height" "1.1"
-			(at 118.11 544.78 0)
+			(at 116.84 520.65 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3307,7 +3337,7 @@
 			)
 		)
 		(property "Mouser Part Number" ""
-			(at 118.11 644.78 0)
+			(at 116.84 620.65 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3317,7 +3347,7 @@
 			)
 		)
 		(property "Mouser Price/Stock" ""
-			(at 118.11 744.78 0)
+			(at 116.84 720.65 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3327,7 +3357,7 @@
 			)
 		)
 		(property "Manufacturer_Name" "onsemi"
-			(at 118.11 844.78 0)
+			(at 116.84 820.65 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3337,7 +3367,7 @@
 			)
 		)
 		(property "Manufacturer_Part_Number" "NVMFS5C442NLAFT1G-YE"
-			(at 118.11 944.78 0)
+			(at 116.84 920.65 0)
 			(effects
 				(font
 					(size 1.27 1.27)
