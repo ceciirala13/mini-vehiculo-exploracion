@@ -7,4 +7,8 @@
   (lib (name "USB_FerriteBead_IND_BLM21_MUR")(type "KiCad")(uri "${KIPRJMOD}/Assets/USB_FerriteBead_IND_BLM21_MUR")(options "")(descr ""))
   (lib (name "USB_fuse_C1Q-1")(type "KiCad")(uri "${KIPRJMOD}/Assets/USB_fuse_C1Q-1")(options "")(descr ""))
   (lib (name "USB_diode_SD1206S040S1R0")(type "KiCad")(uri "${KIPRJMOD}/Assets/USB_diode_SD1206S040S1R0")(options "")(descr ""))
+  (lib (name "BME690")(type "KiCad")(uri "${KIPRJMOD}/Assets/BME690")(options "")(descr ""))
+  (lib (name "830003000")(type "KiCad")(uri "${KIPRJMOD}/Assets/830003000")(options "")(descr ""))
+  (lib (name "TPS564257DRLR")(type "KiCad")(uri "${KIPRJMOD}/Assets/TPS564257DRLR")(options "")(descr ""))
+  (lib (name "AP7361C-33ER-13")(type "KiCad")(uri "${KIPRJMOD}/Assets/AP7361C-33ER-13")(options "")(descr ""))
 )

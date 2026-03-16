@@ -8,4 +8,6 @@
   (lib (name "USB_PROTECTION_SOT23-6L_STM")(type "KiCad")(uri "${KIPRJMOD}/Assets/USB_PROTECTION_SOT23-6L_STM/SOT23-6L_STM.kicad_sym")(options "")(descr ""))
   (lib (name "CR_50120560_WRE-M")(type "KiCad")(uri "${KIPRJMOD}/Assets/Diode_82350120560/CR_50120560_WRE-M.kicad_sym")(options "")(descr ""))
   (lib (name "ConectorDriverESP")(type "KiCad")(uri "${KIPRJMOD}/Assets/ConectorDriverESP.kicad_sym")(options "")(descr ""))
+  (lib (name "TPS564257DRLR")(type "KiCad")(uri "${KIPRJMOD}/Assets/TPS564257DRLR/TPS564257DRLR.kicad_sym")(options "")(descr ""))
+  (lib (name "AP7361C-33ER-13")(type "KiCad")(uri "${KIPRJMOD}/Assets/AP7361C-33ER-13/AP7361C-33ER-13.kicad_sym")(options "")(descr ""))
 )
