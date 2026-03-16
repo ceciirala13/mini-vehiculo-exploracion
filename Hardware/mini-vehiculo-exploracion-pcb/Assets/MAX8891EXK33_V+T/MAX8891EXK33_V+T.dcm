@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP MAX8891EXK33_V+T
+D IC REG LDO 3.3V 0.15A SC70-6
+K
+F https://datasheets.maximintegrated.com/en/ds/MAX8891-MAX8892.pdf
+$ENDCMP
+#
+#End Doc Library
