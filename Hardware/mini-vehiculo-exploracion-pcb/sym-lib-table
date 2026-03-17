@@ -17,4 +17,5 @@
   (lib (name "SMD200F_24-2920-2")(type "KiCad")(uri "${KIPRJMOD}/Assets/SMD200F_24-2920/SMD200F_24-2920-2.kicad_sym")(options "")(descr ""))
   (lib (name "SI1467DH-T1-BE3")(type "KiCad")(uri "${KIPRJMOD}/Assets/SI1467DH-T1-BE3/SI1467DH-T1-BE3.kicad_sym")(options "")(descr ""))
   (lib (name "MAX8891EXK33_V+T")(type "KiCad")(uri "${KIPRJMOD}/Assets/MAX8891EXK33_V+T/MAX8891EXK33_V+T.kicad_sym")(options "")(descr ""))
+  (lib (name "TPS561208DDCR")(type "KiCad")(uri "${KIPRJMOD}/Assets/TPS561208DDCR/TPS561208DDCR.kicad_sym")(options "")(descr ""))
 )

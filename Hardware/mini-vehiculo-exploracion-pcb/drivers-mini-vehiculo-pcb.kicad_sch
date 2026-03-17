@@ -8179,6 +8179,48 @@
 			)
 		)
 	)
+	(sheet
+		(at 153.67 132.08)
+		(size 55.88 25.4)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "a0a3a615-a0eb-4e9b-a594-71f734cb4e88")
+		(property "Sheetname" "Electrical"
+			(at 153.67 131.3684 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "electrical_drivers.kicad_sch"
+			(at 153.67 158.0646 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "drivers-mini-vehiculo-pcb"
+				(path "/7776e3ee-622a-4a3e-a213-279f6f5df2cb"
+					(page "2")
+				)
+			)
+		)
+	)
 	(sheet_instances
 		(path "/"
 			(page "1")

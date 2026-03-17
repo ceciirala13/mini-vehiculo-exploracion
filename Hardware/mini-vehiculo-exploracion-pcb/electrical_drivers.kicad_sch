@@ -1,0 +1,28 @@
+(kicad_sch
+	(version 20250114)
+	(generator "eeschema")
+	(generator_version "9.0")
+	(uuid "e8227060-1842-48f2-b46f-4ee777392af6")
+	(paper "A4")
+	(lib_symbols)
+	(text_box "Convertidor 12V a 5V\n"
+		(exclude_from_sim no)
+		(at 21.59 22.86 0)
+		(size 121.92 67.31)
+		(margins 0.9525 0.9525 0.9525 0.9525)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(type none)
+		)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "02cb7a62-8ca2-4376-85ec-f1fce6b0fba2")
+	)
+)
