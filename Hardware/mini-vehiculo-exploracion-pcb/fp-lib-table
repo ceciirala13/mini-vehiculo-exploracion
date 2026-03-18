@@ -19,4 +19,5 @@
   (lib (name "SI1467DH-T1-BE3")(type "KiCad")(uri "${KIPRJMOD}/Assets/SI1467DH-T1-BE3")(options "")(descr ""))
   (lib (name "MAX8891EXK33_V+T")(type "KiCad")(uri "${KIPRJMOD}/Assets/MAX8891EXK33_V+T")(options "")(descr ""))
   (lib (name "TPS561208DDCR")(type "KiCad")(uri "${KIPRJMOD}/Assets/TPS561208DDCR")(options "")(descr ""))
+  (lib (name "PMEG040V030EPE-QZ")(type "KiCad")(uri "${KIPRJMOD}/Assets/PMEG040V030EPE-QZ")(options "")(descr ""))
 )
