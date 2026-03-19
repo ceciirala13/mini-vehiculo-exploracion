@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP V15PM6HM3_H
+D Schottky Diodes & Rectifiers 60V 15A TMBS TO-277A (SMPC)
+K
+F https://www.vishay.com/docs/87434/v15pm6.pdf
+$ENDCMP
+#
+#End Doc Library
