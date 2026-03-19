@@ -144,156 +144,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Device:D_Schottky"
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(offset 1.016)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "D"
-				(at 0 2.54 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "D_Schottky"
-				(at 0 -2.54 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "~"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Schottky diode"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "diode Schottky"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_fp_filters" "TO-???* *_Diode_* *SingleDiode* D_*"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "D_Schottky_0_1"
-				(polyline
-					(pts
-						(xy -1.905 0.635) (xy -1.905 1.27) (xy -1.27 1.27) (xy -1.27 -1.27) (xy -0.635 -1.27) (xy -0.635 -0.635)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.27 1.27) (xy 1.27 -1.27) (xy -1.27 0) (xy 1.27 1.27)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.27 0) (xy -1.27 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "D_Schottky_1_1"
-				(pin passive line
-					(at -3.81 0 0)
-					(length 2.54)
-					(name "K"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 3.81 0 180)
-					(length 2.54)
-					(name "A"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "Device:L"
 			(pin_numbers
 				(hide yes)
@@ -1369,6 +1219,176 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "V15PM6HM3_H:V15PM6HM3_H"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "D"
+				(at 19.05 7.62 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Value" "V15PM6HM3_H"
+				(at 19.05 5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Footprint" "V15PM6HM3H"
+				(at 19.05 -94.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "https://www.vishay.com/docs/87434/v15pm6.pdf"
+				(at 19.05 -194.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Description" "Schottky Diodes & Rectifiers 60V 15A TMBS TO-277A (SMPC)"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Height" "1.2"
+				(at 19.05 -394.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Mouser Part Number" "78-V15PM6HM3/H"
+				(at 19.05 -494.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Vishay-General-Semiconductor/V15PM6HM3-H?qs=gZXFycFWdANWPtpgGjtwuA%3D%3D"
+				(at 19.05 -594.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Manufacturer_Name" "Vishay"
+				(at 19.05 -694.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Manufacturer_Part_Number" "V15PM6HM3/H"
+				(at 19.05 -794.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(symbol "V15PM6HM3_H_1_1"
+				(rectangle
+					(start 5.08 2.54)
+					(end 17.78 -5.08)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(pin passive line
+					(at 0 0 0)
+					(length 5.08)
+					(name "A_2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -2.54 0)
+					(length 5.08)
+					(name "A_1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 22.86 0 180)
+					(length 5.08)
+					(name "K"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "power:GND"
 			(power)
 			(pin_numbers
@@ -1514,7 +1534,7 @@
 	(text_box "proteccion entrada bateria"
 		(exclude_from_sim no)
 		(at 17.78 85.09 0)
-		(size 73.66 45.72)
+		(size 86.36 45.72)
 		(margins 0.9525 0.9525 0.9525 0.9525)
 		(stroke
 			(width 0)
@@ -1542,6 +1562,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "12797f1b-e654-41dc-883f-f23e57c65fb4")
+	)
+	(junction
+		(at 63.5 96.52)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "1a17ce56-7599-4a1e-88f3-d08b255c2bd3")
 	)
 	(junction
 		(at 72.39 64.77)
@@ -1787,6 +1813,16 @@
 	)
 	(wire
 		(pts
+			(xy 67.31 99.06) (xy 63.5 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "45002527-d83a-495b-b15d-8d6f4c81f47d")
+	)
+	(wire
+		(pts
 			(xy 173.99 34.29) (xy 173.99 39.37)
 		)
 		(stroke
@@ -1827,17 +1863,7 @@
 	)
 	(wire
 		(pts
-			(xy 74.93 96.52) (xy 82.55 96.52)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "62ab7010-e6b5-49f6-b6d9-607d24b4f0ea")
-	)
-	(wire
-		(pts
-			(xy 59.69 96.52) (xy 67.31 96.52)
+			(xy 59.69 96.52) (xy 63.5 96.52)
 		)
 		(stroke
 			(width 0)
@@ -2087,6 +2113,16 @@
 	)
 	(wire
 		(pts
+			(xy 90.17 96.52) (xy 92.71 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c92bf7c6-933a-42f1-932e-ebd055482661")
+	)
+	(wire
+		(pts
 			(xy 172.72 52.07) (xy 217.17 52.07)
 		)
 		(stroke
@@ -2127,6 +2163,16 @@
 	)
 	(wire
 		(pts
+			(xy 63.5 96.52) (xy 67.31 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ea458be4-32fd-4974-be67-d8c5eb73ade3")
+	)
+	(wire
+		(pts
 			(xy 31.75 96.52) (xy 41.91 96.52)
 		)
 		(stroke
@@ -2144,6 +2190,16 @@
 			(type default)
 		)
 		(uuid "f06ba264-831d-4fc3-af56-16a61abe4a28")
+	)
+	(wire
+		(pts
+			(xy 63.5 96.52) (xy 63.5 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f3538555-23c7-4cb6-9601-10358fe923eb")
 	)
 	(wire
 		(pts
@@ -2189,7 +2245,7 @@
 	)
 	(global_label "+12V"
 		(shape input)
-		(at 82.55 96.52 0)
+		(at 92.71 96.52 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2199,7 +2255,7 @@
 		)
 		(uuid "2c913fa9-5c86-4d43-a304-21cbc29463f8")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 90.6152 96.52 0)
+			(at 100.7752 96.52 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2362,74 +2418,6 @@
 			(project ""
 				(path "/7776e3ee-622a-4a3e-a213-279f6f5df2cb/a0a3a615-a0eb-4e9b-a594-71f734cb4e88"
 					(reference "R7")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:D_Schottky")
-		(at 71.12 96.52 180)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "05c496d1-db2d-4fdf-895a-1d9b49d4822b")
-		(property "Reference" "D2"
-			(at 71.4375 90.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "D_Schottky"
-			(at 71.4375 92.71 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 71.12 96.52 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 71.12 96.52 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Schottky diode"
-			(at 71.12 96.52 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "a166204f-be63-4444-b599-744d1de382ee")
-		)
-		(pin "2"
-			(uuid "8cb7b202-683d-4c80-ad72-1b8eebc1945a")
-		)
-		(instances
-			(project ""
-				(path "/7776e3ee-622a-4a3e-a213-279f6f5df2cb/a0a3a615-a0eb-4e9b-a594-71f734cb4e88"
-					(reference "D2")
 					(unit 1)
 				)
 			)
@@ -3551,6 +3539,129 @@
 			(project ""
 				(path "/7776e3ee-622a-4a3e-a213-279f6f5df2cb/a0a3a615-a0eb-4e9b-a594-71f734cb4e88"
 					(reference "C16")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "V15PM6HM3_H:V15PM6HM3_H")
+		(at 67.31 96.52 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "fe3d47a4-4d08-49ca-a3ba-ba9ba89ddbf8")
+		(property "Reference" "D2"
+			(at 78.74 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "V15PM6HM3_H"
+			(at 78.74 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "V15PM6HM3H"
+			(at 86.36 191.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.vishay.com/docs/87434/v15pm6.pdf"
+			(at 86.36 291.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Description" "Schottky Diodes & Rectifiers 60V 15A TMBS TO-277A (SMPC)"
+			(at 67.31 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Height" "1.2"
+			(at 86.36 491.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "78-V15PM6HM3/H"
+			(at 86.36 591.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Vishay-General-Semiconductor/V15PM6HM3-H?qs=gZXFycFWdANWPtpgGjtwuA%3D%3D"
+			(at 86.36 691.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Name" "Vishay"
+			(at 86.36 791.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Part_Number" "V15PM6HM3/H"
+			(at 86.36 891.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "b317bd93-8740-4f20-a08f-d31d2d2c6c0e")
+		)
+		(pin "3"
+			(uuid "7a8a1893-88cc-4456-ba3f-4a85ae7c2f3a")
+		)
+		(pin "2"
+			(uuid "9ad4fcde-eb5d-462e-99f7-67b6dbaaf51c")
+		)
+		(instances
+			(project ""
+				(path "/7776e3ee-622a-4a3e-a213-279f6f5df2cb/a0a3a615-a0eb-4e9b-a594-71f734cb4e88"
+					(reference "D2")
 					(unit 1)
 				)
 			)
