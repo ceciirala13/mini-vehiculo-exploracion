@@ -6610,7 +6610,7 @@
 				)
 			)
 		)
-		(property "Footprint" "BME690"
+		(property "Footprint" "BME690:BME690"
 			(at 139.7 204.14 0)
 			(effects
 				(font
@@ -8858,7 +8858,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
 			(at 35.2552 44.45 0)
 			(effects
 				(font

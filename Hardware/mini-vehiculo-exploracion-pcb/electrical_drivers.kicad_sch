@@ -828,7 +828,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "SMD200F_24-2920-2:SMD200F_24-2920-2"
+		(symbol "SF-1206SA1500R-2:SF-1206SA1500R-2"
 			(pin_names
 				(hide yes)
 			)
@@ -844,7 +844,7 @@
 					(justify left top)
 				)
 			)
-			(property "Value" "SMD200F_24-2920-2"
+			(property "Value" "SF-1206SA1500R-2"
 				(at 13.97 3.81 0)
 				(effects
 					(font
@@ -853,7 +853,7 @@
 					(justify left top)
 				)
 			)
-			(property "Footprint" "SMD200F2429202"
+			(property "Footprint" "SF1206SA1500R2"
 				(at 13.97 -96.19 0)
 				(effects
 					(font
@@ -863,7 +863,7 @@
 					(hide yes)
 				)
 			)
-			(property "Datasheet" "https://www.littelfuse.com/media?resourcetype=datasheets&itemid=e664881a-0c68-4836-928b-7ed2f0c2a6da&filename=littelfuse-ptc-smd-datasheet"
+			(property "Datasheet" "http://www.bourns.com/docs/Product-Datasheets/SF-1206SA-R.pdf"
 				(at 13.97 -196.19 0)
 				(effects
 					(font
@@ -873,7 +873,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "LITTELFUSE - SMD200F/24-2920-2 - Resettable Fuse, PPTC, 2920 (7351 Metric), PolySwitch SMD Series, 24 VDC, 2 A, 4 A, 5 s"
+			(property "Description" "1206 slow-blow met-foil. 15A Auto"
 				(at 0 0 0)
 				(effects
 					(font
@@ -882,7 +882,7 @@
 					(hide yes)
 				)
 			)
-			(property "Height" "3"
+			(property "Height" "0.9"
 				(at 13.97 -396.19 0)
 				(effects
 					(font
@@ -892,7 +892,7 @@
 					(hide yes)
 				)
 			)
-			(property "Mouser Part Number" "650-SMD200F/2429202"
+			(property "Mouser Part Number" "652-SF-1206SA1500R-2"
 				(at 13.97 -496.19 0)
 				(effects
 					(font
@@ -902,7 +902,7 @@
 					(hide yes)
 				)
 			)
-			(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Littelfuse/SMD200F-24-2920-2?qs=WTEd434rUSU6D3j%2FZW4mUA%3D%3D"
+			(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Bourns/SF-1206SA1500R-2?qs=MyNHzdoqoQLFm73fnRlz0w%3D%3D"
 				(at 13.97 -596.19 0)
 				(effects
 					(font
@@ -912,7 +912,7 @@
 					(hide yes)
 				)
 			)
-			(property "Manufacturer_Name" "LITTELFUSE"
+			(property "Manufacturer_Name" "Bourns"
 				(at 13.97 -696.19 0)
 				(effects
 					(font
@@ -922,7 +922,7 @@
 					(hide yes)
 				)
 			)
-			(property "Manufacturer_Part_Number" "SMD200F/24-2920-2"
+			(property "Manufacturer_Part_Number" "SF-1206SA1500R-2"
 				(at 13.97 -796.19 0)
 				(effects
 					(font
@@ -932,7 +932,7 @@
 					(hide yes)
 				)
 			)
-			(symbol "SMD200F_24-2920-2_1_1"
+			(symbol "SF-1206SA1500R-2_1_1"
 				(rectangle
 					(start 5.08 1.27)
 					(end 12.7 -1.27)
@@ -2354,6 +2354,126 @@
 		)
 	)
 	(symbol
+		(lib_id "SF-1206SA1500R-2:SF-1206SA1500R-2")
+		(at 41.91 96.52 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "013388a6-d9cf-4f43-938c-3c8288e94612")
+		(property "Reference" "F1"
+			(at 50.8 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "SF-1206SA1500R-2"
+			(at 50.8 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "SF1206SA1500R2"
+			(at 55.88 192.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://www.bourns.com/docs/Product-Datasheets/SF-1206SA-R.pdf"
+			(at 55.88 292.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Description" "1206 slow-blow met-foil. 15A Auto"
+			(at 41.91 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Height" "0.9"
+			(at 55.88 492.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "652-SF-1206SA1500R-2"
+			(at 55.88 592.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Bourns/SF-1206SA1500R-2?qs=MyNHzdoqoQLFm73fnRlz0w%3D%3D"
+			(at 55.88 692.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Name" "Bourns"
+			(at 55.88 792.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Part_Number" "SF-1206SA1500R-2"
+			(at 55.88 892.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "7b58ecca-979c-4f0c-8c8d-44fe3566452d")
+		)
+		(pin "1"
+			(uuid "ef743864-bb8f-47ed-823d-4c3fda1f69e6")
+		)
+		(instances
+			(project ""
+				(path "/7776e3ee-622a-4a3e-a213-279f6f5df2cb/a0a3a615-a0eb-4e9b-a594-71f734cb4e88"
+					(reference "F1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R")
 		(at 113.03 44.45 0)
 		(unit 1)
@@ -3349,126 +3469,6 @@
 			(project ""
 				(path "/7776e3ee-622a-4a3e-a213-279f6f5df2cb/a0a3a615-a0eb-4e9b-a594-71f734cb4e88"
 					(reference "C5")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "SMD200F_24-2920-2:SMD200F_24-2920-2")
-		(at 41.91 96.52 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "f4ca71a1-1d04-475b-92ac-b1d305b84d80")
-		(property "Reference" "F1"
-			(at 50.8 90.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "SMD200F_24-2920-2"
-			(at 50.8 92.71 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "SMD200F2429202"
-			(at 55.88 192.71 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.littelfuse.com/media?resourcetype=datasheets&itemid=e664881a-0c68-4836-928b-7ed2f0c2a6da&filename=littelfuse-ptc-smd-datasheet"
-			(at 55.88 292.71 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-				(hide yes)
-			)
-		)
-		(property "Description" "LITTELFUSE - SMD200F/24-2920-2 - Resettable Fuse, PPTC, 2920 (7351 Metric), PolySwitch SMD Series, 24 VDC, 2 A, 4 A, 5 s"
-			(at 41.91 96.52 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Height" "3"
-			(at 55.88 492.71 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-				(hide yes)
-			)
-		)
-		(property "Mouser Part Number" "650-SMD200F/2429202"
-			(at 55.88 592.71 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-				(hide yes)
-			)
-		)
-		(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Littelfuse/SMD200F-24-2920-2?qs=WTEd434rUSU6D3j%2FZW4mUA%3D%3D"
-			(at 55.88 692.71 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer_Name" "LITTELFUSE"
-			(at 55.88 792.71 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer_Part_Number" "SMD200F/24-2920-2"
-			(at 55.88 892.71 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "2a8d315e-d6d0-4a96-ab93-1e9815f67d5a")
-		)
-		(pin "1"
-			(uuid "0fb9a59b-7903-4ed8-8e3d-c56ba17c9dbf")
-		)
-		(instances
-			(project ""
-				(path "/7776e3ee-622a-4a3e-a213-279f6f5df2cb/a0a3a615-a0eb-4e9b-a594-71f734cb4e88"
-					(reference "F1")
 					(unit 1)
 				)
 			)
