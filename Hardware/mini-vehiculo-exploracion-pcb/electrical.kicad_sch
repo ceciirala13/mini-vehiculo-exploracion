@@ -1963,8 +1963,8 @@
 	)
 	(text_box "Entrada 12V Bateria\n"
 		(exclude_from_sim no)
-		(at 22.86 21.59 0)
-		(size 185.42 60.96)
+		(at 14.605 21.59 0)
+		(size 193.675 60.96)
 		(margins 0.9525 0.9525 0.9525 0.9525)
 		(stroke
 			(width 0)
@@ -2068,6 +2068,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "4794328f-1a2b-4b28-8bb5-1b661e4e304b")
+	)
+	(junction
+		(at 30.48 34.29)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "48b68582-7613-48e6-97b2-4df5cc91805a")
 	)
 	(junction
 		(at 165.1 38.1)
@@ -2341,6 +2347,16 @@
 	)
 	(wire
 		(pts
+			(xy 30.48 34.29) (xy 30.48 36.83)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "14284eba-2456-4d7f-9242-1ef193f21427")
+	)
+	(wire
+		(pts
 			(xy 83.82 52.07) (xy 83.82 41.91)
 		)
 		(stroke
@@ -2601,7 +2617,7 @@
 	)
 	(wire
 		(pts
-			(xy 30.48 35.56) (xy 30.48 36.83)
+			(xy 30.48 33.02) (xy 30.48 34.29)
 		)
 		(stroke
 			(width 0)
@@ -3031,6 +3047,16 @@
 	)
 	(wire
 		(pts
+			(xy 29.21 34.29) (xy 30.48 34.29)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c7b0b12c-9ecd-4f8c-8305-8231263ab6e3")
+	)
+	(wire
+		(pts
 			(xy 269.24 35.56) (xy 271.78 35.56)
 		)
 		(stroke
@@ -3238,6 +3264,16 @@
 			(type default)
 		)
 		(uuid "fa6aba47-be93-4fcc-bec6-88d67d936a2e")
+	)
+	(label "POWER_12V"
+		(at 29.21 34.29 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "a586efdc-b8a8-4c0e-9ffb-7a151e904cae")
 	)
 	(global_label "V_BUS"
 		(shape input)
@@ -5138,7 +5174,7 @@
 	)
 	(symbol
 		(lib_id "power:VDC")
-		(at 30.48 35.56 0)
+		(at 30.48 33.02 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -5147,7 +5183,7 @@
 		(fields_autoplaced yes)
 		(uuid "aacaf370-e31e-4438-a50f-50820ccd0e5d")
 		(property "Reference" "#PWR023"
-			(at 30.48 39.37 0)
+			(at 30.48 36.83 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5156,7 +5192,7 @@
 			)
 		)
 		(property "Value" "12V"
-			(at 30.48 30.48 0)
+			(at 30.48 27.94 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5164,7 +5200,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 30.48 35.56 0)
+			(at 30.48 33.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5173,7 +5209,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 30.48 35.56 0)
+			(at 30.48 33.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5182,7 +5218,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"VDC\""
-			(at 30.48 35.56 0)
+			(at 30.48 33.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)

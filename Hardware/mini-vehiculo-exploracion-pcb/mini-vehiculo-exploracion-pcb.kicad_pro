@@ -475,12 +475,27 @@
         "wire_width": 6
       },
       {
+        "name": "ANALOG",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 0,
+        "schematic_color": "rgb(28, 30, 255)"
+      },
+      {
         "bus_width": 12,
         "line_style": 0,
         "name": "COMMS",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
-        "priority": 0,
+        "priority": 1,
         "schematic_color": "rgb(255, 169, 33)",
+        "wire_width": 6
+      },
+      {
+        "bus_width": 12,
+        "line_style": 0,
+        "name": "CRISTAL",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 4,
+        "schematic_color": "rgb(173, 22, 255)",
         "wire_width": 6
       },
       {
@@ -488,8 +503,8 @@
         "line_style": 0,
         "name": "POWER_DIST",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
-        "priority": 1,
-        "schematic_color": "rgb(20, 99, 10)",
+        "priority": 2,
+        "schematic_color": "rgb(194, 0, 194)",
         "wire_width": 6
       },
       {
@@ -497,17 +512,8 @@
         "line_style": 0,
         "name": "POWER_GND",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
-        "priority": 2,
-        "schematic_color": "rgb(4, 0, 0)",
-        "wire_width": 6
-      },
-      {
-        "bus_width": 12,
-        "line_style": 0,
-        "name": "POWER_PLANES",
-        "pcb_color": "rgba(0, 0, 0, 0.000)",
         "priority": 3,
-        "schematic_color": "rgb(173, 22, 255)",
+        "schematic_color": "rgb(4, 0, 0)",
         "wire_width": 6
       },
       {
@@ -515,7 +521,7 @@
         "line_style": 0,
         "name": "POWER_SUPPLY",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
-        "priority": 4,
+        "priority": 5,
         "schematic_color": "rgb(253, 0, 0)",
         "wire_width": 6
       },
@@ -524,8 +530,8 @@
         "line_style": 0,
         "name": "SIGNAL",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
-        "priority": 5,
-        "schematic_color": "rgb(1, 255, 0)",
+        "priority": 6,
+        "schematic_color": "rgb(0, 194, 0)",
         "wire_width": 6
       },
       {
@@ -533,7 +539,7 @@
         "line_style": 0,
         "name": "USB",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
-        "priority": 6,
+        "priority": 7,
         "schematic_color": "rgb(0, 245, 255)",
         "wire_width": 6
       }
@@ -555,6 +561,174 @@
       {
         "netclass": "POWER_SUPPLY",
         "pattern": "/3V3"
+      },
+      {
+        "netclass": "SIGNAL",
+        "pattern": "EN"
+      },
+      {
+        "netclass": "SIGNAL",
+        "pattern": "ESP_IO0"
+      },
+      {
+        "netclass": "SIGNAL",
+        "pattern": "/BNO_INT"
+      },
+      {
+        "netclass": "ANALOG",
+        "pattern": "ADC_BAT"
+      },
+      {
+        "netclass": "SIGNAL",
+        "pattern": "/RST_BTTN"
+      },
+      {
+        "netclass": "COMMS",
+        "pattern": "/SDA1"
+      },
+      {
+        "netclass": "COMMS",
+        "pattern": "/SCL1"
+      },
+      {
+        "netclass": "SIGNAL",
+        "pattern": "/M1_IN1"
+      },
+      {
+        "netclass": "SIGNAL",
+        "pattern": "/M1_IN2"
+      },
+      {
+        "netclass": "SIGNAL",
+        "pattern": "/M1_DISABLE"
+      },
+      {
+        "netclass": "COMMS",
+        "pattern": "/CS_cam"
+      },
+      {
+        "netclass": "COMMS",
+        "pattern": "/MOSI_cam"
+      },
+      {
+        "netclass": "COMMS",
+        "pattern": "/SCK_cam"
+      },
+      {
+        "netclass": "COMMS",
+        "pattern": "/MISO_cam"
+      },
+      {
+        "netclass": "SIGNAL",
+        "pattern": "/M2_IN1"
+      },
+      {
+        "netclass": "SIGNAL",
+        "pattern": "/M2_IN2"
+      },
+      {
+        "netclass": "SIGNAL",
+        "pattern": "/M2_DISABLE"
+      },
+      {
+        "netclass": "COMMS",
+        "pattern": "/TX_RC"
+      },
+      {
+        "netclass": "COMMS",
+        "pattern": "/RX_RC"
+      },
+      {
+        "netclass": "COMMS",
+        "pattern": "/TX_1"
+      },
+      {
+        "netclass": "COMMS",
+        "pattern": "/RX_1"
+      },
+      {
+        "netclass": "USB",
+        "pattern": "USB_D-"
+      },
+      {
+        "netclass": "USB",
+        "pattern": "USB_D+"
+      },
+      {
+        "netclass": "SIGNAL",
+        "pattern": "/M1_nFAULT"
+      },
+      {
+        "netclass": "SIGNAL",
+        "pattern": "/M2_nFAULT"
+      },
+      {
+        "netclass": "SIGNAL",
+        "pattern": "/SERVO_CRL"
+      },
+      {
+        "netclass": "SIGNAL",
+        "pattern": "/PIN_AUX1"
+      },
+      {
+        "netclass": "SIGNAL",
+        "pattern": "/PIN_AUX2"
+      },
+      {
+        "netclass": "SIGNAL",
+        "pattern": "/PIN_AUX3"
+      },
+      {
+        "netclass": "COMMS",
+        "pattern": "/SDA_cam"
+      },
+      {
+        "netclass": "COMMS",
+        "pattern": "/SCL_cam"
+      },
+      {
+        "netclass": "CRISTAL",
+        "pattern": "/XTAL_N"
+      },
+      {
+        "netclass": "CRISTAL",
+        "pattern": "/XTAL_P"
+      },
+      {
+        "netclass": "POWER_DIST",
+        "pattern": "V_BUS"
+      },
+      {
+        "netclass": "USB",
+        "pattern": "/MCU/D-"
+      },
+      {
+        "netclass": "USB",
+        "pattern": "/MCU/D+"
+      },
+      {
+        "netclass": "USB",
+        "pattern": "/MCU/CC1"
+      },
+      {
+        "netclass": "USB",
+        "pattern": "/MCU/CC2"
+      },
+      {
+        "netclass": "POWER_SUPPLY",
+        "pattern": "12V"
+      },
+      {
+        "netclass": "POWER_DIST",
+        "pattern": "V_BAT"
+      },
+      {
+        "netclass": "POWER_DIST",
+        "pattern": "V_SELEC"
+      },
+      {
+        "netclass": "POWER_DIST",
+        "pattern": "+3.3V"
       }
     ]
   },
@@ -636,12 +810,72 @@
           "label": "Datasheet",
           "name": "Datasheet",
           "show": true
+        },
+        {
+          "group_by": false,
+          "label": "Arrow Price/Stock",
+          "name": "Arrow Price/Stock",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Height",
+          "name": "Height",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Manufacturer_Name",
+          "name": "Manufacturer_Name",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Manufacturer_Part_Number",
+          "name": "Manufacturer_Part_Number",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Mouser Part Number",
+          "name": "Mouser Part Number",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Mouser Price/Stock",
+          "name": "Mouser Price/Stock",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Sim.Pins",
+          "name": "Sim.Pins",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Arrow Part Number",
+          "name": "Arrow Part Number",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Description",
+          "name": "Description",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "#",
+          "name": "${ITEM_NUMBER}",
+          "show": false
         }
       ],
       "filter_string": "",
       "group_symbols": true,
       "include_excluded_from_bom": true,
-      "name": "Default Editing",
+      "name": "",
       "sort_asc": true,
       "sort_field": "Reference"
     },
