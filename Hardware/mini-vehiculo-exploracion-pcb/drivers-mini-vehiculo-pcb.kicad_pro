@@ -617,6 +617,10 @@
     [
       "a0a3a615-a0eb-4e9b-a594-71f734cb4e88",
       "Electrical"
+    ],
+    [
+      "09f4a7ab-b5f1-4ef7-9bc4-d2f318ad2ada",
+      "Battery Sensor"
     ]
   ],
   "text_variables": {}
