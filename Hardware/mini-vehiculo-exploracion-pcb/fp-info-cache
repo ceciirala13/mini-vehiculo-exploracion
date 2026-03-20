@@ -1,4 +1,4 @@
-27282856249001046
+27272224317697245
 830003000
 830003000
 830003000-2
@@ -60206,6 +60206,13 @@ ceramic
 0
 3
 3
+DRV8873HPWPRQ1
+DRV8873HPWPRQ1
+
+
+0
+43
+43
 Diode_SMD
 D_0201_0603Metric
 Diode SMD 0201 (0603 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: https://www.vishay.com/docs/20052/crcw0201e3.pdf), generated with kicad-footprint-generator
@@ -98748,69 +98755,6 @@ Fuse
 0
 2
 2
-SamacSys_Parts
-NE555DR
-D (R-PDSO-G8)
-Integrated Circuit
-0
-8
-8
-SamacSys_Parts
-NVMFS5C430NAFT1GYE
-DFNW5 5x6 CASE 507BE ISSUE O
-MOSFET (N-Channel)
-0
-9
-9
-SamacSys_Parts
-NVMFS5C442NLWFAFT1G
-DFN5 5x6, 1.27P  (SO−8FL) CASE 488AA ISSUE N
-MOSFET (N-Channel)
-0
-9
-9
-SamacSys_Parts
-SMD030F20182
-SMD030F-2018-2
-Fuse
-0
-2
-2
-SamacSys_Parts
-SMD200F2429202
-SMD200F/24-2920-2-3
-Fuse
-0
-2
-2
-SamacSys_Parts
-SODFL4725X110N
-(SOD128)
-Diode
-0
-2
-2
-SamacSys_Parts
-SOIC127P600X175-8N
-SOP_8_2022
-MOSFET (P-Channel)
-0
-8
-8
-SamacSys_Parts
-SOT230P700X180-4N
-3-Pin SOT-223
-Integrated Circuit
-0
-4
-4
-SamacSys_Parts
-SOTFL50P160X60-6N
-DRL0006A
-Integrated Circuit
-0
-6
-6
 Sensor
 ASAIR_AM2302_P2.54mm_Lead2.75mm_TabDown
 Temperature and humidity module, http://akizukidenshi.com/download/ds/aosong/AM2302.pdf
@@ -108153,6 +108097,20 @@ Varistor
 Varistor_Panasonic_VF
 Panasonic VF series varistor, 6x8mm body, 3.2mm height, https://mediap.industry.panasonic.eu/assets/imported/industrial.panasonic.com/cdbs/www-data/pdf/AWA0000/AWA0000C4.pdf
 Varistor VF
+0
+2
+2
+capacitores_driver
+CAPC2012X88N
+
+
+0
+2
+2
+capacitores_driver
+CAPC2012X140N
+
+
 0
 2
 2

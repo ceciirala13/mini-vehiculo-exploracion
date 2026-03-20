@@ -27,7 +27,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "DRV8873HPWPRQ1:DRV8873HPWPRQ1"
+		(property "Footprint" "DRV8873HPWPRQ1:SOP65P640X120-25N"
 			(at 0 0 0)
 			(effects
 				(font

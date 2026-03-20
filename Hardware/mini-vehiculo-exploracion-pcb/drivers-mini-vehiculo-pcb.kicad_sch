@@ -2821,9 +2821,9 @@
 		)
 		(uuid "73c94843-e70a-47fd-b968-ef82ca4a8cff")
 	)
-	(text "Bateria 12V"
+	(text "POWER SERVOMOTOR"
 		(exclude_from_sim no)
-		(at 83.058 166.37 0)
+		(at 87.376 166.37 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3877,6 +3877,16 @@
 		)
 		(uuid "4f478ee6-734a-425f-bc28-8f230e648f6a")
 	)
+	(label "CTRL_SERVO"
+		(at 45.72 144.78 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "5fc390ca-2298-47b4-a2ee-104605c4b5b6")
+	)
 	(label "M2_V-"
 		(at 186.69 83.82 180)
 		(effects
@@ -3937,7 +3947,7 @@
 		)
 		(uuid "b8e19ddb-985e-4650-b090-f6bb38e66b73")
 	)
-	(label "M1_DISABLE"
+	(label "M1_nFAULT"
 		(at 46.99 172.72 0)
 		(effects
 			(font
@@ -3967,7 +3977,7 @@
 		)
 		(uuid "d6e53c49-c914-49a9-99d4-28ea2c516945")
 	)
-	(label "M2_DISABLE"
+	(label "M2_nFAULT"
 		(at 46.99 175.26 0)
 		(effects
 			(font
@@ -4037,7 +4047,7 @@
 		)
 		(uuid "f3f36a63-d4f0-4927-aa6f-74ceb7ce461c")
 	)
-	(global_label "+12V"
+	(global_label "+5V"
 		(shape input)
 		(at 91.44 176.53 0)
 		(fields_autoplaced yes)
@@ -4049,7 +4059,7 @@
 		)
 		(uuid "11e76684-f6e4-42f4-bf7b-fd38193ecbc3")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 99.5052 176.53 0)
+			(at 98.2957 176.53 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4767,7 +4777,7 @@
 				)
 			)
 		)
-		(property "Value" "Conn_01x02_Battery"
+		(property "Value" "Conn_01x02_Servo"
 			(at 87.122 172.212 0)
 			(effects
 				(font
@@ -5182,7 +5192,7 @@
 				)
 			)
 		)
-		(property "Footprint" "DRV8873HPWPRQ1:SOP65P640X120-25N"
+		(property "Footprint" "DRV8873HPWPRQ1:DRV8873HPWPRQ1"
 			(at 92.71 82.55 0)
 			(effects
 				(font
@@ -6062,7 +6072,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "47u"
+		(property "Value" "47n"
 			(at 69.85 73.6599 0)
 			(effects
 				(font
@@ -6479,7 +6489,7 @@
 				)
 			)
 		)
-		(property "Footprint" "DRV8873HPWPRQ1:SOP65P640X120-25N"
+		(property "Footprint" "DRV8873HPWPRQ1:DRV8873HPWPRQ1"
 			(at 204.47 83.82 0)
 			(effects
 				(font
@@ -8128,7 +8138,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "47u"
+		(property "Value" "47n"
 			(at 181.61 74.9299 0)
 			(effects
 				(font
