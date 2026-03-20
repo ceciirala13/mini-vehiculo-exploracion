@@ -4648,7 +4648,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "capacitores_driver:CAPC2012X88N"
 			(at 167.3352 66.04 0)
 			(effects
 				(font
@@ -5055,7 +5055,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "capacitores_driver:CAPC2012X88N"
 			(at 167.3352 74.93 0)
 			(effects
 				(font
@@ -5946,7 +5946,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "capacitores_driver:CAPC2012X88N"
 			(at 55.5752 64.77 0)
 			(effects
 				(font
@@ -6081,7 +6081,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "capacitores_driver:CAPC2012X140N"
 			(at 67.0052 76.2 0)
 			(effects
 				(font
@@ -6421,7 +6421,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "capacitores_driver:CAPC2012X88N"
 			(at 67.0052 52.07 0)
 			(effects
 				(font
@@ -7396,7 +7396,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "capacitores_driver:CAPC2012X88N"
 			(at 177.4952 53.34 0)
 			(effects
 				(font
@@ -7466,7 +7466,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "capacitores_driver:CAPC2012X88N"
 			(at 45.4152 73.66 0)
 			(effects
 				(font
@@ -7536,7 +7536,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "capacitores_driver:CAPC2012X88N"
 			(at 55.5752 73.66 0)
 			(effects
 				(font
@@ -7942,7 +7942,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "capacitores_driver:CAPC2012X88N"
 			(at 157.1752 74.93 0)
 			(effects
 				(font
@@ -8147,7 +8147,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "capacitores_driver:CAPC2012X140N"
 			(at 178.7652 77.47 0)
 			(effects
 				(font
