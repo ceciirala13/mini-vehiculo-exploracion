@@ -9193,8 +9193,50 @@
 		)
 	)
 	(sheet
+		(at 234.315 138.43)
+		(size 33.02 17.145)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "27757aec-ab0f-470c-ac2a-d85fc9232d35")
+		(property "Sheetname" "Battery_sensor"
+			(at 234.315 137.7184 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "battery_sensor.kicad_sch"
+			(at 234.315 156.1596 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "mini-vehiculo-exploracion-pcb"
+				(path "/3cb3b833-c38f-47b4-b7e9-f0e6337b7613"
+					(page "4")
+				)
+			)
+		)
+	)
+	(sheet
 		(at 234.95 90.17)
-		(size 40.64 24.13)
+		(size 32.385 17.145)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
@@ -9208,7 +9250,7 @@
 			(color 0 0 0 0.0000)
 		)
 		(uuid "7b198334-65f4-4536-9697-14ad78bccec0")
-		(property "Sheetname" "MCU"
+		(property "Sheetname" "MCU_Peripherals"
 			(at 234.95 89.4584 0)
 			(effects
 				(font
@@ -9218,7 +9260,7 @@
 			)
 		)
 		(property "Sheetfile" "mcu.kicad_sch"
-			(at 234.95 114.8846 0)
+			(at 234.95 107.8996 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9235,7 +9277,7 @@
 		)
 	)
 	(sheet
-		(at 234.95 124.46)
+		(at 234.315 114.3)
 		(size 33.02 16.51)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -9251,7 +9293,7 @@
 		)
 		(uuid "d054e30f-93c7-4141-9b1f-3289ce35fefa")
 		(property "Sheetname" "Electrical"
-			(at 234.95 123.7484 0)
+			(at 234.315 113.5884 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9260,7 +9302,7 @@
 			)
 		)
 		(property "Sheetfile" "electrical.kicad_sch"
-			(at 234.95 141.5546 0)
+			(at 234.315 131.3946 0)
 			(effects
 				(font
 					(size 1.27 1.27)

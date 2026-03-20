@@ -729,6 +729,10 @@
       {
         "netclass": "POWER_DIST",
         "pattern": "+3.3V"
+      },
+      {
+        "netclass": "POWER_SUPPLY",
+        "pattern": "ENT_BAT"
       }
     ]
   },
@@ -926,11 +930,15 @@
     ],
     [
       "7b198334-65f4-4536-9697-14ad78bccec0",
-      "MCU"
+      "MCU_Peripherals"
     ],
     [
       "d054e30f-93c7-4141-9b1f-3289ce35fefa",
       "Electrical"
+    ],
+    [
+      "27757aec-ab0f-470c-ac2a-d85fc9232d35",
+      "Battery_sensor"
     ]
   ],
   "text_variables": {}
