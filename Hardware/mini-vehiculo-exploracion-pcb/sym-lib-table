@@ -20,4 +20,5 @@
   (lib (name "TPS561208DDCR")(type "KiCad")(uri "${KIPRJMOD}/Assets/TPS561208DDCR/TPS561208DDCR.kicad_sym")(options "")(descr ""))
   (lib (name "PMEG040V030EPE-QZ")(type "KiCad")(uri "${KIPRJMOD}/Assets/PMEG040V030EPE-QZ/PMEG040V030EPE-QZ.kicad_sym")(options "")(descr ""))
   (lib (name "V15PM6HM3_H")(type "KiCad")(uri "${KIPRJMOD}/Assets/V15PM6HM3_H/V15PM6HM3_H.kicad_sym")(options "")(descr ""))
+  (lib (name "SF-1206SA1500R-2")(type "KiCad")(uri "${KIPRJMOD}/Assets/SF-1206SA1500R-2/SF-1206SA1500R-2.kicad_sym")(options "")(descr ""))
 )
