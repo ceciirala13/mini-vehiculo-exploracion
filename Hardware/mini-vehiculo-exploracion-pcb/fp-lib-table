@@ -27,4 +27,5 @@
   (lib (name "DRV8873HPWPRQ1")(type "KiCad")(uri "${KIPRJMOD}/Assets/DRV8873HPWPRQ1")(options "")(descr ""))
   (lib (name "Diode_82350120560")(type "KiCad")(uri "${KIPRJMOD}/Assets/Diode_82350120560")(options "")(descr ""))
   (lib (name "B3FS-1010")(type "KiCad")(uri "${KIPRJMOD}/Assets/B3FS-1010")(options "")(descr ""))
+  (lib (name "LM358AN_NOPB")(type "KiCad")(uri "${KIPRJMOD}/Assets/LM358AN_NOPB")(options "")(descr ""))
 )
