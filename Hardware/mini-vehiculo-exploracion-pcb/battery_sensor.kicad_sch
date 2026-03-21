@@ -1351,80 +1351,6 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 76.2 102.87 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "103e9b74-986d-4573-8d6d-aa1580f077ae")
-		(property "Reference" "R?"
-			(at 76.2 96.52 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "18k"
-			(at 76.2 99.06 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 76.2 101.092 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 76.2 102.87 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 76.2 102.87 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "def0ebfe-113b-46a7-a479-12770ec59f94")
-		)
-		(pin "2"
-			(uuid "e9e9f558-a685-40f1-8c25-c70c20e49349")
-		)
-		(instances
-			(project "mini-vehiculo-exploracion-pcb"
-				(path "/3cb3b833-c38f-47b4-b7e9-f0e6337b7613/27757aec-ab0f-470c-ac2a-d85fc9232d35"
-					(reference "R21")
-					(unit 1)
-				)
-			)
-			(project "drivers-mini-vehiculo-pcb"
-				(path "/7776e3ee-622a-4a3e-a213-279f6f5df2cb/09f4a7ab-b5f1-4ef7-9bc4-d2f318ad2ada"
-					(reference "R?")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
 		(at 99.06 102.87 90)
 		(unit 1)
 		(exclude_from_sim no)
@@ -1432,8 +1358,8 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "15549206-bdb3-425d-9dc2-c0dd8016e082")
-		(property "Reference" "R?"
+		(uuid "09ea26dc-7f49-453d-acef-c1f4d64a897f")
+		(property "Reference" "R12"
 			(at 99.06 96.52 90)
 			(effects
 				(font
@@ -1449,7 +1375,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
 			(at 99.06 104.648 90)
 			(effects
 				(font
@@ -1477,21 +1403,150 @@
 			)
 		)
 		(pin "1"
-			(uuid "cb6719e9-33b1-4c03-8f60-505c0e84cdcd")
+			(uuid "b0c58076-8d4a-4edc-a7a2-dfe076127714")
 		)
 		(pin "2"
-			(uuid "f817651d-82f7-4498-bbf3-0eb3242ed57b")
+			(uuid "2f56af41-e296-40af-846b-8d9e79692de9")
 		)
 		(instances
-			(project "mini-vehiculo-exploracion-pcb"
-				(path "/3cb3b833-c38f-47b4-b7e9-f0e6337b7613/27757aec-ab0f-470c-ac2a-d85fc9232d35"
-					(reference "R22")
+			(project "drivers-mini-vehiculo-pcb"
+				(path "/7776e3ee-622a-4a3e-a213-279f6f5df2cb/09f4a7ab-b5f1-4ef7-9bc4-d2f318ad2ada"
+					(reference "R12")
 					(unit 1)
 				)
 			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 219.71 73.66 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "1fae9264-a518-49cc-a32a-d4628964fa09")
+		(property "Reference" "C21"
+			(at 219.71 66.04 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "4.7u"
+			(at 219.71 68.58 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
+			(at 223.52 72.6948 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 219.71 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 219.71 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "ff86a9bf-67e4-45da-8522-2a8205d21270")
+		)
+		(pin "2"
+			(uuid "1d360792-8056-47f2-9d4c-680458d5f9b2")
+		)
+		(instances
 			(project "drivers-mini-vehiculo-pcb"
 				(path "/7776e3ee-622a-4a3e-a213-279f6f5df2cb/09f4a7ab-b5f1-4ef7-9bc4-d2f318ad2ada"
-					(reference "R?")
+					(reference "C21")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 161.29 72.39 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "2dd5d37c-5c51-4206-8f58-657bc5464fc5")
+		(property "Reference" "TP3"
+			(at 163.83 67.8179 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "OP1_Out"
+			(at 163.83 70.3579 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_1.5x1.5mm"
+			(at 166.37 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 166.37 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 161.29 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "d26eaf28-7c47-4db1-8062-cb4b5369a500")
+		)
+		(instances
+			(project "drivers-mini-vehiculo-pcb"
+				(path "/7776e3ee-622a-4a3e-a213-279f6f5df2cb/09f4a7ab-b5f1-4ef7-9bc4-d2f318ad2ada"
+					(reference "TP3")
 					(unit 1)
 				)
 			)
@@ -1783,7 +1838,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
 			(at 112.7252 116.84 0)
 			(effects
 				(font
@@ -1826,6 +1881,76 @@
 			(project ""
 				(path "/7776e3ee-622a-4a3e-a213-279f6f5df2cb/09f4a7ab-b5f1-4ef7-9bc4-d2f318ad2ada"
 					(reference "C18")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 204.47 111.76 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "467b6a1e-7570-40ea-898c-1e66c4ec55d6")
+		(property "Reference" "C20"
+			(at 208.28 110.4899 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10uF"
+			(at 208.28 113.0299 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
+			(at 205.4352 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 204.47 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 204.47 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "0110278f-c59f-4ae1-b560-0c28b686413d")
+		)
+		(pin "2"
+			(uuid "bb419e0c-a36d-4fdb-8ab1-32d99176638a")
+		)
+		(instances
+			(project "drivers-mini-vehiculo-pcb"
+				(path "/7776e3ee-622a-4a3e-a213-279f6f5df2cb/09f4a7ab-b5f1-4ef7-9bc4-d2f318ad2ada"
+					(reference "C20")
 					(unit 1)
 				)
 			)
@@ -1912,8 +2037,8 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "60c49fa3-4814-4bb2-90c1-dc177b07a45f")
-		(property "Reference" "R?"
+		(uuid "58ed5f85-02e8-47d7-bb37-da518b4d975b")
+		(property "Reference" "R14"
 			(at 198.12 93.98 90)
 			(effects
 				(font
@@ -1929,7 +2054,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
 			(at 198.12 102.108 90)
 			(effects
 				(font
@@ -1957,21 +2082,82 @@
 			)
 		)
 		(pin "1"
-			(uuid "35c63586-7fdd-4420-812d-410f91db8fb4")
+			(uuid "260ca84d-5c57-4a4d-849d-22cd20863f60")
 		)
 		(pin "2"
-			(uuid "d68a2525-8df4-4bdc-92e2-384b83c01820")
+			(uuid "d8ea36b1-df01-4e68-ae20-0eace1a7164e")
 		)
 		(instances
-			(project "mini-vehiculo-exploracion-pcb"
-				(path "/3cb3b833-c38f-47b4-b7e9-f0e6337b7613/27757aec-ab0f-470c-ac2a-d85fc9232d35"
-					(reference "R24")
+			(project "drivers-mini-vehiculo-pcb"
+				(path "/7776e3ee-622a-4a3e-a213-279f6f5df2cb/09f4a7ab-b5f1-4ef7-9bc4-d2f318ad2ada"
+					(reference "R14")
 					(unit 1)
 				)
 			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 241.3 71.12 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "5fa48e15-33a0-4356-bcce-ab5d211039f5")
+		(property "Reference" "TP2"
+			(at 243.84 66.5479 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "OP2_Out"
+			(at 243.84 69.0879 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_1.5x1.5mm"
+			(at 246.38 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 246.38 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 241.3 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "e7fa6a9a-9d9a-43f0-96ec-4c1b48b2aa36")
+		)
+		(instances
 			(project "drivers-mini-vehiculo-pcb"
 				(path "/7776e3ee-622a-4a3e-a213-279f6f5df2cb/09f4a7ab-b5f1-4ef7-9bc4-d2f318ad2ada"
-					(reference "R?")
+					(reference "TP2")
 					(unit 1)
 				)
 			)
@@ -2071,33 +2257,35 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:C")
-		(at 219.71 73.66 90)
+		(lib_id "Device:R")
+		(at 54.61 111.76 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "7789ffc2-c33a-453a-a808-44cac836f312")
-		(property "Reference" "C?"
-			(at 219.71 66.04 90)
+		(uuid "74fa03db-2b26-4db8-a2c7-423f2161ad04")
+		(property "Reference" "R10"
+			(at 57.15 110.4899 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify right)
 			)
 		)
-		(property "Value" "4.7u"
-			(at 219.71 68.58 90)
+		(property "Value" "10k"
+			(at 57.15 113.0299 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify right)
 			)
 		)
-		(property "Footprint" ""
-			(at 223.52 72.6948 0)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+			(at 56.388 111.76 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2106,7 +2294,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 219.71 73.66 0)
+			(at 54.61 111.76 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2114,8 +2302,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Unpolarized capacitor"
-			(at 219.71 73.66 0)
+		(property "Description" "Resistor"
+			(at 54.61 111.76 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2124,21 +2312,15 @@
 			)
 		)
 		(pin "1"
-			(uuid "f60c489e-3349-4d92-81b3-a24fb2369693")
+			(uuid "b3a04adc-40fc-4bb8-8d35-582cdeb175c0")
 		)
 		(pin "2"
-			(uuid "c6736546-6539-40fb-bd58-1ab3b51172e3")
+			(uuid "67ae5523-a243-4e7c-a6bb-cd21701cee10")
 		)
 		(instances
-			(project "mini-vehiculo-exploracion-pcb"
-				(path "/3cb3b833-c38f-47b4-b7e9-f0e6337b7613/27757aec-ab0f-470c-ac2a-d85fc9232d35"
-					(reference "C23")
-					(unit 1)
-				)
-			)
 			(project "drivers-mini-vehiculo-pcb"
 				(path "/7776e3ee-622a-4a3e-a213-279f6f5df2cb/09f4a7ab-b5f1-4ef7-9bc4-d2f318ad2ada"
-					(reference "C?")
+					(reference "R10")
 					(unit 1)
 				)
 			)
@@ -2218,34 +2400,32 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 54.61 111.76 180)
+		(at 76.2 102.87 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "88e60b4c-47fc-41a4-826e-875bfbaadd36")
-		(property "Reference" "R?"
-			(at 57.15 110.4899 0)
+		(uuid "85b887f7-0c18-43d2-8f2d-4cc1b9862836")
+		(property "Reference" "R11"
+			(at 76.2 96.52 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
 			)
 		)
-		(property "Value" "10k"
-			(at 57.15 113.0299 0)
+		(property "Value" "18k"
+			(at 76.2 99.06 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
 			)
 		)
-		(property "Footprint" ""
-			(at 56.388 111.76 90)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+			(at 76.2 101.092 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2254,7 +2434,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 54.61 111.76 0)
+			(at 76.2 102.87 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2263,7 +2443,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 54.61 111.76 0)
+			(at 76.2 102.87 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2272,94 +2452,15 @@
 			)
 		)
 		(pin "1"
-			(uuid "5e161e67-674a-4528-a7a2-b5c29bfcf3d1")
+			(uuid "69407255-0aaf-40e3-a2f9-041697337f23")
 		)
 		(pin "2"
-			(uuid "4d1bd34c-da5c-4420-9faa-eb8cfcbfb6b1")
+			(uuid "39675ff0-df45-49e5-be0b-b3b0c0510259")
 		)
 		(instances
-			(project "mini-vehiculo-exploracion-pcb"
-				(path "/3cb3b833-c38f-47b4-b7e9-f0e6337b7613/27757aec-ab0f-470c-ac2a-d85fc9232d35"
-					(reference "R20")
-					(unit 1)
-				)
-			)
 			(project "drivers-mini-vehiculo-pcb"
 				(path "/7776e3ee-622a-4a3e-a213-279f6f5df2cb/09f4a7ab-b5f1-4ef7-9bc4-d2f318ad2ada"
-					(reference "R?")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 161.29 72.39 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "8ef6e4c4-36b9-403b-a92f-fa09afd23775")
-		(property "Reference" "TP?"
-			(at 163.83 67.8179 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "OP1_Out"
-			(at 163.83 70.3579 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 166.37 72.39 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 166.37 72.39 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "test point"
-			(at 161.29 72.39 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "f183d34f-6bd2-45fe-94de-3240ed6def14")
-		)
-		(instances
-			(project "mini-vehiculo-exploracion-pcb"
-				(path "/3cb3b833-c38f-47b4-b7e9-f0e6337b7613/27757aec-ab0f-470c-ac2a-d85fc9232d35"
-					(reference "TP2")
-					(unit 1)
-				)
-			)
-			(project "drivers-mini-vehiculo-pcb"
-				(path "/7776e3ee-622a-4a3e-a213-279f6f5df2cb/09f4a7ab-b5f1-4ef7-9bc4-d2f318ad2ada"
-					(reference "TP?")
+					(reference "R11")
 					(unit 1)
 				)
 			)
@@ -2393,7 +2494,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "TestPoint:TestPoint_Pad_1.5x1.5mm"
 			(at 72.39 87.63 0)
 			(effects
 				(font
@@ -2466,7 +2567,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
 			(at 56.388 91.44 90)
 			(effects
 				(font
@@ -2595,8 +2696,8 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "c987f80c-406e-4c44-ab6c-7209bab7d4ac")
-		(property "Reference" "R?"
+		(uuid "e474db21-b960-4099-a476-3320383fa516")
+		(property "Reference" "R13"
 			(at 180.34 93.98 90)
 			(effects
 				(font
@@ -2612,7 +2713,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
 			(at 180.34 102.108 90)
 			(effects
 				(font
@@ -2640,94 +2741,15 @@
 			)
 		)
 		(pin "1"
-			(uuid "c8c466ac-4ca6-4308-8100-747b460dd380")
+			(uuid "6df11d5c-561e-4103-9d9a-325ba23881cc")
 		)
 		(pin "2"
-			(uuid "2d4799ec-13d4-40aa-ad78-6fe963f25f6f")
+			(uuid "88798b23-07cb-472a-8d3a-8dd545f9b82c")
 		)
 		(instances
-			(project "mini-vehiculo-exploracion-pcb"
-				(path "/3cb3b833-c38f-47b4-b7e9-f0e6337b7613/27757aec-ab0f-470c-ac2a-d85fc9232d35"
-					(reference "R23")
-					(unit 1)
-				)
-			)
 			(project "drivers-mini-vehiculo-pcb"
 				(path "/7776e3ee-622a-4a3e-a213-279f6f5df2cb/09f4a7ab-b5f1-4ef7-9bc4-d2f318ad2ada"
-					(reference "R?")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 241.3 71.12 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "da4f875a-297d-4df7-a547-42c5a1300315")
-		(property "Reference" "TP?"
-			(at 243.84 66.5479 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "OP2_Out"
-			(at 243.84 69.0879 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 246.38 71.12 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 246.38 71.12 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "test point"
-			(at 241.3 71.12 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "28e8cb91-2a77-46a1-9cb0-cb39b47685bd")
-		)
-		(instances
-			(project "mini-vehiculo-exploracion-pcb"
-				(path "/3cb3b833-c38f-47b4-b7e9-f0e6337b7613/27757aec-ab0f-470c-ac2a-d85fc9232d35"
-					(reference "TP3")
-					(unit 1)
-				)
-			)
-			(project "drivers-mini-vehiculo-pcb"
-				(path "/7776e3ee-622a-4a3e-a213-279f6f5df2cb/09f4a7ab-b5f1-4ef7-9bc4-d2f318ad2ada"
-					(reference "TP?")
+					(reference "R13")
 					(unit 1)
 				)
 			)
@@ -2759,7 +2781,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
 			(at 135.89 73.9648 0)
 			(effects
 				(font
@@ -2802,82 +2824,6 @@
 			(project ""
 				(path "/7776e3ee-622a-4a3e-a213-279f6f5df2cb/09f4a7ab-b5f1-4ef7-9bc4-d2f318ad2ada"
 					(reference "C19")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C")
-		(at 204.47 111.76 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "e6fb59a8-0da6-4cd0-a677-46f23155209a")
-		(property "Reference" "C?"
-			(at 208.28 110.4899 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "10uF"
-			(at 208.28 113.0299 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 205.4352 115.57 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 204.47 111.76 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Unpolarized capacitor"
-			(at 204.47 111.76 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "ec814a4e-5fb9-4461-b96d-4ef4b19c18bf")
-		)
-		(pin "2"
-			(uuid "889f1009-6caa-4f8f-831f-f89b21f092c3")
-		)
-		(instances
-			(project "mini-vehiculo-exploracion-pcb"
-				(path "/3cb3b833-c38f-47b4-b7e9-f0e6337b7613/27757aec-ab0f-470c-ac2a-d85fc9232d35"
-					(reference "C24")
-					(unit 1)
-				)
-			)
-			(project "drivers-mini-vehiculo-pcb"
-				(path "/7776e3ee-622a-4a3e-a213-279f6f5df2cb/09f4a7ab-b5f1-4ef7-9bc4-d2f318ad2ada"
-					(reference "C?")
 					(unit 1)
 				)
 			)
