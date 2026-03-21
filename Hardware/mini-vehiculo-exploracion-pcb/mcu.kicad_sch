@@ -4009,7 +4009,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
 			(at 43.18 170.688 90)
 			(effects
 				(font
@@ -4142,7 +4142,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
 			(at 38.4048 38.1 0)
 			(effects
 				(font
@@ -4275,7 +4275,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
 			(at 140.0048 54.61 0)
 			(effects
 				(font
@@ -4345,7 +4345,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
 			(at 135.5852 142.24 0)
 			(effects
 				(font
@@ -4480,7 +4480,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
 			(at 74.93 63.8048 0)
 			(effects
 				(font
@@ -4682,7 +4682,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
 			(at 142.748 38.1 90)
 			(effects
 				(font
@@ -4752,7 +4752,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "LED_SMD:LED_0805_2012Metric"
 			(at 85.09 166.37 0)
 			(effects
 				(font
@@ -4829,7 +4829,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "B3FS-1010:B3FS-1000P"
 			(at 132.08 45.72 0)
 			(effects
 				(font
@@ -4896,7 +4896,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
 			(at 74.93 40.9448 0)
 			(effects
 				(font
@@ -5076,7 +5076,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
 			(at 48.5648 38.1 0)
 			(effects
 				(font
@@ -5426,7 +5426,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Diode_82350120560:CR_50120560_WRE-M"
 			(at 149.86 58.42 0)
 			(effects
 				(font
@@ -5626,7 +5626,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "B3FS-1010:B3FS-1000P"
 			(at 71.12 52.07 0)
 			(effects
 				(font
@@ -5693,7 +5693,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
 			(at 43.18 163.068 90)
 			(effects
 				(font
@@ -5760,7 +5760,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
 			(at 64.77 34.798 90)
 			(effects
 				(font
@@ -5960,7 +5960,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
 			(at 86.868 157.48 90)
 			(effects
 				(font

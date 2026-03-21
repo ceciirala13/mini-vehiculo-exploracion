@@ -3245,7 +3245,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
 			(at 84.7852 62.23 0)
 			(effects
 				(font
@@ -3386,7 +3386,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
 			(at 219.4052 49.53 0)
 			(effects
 				(font
@@ -3460,7 +3460,7 @@
 				)
 			)
 		)
-		(property "Footprint" "SOT65P210X110-5N"
+		(property "Footprint" "MAX8891EXK33_V+T:SOT65P210X110-5N"
 			(at 255.27 127.94 0)
 			(effects
 				(font
@@ -3727,7 +3727,7 @@
 				)
 			)
 		)
-		(property "Footprint" "SOT95P280X110-6N"
+		(property "Footprint" "TPS561208DDCR:SOT95P280X110-6N"
 			(at 123.19 131.75 0)
 			(effects
 				(font
@@ -3859,7 +3859,7 @@
 				)
 			)
 		)
-		(property "Footprint" "PMEG040V030EPEQZ"
+		(property "Footprint" "PMEG040V030EPE-QZ:PMEG040V030EPEQZ"
 			(at 78.74 136.83 0)
 			(effects
 				(font
@@ -4048,7 +4048,7 @@
 				)
 			)
 		)
-		(property "Footprint" "SMD030F20182"
+		(property "Footprint" "SMD100F-2018-2:SMD030F20182"
 			(at 49.53 138.1 0)
 			(effects
 				(font
@@ -4168,7 +4168,7 @@
 				)
 			)
 		)
-		(property "Footprint" "PMEG040V030EPEQZ"
+		(property "Footprint" "PMEG040V030EPE-QZ:PMEG040V030EPEQZ"
 			(at 87.63 229.54 0)
 			(effects
 				(font
@@ -4293,7 +4293,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
 			(at 172.4152 59.69 0)
 			(effects
 				(font
@@ -4431,7 +4431,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "SODFL4725X110N"
+		(property "Footprint" "PTVS13VP1UTP-QX:SODFL4725X110N"
 			(at -66.98 57.15 0)
 			(effects
 				(font
@@ -4559,7 +4559,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
 			(at 270.2052 50.8 0)
 			(effects
 				(font
@@ -4699,7 +4699,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
 			(at 144.78 35.8648 0)
 			(effects
 				(font
@@ -4767,7 +4767,7 @@
 				)
 			)
 		)
-		(property "Footprint" "SOT65P210X110-6N"
+		(property "Footprint" "SI1467DH-T1-BE3:SOT65P210X110-6N"
 			(at 88.9 213.03 0)
 			(effects
 				(font
@@ -4907,7 +4907,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
 			(at 50.292 143.51 90)
 			(effects
 				(font
@@ -4977,7 +4977,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
 			(at 159.512 48.26 90)
 			(effects
 				(font
@@ -5118,7 +5118,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
 			(at 159.512 64.77 90)
 			(effects
 				(font

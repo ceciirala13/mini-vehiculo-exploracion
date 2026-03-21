@@ -1,4 +1,4 @@
-27273996129554965
+27279316409483863
 830003000
 830003000
 830003000-2
@@ -60213,6 +60213,27 @@ SOP65P640X120-25N
 0
 43
 43
+Diode_82350120560
+CR_50120560_WRE
+
+82350120560 
+0
+2
+2
+Diode_82350120560
+CR_50120560_WRE-L
+
+82350120560 
+0
+2
+2
+Diode_82350120560
+CR_50120560_WRE-M
+
+82350120560 
+0
+2
+2
 Diode_SMD
 D_0201_0603Metric
 Diode SMD 0201 (0603 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: https://www.vishay.com/docs/20052/crcw0201e3.pdf), generated with kicad-footprint-generator

@@ -25,4 +25,6 @@
   (lib (name "SMD100F-2018-2")(type "KiCad")(uri "${KIPRJMOD}/Assets/SMD100F-2018-2")(options "")(descr ""))
   (lib (name "EMZR160ARA221MF61G")(type "KiCad")(uri "${KIPRJMOD}/Assets/EMZR160ARA221MF61G.pretty")(options "")(descr ""))
   (lib (name "DRV8873HPWPRQ1")(type "KiCad")(uri "${KIPRJMOD}/Assets/DRV8873HPWPRQ1")(options "")(descr ""))
+  (lib (name "Diode_82350120560")(type "KiCad")(uri "${KIPRJMOD}/Assets/Diode_82350120560")(options "")(descr ""))
+  (lib (name "B3FS-1010")(type "KiCad")(uri "${KIPRJMOD}/Assets/B3FS-1010")(options "")(descr ""))
 )
