@@ -21,4 +21,5 @@
   (lib (name "PMEG040V030EPE-QZ")(type "KiCad")(uri "${KIPRJMOD}/Assets/PMEG040V030EPE-QZ/PMEG040V030EPE-QZ.kicad_sym")(options "")(descr ""))
   (lib (name "V15PM6HM3_H")(type "KiCad")(uri "${KIPRJMOD}/Assets/V15PM6HM3_H/V15PM6HM3_H.kicad_sym")(options "")(descr ""))
   (lib (name "SF-1206SA1500R-2")(type "KiCad")(uri "${KIPRJMOD}/Assets/SF-1206SA1500R-2/SF-1206SA1500R-2.kicad_sym")(options "")(descr ""))
+  (lib (name "SMD100F-2018-2")(type "KiCad")(uri "${KIPRJMOD}/Assets/SMD100F-2018-2/SMD100F-2018-2.kicad_sym")(options "")(descr ""))
 )

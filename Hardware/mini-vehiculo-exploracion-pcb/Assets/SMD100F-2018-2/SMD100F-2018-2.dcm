@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP SMD100F-2018-2
+D Resettable Fuses - PPTC 1.1A 15V 40A Imax
+K
+F https://www.littelfuse.com/~/media/electronics/datasheets/resettable_ptcs/littelfuse_ptc_midsmd_datasheet.pdf.pdf
+$ENDCMP
+#
+#End Doc Library
