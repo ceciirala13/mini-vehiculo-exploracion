@@ -1,4 +1,4 @@
-27286402727052465
+27279316409483863
 830003000
 830003000
 830003000-2
@@ -60206,6 +60206,34 @@ ceramic
 0
 3
 3
+DRV8873HPWPRQ1
+SOP65P640X120-25N
+
+
+0
+43
+43
+Diode_82350120560
+CR_50120560_WRE
+
+82350120560 
+0
+2
+2
+Diode_82350120560
+CR_50120560_WRE-L
+
+82350120560 
+0
+2
+2
+Diode_82350120560
+CR_50120560_WRE-M
+
+82350120560 
+0
+2
+2
 Diode_SMD
 D_0201_0603Metric
 Diode SMD 0201 (0603 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: https://www.vishay.com/docs/20052/crcw0201e3.pdf), generated with kicad-footprint-generator
@@ -62229,6 +62257,13 @@ One digit LED 7 segment SA39-11 SC39-11 SA39-12 SC39-12
 0
 10
 10
+EMZR160ARA221MF61G
+CAPAE660X610N
+CASE  CODE F61
+Capacitor Polarised
+0
+2
+2
 Ferrite_THT
 LairdTech_28C0236-0JW-10
 Ferrite, vertical, LairdTech 28C0236-0JW-10, https://assets.lairdtech.com/home/brandworld/files/28C0236-0JW-10.pdf, JW Miller core https://www.bourns.com/products/magnetic-products/j.w.-miller-through-hole-ferrite-beads-emi-filters
@@ -98762,69 +98797,6 @@ Fuse
 0
 2
 2
-SamacSys_Parts
-NE555DR
-D (R-PDSO-G8)
-Integrated Circuit
-0
-8
-8
-SamacSys_Parts
-NVMFS5C430NAFT1GYE
-DFNW5 5x6 CASE 507BE ISSUE O
-MOSFET (N-Channel)
-0
-9
-9
-SamacSys_Parts
-NVMFS5C442NLWFAFT1G
-DFN5 5x6, 1.27P  (SO−8FL) CASE 488AA ISSUE N
-MOSFET (N-Channel)
-0
-9
-9
-SamacSys_Parts
-SMD030F20182
-SMD030F-2018-2
-Fuse
-0
-2
-2
-SamacSys_Parts
-SMD200F2429202
-SMD200F/24-2920-2-3
-Fuse
-0
-2
-2
-SamacSys_Parts
-SODFL4725X110N
-(SOD128)
-Diode
-0
-2
-2
-SamacSys_Parts
-SOIC127P600X175-8N
-SOP_8_2022
-MOSFET (P-Channel)
-0
-8
-8
-SamacSys_Parts
-SOT230P700X180-4N
-3-Pin SOT-223
-Integrated Circuit
-0
-4
-4
-SamacSys_Parts
-SOTFL50P160X60-6N
-DRL0006A
-Integrated Circuit
-0
-6
-6
 Sensor
 ASAIR_AM2302_P2.54mm_Lead2.75mm_TabDown
 Temperature and humidity module, http://akizukidenshi.com/download/ds/aosong/AM2302.pdf

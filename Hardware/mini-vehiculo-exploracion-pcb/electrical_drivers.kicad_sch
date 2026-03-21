@@ -1659,6 +1659,12 @@
 		(uuid "0e6aec53-b601-4f5f-bf46-a3588eb4cbc9")
 	)
 	(junction
+		(at 124.46 39.37)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "0ef2fd4d-925d-4172-b6c9-19002348aeef")
+	)
+	(junction
 		(at 49.53 64.77)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1677,10 +1683,22 @@
 		(uuid "339764f5-9251-4c7d-bd74-e640efa55b24")
 	)
 	(junction
+		(at 34.29 44.45)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "3c4aff89-671e-41bc-9111-98da254e4a50")
+	)
+	(junction
 		(at 72.39 64.77)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "4ec7363f-1893-4a33-9fc6-835f1c0bf587")
+	)
+	(junction
+		(at 196.85 52.07)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "55b9d687-9d30-4e80-a024-6f1549e21136")
 	)
 	(junction
 		(at 173.99 34.29)
@@ -1723,6 +1741,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "a455e44b-3fbf-4c6d-8bbc-711eec92ed8d")
+	)
+	(junction
+		(at 218.44 36.83)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "c249139b-4725-463b-aa05-a7e756f52a1b")
 	)
 	(junction
 		(at 172.72 52.07)
@@ -1780,16 +1804,6 @@
 	)
 	(wire
 		(pts
-			(xy 31.75 44.45) (xy 35.56 44.45)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "126e4b26-c403-42a3-a069-1cc68b1d0e78")
-	)
-	(wire
-		(pts
 			(xy 45.72 27.94) (xy 45.72 44.45)
 		)
 		(stroke
@@ -1830,23 +1844,13 @@
 	)
 	(wire
 		(pts
-			(xy 123.19 39.37) (xy 127 39.37)
+			(xy 123.19 39.37) (xy 124.46 39.37)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "2840cc24-cbdb-434a-a681-71ae170e20d3")
-	)
-	(wire
-		(pts
-			(xy 27.94 96.52) (xy 31.75 96.52)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2a5fd426-7eb1-46f9-8ab6-a25c1736bef0")
 	)
 	(wire
 		(pts
@@ -1877,6 +1881,16 @@
 			(type default)
 		)
 		(uuid "3cafb187-e63d-4459-a6b9-26223adfc5a0")
+	)
+	(wire
+		(pts
+			(xy 31.75 44.45) (xy 34.29 44.45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3d422601-a99a-48f7-b26a-90aa6183497e")
 	)
 	(wire
 		(pts
@@ -2150,6 +2164,16 @@
 	)
 	(wire
 		(pts
+			(xy 124.46 39.37) (xy 127 39.37)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b1f08508-ec4e-4dc7-ba46-a6045b38929a")
+	)
+	(wire
+		(pts
 			(xy 35.56 44.45) (xy 45.72 44.45)
 		)
 		(stroke
@@ -2160,7 +2184,7 @@
 	)
 	(wire
 		(pts
-			(xy 217.17 36.83) (xy 220.98 36.83)
+			(xy 217.17 36.83) (xy 218.44 36.83)
 		)
 		(stroke
 			(width 0)
@@ -2230,13 +2254,33 @@
 	)
 	(wire
 		(pts
-			(xy 172.72 52.07) (xy 217.17 52.07)
+			(xy 27.94 96.52) (xy 31.75 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c9f33409-9ca7-4b6c-8661-4af36112d170")
+	)
+	(wire
+		(pts
+			(xy 172.72 52.07) (xy 196.85 52.07)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "cd5e1500-5bfe-4a9c-b872-81abde042e38")
+	)
+	(wire
+		(pts
+			(xy 34.29 44.45) (xy 35.56 44.45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ce2912b6-a562-4e17-a13a-0bedc0c1966c")
 	)
 	(wire
 		(pts
@@ -2290,6 +2334,16 @@
 	)
 	(wire
 		(pts
+			(xy 218.44 36.83) (xy 220.98 36.83)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "eed643dd-8339-488e-871b-4978137a6766")
+	)
+	(wire
+		(pts
 			(xy 85.09 50.8) (xy 113.03 50.8)
 		)
 		(stroke
@@ -2327,6 +2381,16 @@
 			(type default)
 		)
 		(uuid "faff519a-5401-4e82-a68f-7f67e05c2cf2")
+	)
+	(wire
+		(pts
+			(xy 196.85 52.07) (xy 217.17 52.07)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ffb89857-351e-40da-8293-53ec47aa9e73")
 	)
 	(global_label "+5V"
 		(shape input)
@@ -2486,7 +2550,7 @@
 				)
 			)
 		)
-		(property "Footprint" "SF1206SA1500R2"
+		(property "Footprint" "SF-1206SA1500R-2:SF1206SA1500R2"
 			(at 55.88 192.71 0)
 			(effects
 				(font
@@ -2608,7 +2672,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
 			(at 111.252 44.45 90)
 			(effects
 				(font
@@ -2651,6 +2715,72 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 196.85 52.07 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "111d353a-6cb8-4ccf-821e-842abcfeaf40")
+		(property "Reference" "#PWR017"
+			(at 196.85 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 196.85 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 196.85 52.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 196.85 52.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 196.85 52.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "ab5b1801-3c38-4cbc-b732-d9044b59b68a")
+		)
+		(instances
+			(project ""
+				(path "/7776e3ee-622a-4a3e-a213-279f6f5df2cb/a0a3a615-a0eb-4e9b-a594-71f734cb4e88"
+					(reference "#PWR017")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C")
 		(at 217.17 41.91 0)
 		(unit 1)
@@ -2678,7 +2808,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
 			(at 218.1352 45.72 0)
 			(effects
 				(font
@@ -2721,6 +2851,72 @@
 		)
 	)
 	(symbol
+		(lib_id "power:PWR_FLAG")
+		(at 34.29 44.45 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "1cc55485-c881-43ac-90e5-43849149f35c")
+		(property "Reference" "#FLG04"
+			(at 34.29 42.545 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "PWR_FLAG"
+			(at 34.29 39.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 34.29 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 34.29 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Special symbol for telling ERC where power comes from"
+			(at 34.29 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "2c1e2f29-e398-4222-a23e-60481cc42e40")
+		)
+		(instances
+			(project "drivers-mini-vehiculo-pcb"
+				(path "/7776e3ee-622a-4a3e-a213-279f6f5df2cb/a0a3a615-a0eb-4e9b-a594-71f734cb4e88"
+					(reference "#FLG04")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "TPS561208DDCR:TPS561208DDCR")
 		(at 50.8 39.37 0)
 		(unit 1)
@@ -2746,7 +2942,7 @@
 				)
 			)
 		)
-		(property "Footprint" "SOT95P280X110-6N"
+		(property "Footprint" "TPS561208DDCR:SOT95P280X110-6N"
 			(at 74.93 134.29 0)
 			(effects
 				(font
@@ -2880,7 +3076,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
 			(at 111.252 57.15 90)
 			(effects
 				(font
@@ -2990,6 +3186,138 @@
 	)
 	(symbol
 		(lib_id "power:PWR_FLAG")
+		(at 124.46 39.37 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "5920154e-b084-4b96-b9cf-b5a96f64538e")
+		(property "Reference" "#FLG05"
+			(at 124.46 37.465 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "PWR_FLAG"
+			(at 124.46 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 124.46 39.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 124.46 39.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Special symbol for telling ERC where power comes from"
+			(at 124.46 39.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "159ba794-3594-4006-b064-28610f1433f8")
+		)
+		(instances
+			(project "drivers-mini-vehiculo-pcb"
+				(path "/7776e3ee-622a-4a3e-a213-279f6f5df2cb/a0a3a615-a0eb-4e9b-a594-71f734cb4e88"
+					(reference "#FLG05")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:PWR_FLAG")
+		(at 218.44 36.83 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "5d9e43b4-7893-4d56-99d7-28d155497768")
+		(property "Reference" "#FLG06"
+			(at 218.44 34.925 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "PWR_FLAG"
+			(at 218.44 31.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 218.44 36.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 218.44 36.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Special symbol for telling ERC where power comes from"
+			(at 218.44 36.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "c86c9dd8-890e-4c53-a798-e6bbd77f894d")
+		)
+		(instances
+			(project "drivers-mini-vehiculo-pcb"
+				(path "/7776e3ee-622a-4a3e-a213-279f6f5df2cb/a0a3a615-a0eb-4e9b-a594-71f734cb4e88"
+					(reference "#FLG06")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:PWR_FLAG")
 		(at 31.75 96.52 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -3082,7 +3410,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
 			(at 124.1552 54.61 0)
 			(effects
 				(font
@@ -3218,7 +3546,7 @@
 				)
 			)
 		)
-		(property "Footprint" "SOT65P210X110-5N"
+		(property "Footprint" "MAX8891EXK33_V+T:SOT65P210X110-5N"
 			(at 203.2 129.21 0)
 			(effects
 				(font
@@ -3349,7 +3677,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "SODFL4725X110N"
+		(property "Footprint" "PTVS13VP1UTP-QX:SODFL4725X110N"
 			(at -65.71 111.76 0)
 			(effects
 				(font
@@ -3469,7 +3797,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
 			(at 96.52 38.4048 0)
 			(effects
 				(font
@@ -3605,7 +3933,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
 			(at 36.5252 55.88 0)
 			(effects
 				(font
@@ -3742,7 +4070,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
 			(at 164.7952 45.72 0)
 			(effects
 				(font
@@ -3810,7 +4138,7 @@
 				)
 			)
 		)
-		(property "Footprint" "V15PM6HM3H"
+		(property "Footprint" "V15PM6HM3_H:V15PM6HM3H"
 			(at 86.36 191.44 0)
 			(effects
 				(font
