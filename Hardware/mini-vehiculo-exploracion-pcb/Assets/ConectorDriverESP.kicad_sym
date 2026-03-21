@@ -876,7 +876,7 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x08, script generated"
-			(at 0 0 0)
+			(at -0.254 13.208 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1095,32 +1095,24 @@
 					(type none)
 				)
 			)
-			(text "IO21"
+			(text "IO14"
+				(at -2.794 -2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(text "IO15"
+				(at -2.794 -5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(text "IO16"
 				(at -2.794 -7.62 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(text "GND"
-				(at -2.54 5.08 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(text "GND"
-				(at -2.54 -0.254 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(text "GND"
-				(at -2.54 -5.08 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -1143,8 +1135,8 @@
 					)
 				)
 			)
-			(text "IO8\n"
-				(at -2.286 2.54 0)
+			(text "IO8"
+				(at -2.286 5.08 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -1152,7 +1144,7 @@
 				)
 			)
 			(text "IO9"
-				(at -2.286 -2.54 0)
+				(at -2.286 2.54 0)
 				(effects
 					(font
 						(size 1.27 1.27)
