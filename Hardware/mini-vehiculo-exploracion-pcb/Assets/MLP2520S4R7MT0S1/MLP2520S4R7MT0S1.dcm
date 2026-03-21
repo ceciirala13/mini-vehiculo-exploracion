@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP MLP2520S4R7MT0S1
+D Inductor Power Shielded Multi-Layer 4.7uH 20% 2MHz Ferrite 1A 169mOhm DCR 1008 T/R
+K
+F https://product.tdk.com/system/files/dam/doc/product/inductor/inductor/smd/catalog/inductor_commercial_power_mlp2520_en.pdf
+$ENDCMP
+#
+#End Doc Library
