@@ -24,4 +24,5 @@
   (lib (name "SMD100F-2018-2")(type "KiCad")(uri "${KIPRJMOD}/Assets/SMD100F-2018-2/SMD100F-2018-2.kicad_sym")(options "")(descr ""))
   (lib (name "B3FS-1010")(type "KiCad")(uri "${KIPRJMOD}/Assets/B3FS-1010/B3FS-1010.kicad_sym")(options "")(descr ""))
   (lib (name "LM358AN_NOPB")(type "KiCad")(uri "${KIPRJMOD}/Assets/LM358AN_NOPB/LM358AN_NOPB.kicad_sym")(options "")(descr ""))
+  (lib (name "MLP2520S4R7MT0S1")(type "KiCad")(uri "${KIPRJMOD}/Assets/MLP2520S4R7MT0S1/MLP2520S4R7MT0S1.kicad_sym")(options "")(descr ""))
 )

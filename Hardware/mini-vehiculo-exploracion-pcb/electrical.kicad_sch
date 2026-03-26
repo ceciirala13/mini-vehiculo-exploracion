@@ -144,168 +144,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Device:L"
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(offset 1.016)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "L"
-				(at -1.27 0 90)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "L"
-				(at 1.905 0 90)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "~"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Inductor"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "inductor choke coil reactor magnetic"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_fp_filters" "Choke_* *Coil* Inductor_* L_*"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "L_0_1"
-				(arc
-					(start 0 2.54)
-					(mid 0.6323 1.905)
-					(end 0 1.27)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start 0 1.27)
-					(mid 0.6323 0.635)
-					(end 0 0)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start 0 0)
-					(mid 0.6323 -0.635)
-					(end 0 -1.27)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start 0 -1.27)
-					(mid 0.6323 -1.905)
-					(end 0 -2.54)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "L_1_1"
-				(pin passive line
-					(at 0 3.81 270)
-					(length 1.27)
-					(name "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -3.81 90)
-					(length 1.27)
-					(name "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "Device:R"
 			(pin_numbers
 				(hide yes)
@@ -626,6 +464,198 @@
 						)
 					)
 					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "MLP2520S4R7MT0S1:MLP2520S4R7MT0S1"
+			(pin_names
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "L"
+				(at 16.51 6.35 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Value" "MLP2520S4R7MT0S1"
+				(at 16.51 3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Footprint" "INDC2520X100N"
+				(at 16.51 -96.19 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "https://product.tdk.com/system/files/dam/doc/product/inductor/inductor/smd/catalog/inductor_commercial_power_mlp2520_en.pdf"
+				(at 16.51 -196.19 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Description" "Inductor Power Shielded Multi-Layer 4.7uH 20% 2MHz Ferrite 1A 169mOhm DCR 1008 T/R"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Height" "1"
+				(at 16.51 -396.19 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Mouser Part Number" "810-MLP2520S4R7MT0S1"
+				(at 16.51 -496.19 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/TDK/MLP2520S4R7MT0S1?qs=%2FPzWLGNeQ%252BgDk3obJem54g%3D%3D"
+				(at 16.51 -596.19 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Manufacturer_Name" "TDK"
+				(at 16.51 -696.19 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Manufacturer_Part_Number" "MLP2520S4R7MT0S1"
+				(at 16.51 -796.19 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(symbol "MLP2520S4R7MT0S1_1_1"
+				(arc
+					(start 5.08 0)
+					(mid 6.35 1.219)
+					(end 7.62 0)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 7.62 0)
+					(mid 8.89 1.219)
+					(end 10.16 0)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 10.16 0)
+					(mid 11.43 1.219)
+					(end 12.7 0)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 12.7 0)
+					(mid 13.97 1.219)
+					(end 15.24 0)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at 0 0 0)
+					(length 5.08)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 20.32 0 180)
+					(length 5.08)
+					(name "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -2026,13 +2056,13 @@
 		(uuid "0dc9669b-14c0-4aee-9341-ad6221d8a5ef")
 	)
 	(junction
-		(at 161.29 57.15)
+		(at 175.26 57.15)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "0f011052-2355-4716-ac87-4b51d93dc2f1")
 	)
 	(junction
-		(at 161.29 36.83)
+		(at 175.26 36.83)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "2e764499-3b5a-46f2-b3ab-888d318bd933")
@@ -2116,13 +2146,13 @@
 		(uuid "afc67912-3a74-449e-a7d6-945ef459e336")
 	)
 	(junction
-		(at 161.29 74.93)
+		(at 175.26 74.93)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "b8f2e883-7721-4013-ac07-88d7b77c8983")
 	)
 	(junction
-		(at 171.45 36.83)
+		(at 185.42 36.83)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "b98cf8c3-87bd-4ca5-bbe1-b43a2faf1771")
@@ -2163,7 +2193,7 @@
 	)
 	(wire
 		(pts
-			(xy 149.86 36.83) (xy 151.13 36.83)
+			(xy 149.86 36.83) (xy 152.4 36.83)
 		)
 		(stroke
 			(width 0)
@@ -2173,7 +2203,7 @@
 	)
 	(wire
 		(pts
-			(xy 171.45 36.83) (xy 172.72 36.83)
+			(xy 185.42 36.83) (xy 186.69 36.83)
 		)
 		(stroke
 			(width 0)
@@ -2183,7 +2213,7 @@
 	)
 	(wire
 		(pts
-			(xy 158.75 36.83) (xy 161.29 36.83)
+			(xy 172.72 36.83) (xy 175.26 36.83)
 		)
 		(stroke
 			(width 0)
@@ -2243,7 +2273,7 @@
 	)
 	(wire
 		(pts
-			(xy 161.29 57.15) (xy 161.29 60.96)
+			(xy 175.26 57.15) (xy 175.26 60.96)
 		)
 		(stroke
 			(width 0)
@@ -2333,7 +2363,7 @@
 	)
 	(wire
 		(pts
-			(xy 137.16 74.93) (xy 161.29 74.93)
+			(xy 137.16 74.93) (xy 175.26 74.93)
 		)
 		(stroke
 			(width 0)
@@ -2363,7 +2393,7 @@
 	)
 	(wire
 		(pts
-			(xy 161.29 52.07) (xy 161.29 57.15)
+			(xy 175.26 52.07) (xy 175.26 57.15)
 		)
 		(stroke
 			(width 0)
@@ -2583,7 +2613,7 @@
 	)
 	(wire
 		(pts
-			(xy 171.45 36.83) (xy 161.29 36.83)
+			(xy 185.42 36.83) (xy 175.26 36.83)
 		)
 		(stroke
 			(width 0)
@@ -2593,7 +2623,7 @@
 	)
 	(wire
 		(pts
-			(xy 161.29 36.83) (xy 161.29 44.45)
+			(xy 175.26 36.83) (xy 175.26 44.45)
 		)
 		(stroke
 			(width 0)
@@ -2683,7 +2713,7 @@
 	)
 	(wire
 		(pts
-			(xy 130.81 57.15) (xy 161.29 57.15)
+			(xy 130.81 57.15) (xy 175.26 57.15)
 		)
 		(stroke
 			(width 0)
@@ -2703,7 +2733,7 @@
 	)
 	(wire
 		(pts
-			(xy 161.29 74.93) (xy 171.45 74.93)
+			(xy 175.26 74.93) (xy 185.42 74.93)
 		)
 		(stroke
 			(width 0)
@@ -2773,7 +2803,7 @@
 	)
 	(wire
 		(pts
-			(xy 161.29 68.58) (xy 161.29 74.93)
+			(xy 175.26 68.58) (xy 175.26 74.93)
 		)
 		(stroke
 			(width 0)
@@ -2793,7 +2823,7 @@
 	)
 	(wire
 		(pts
-			(xy 171.45 52.07) (xy 171.45 36.83)
+			(xy 185.42 52.07) (xy 185.42 36.83)
 		)
 		(stroke
 			(width 0)
@@ -2973,7 +3003,7 @@
 	)
 	(wire
 		(pts
-			(xy 171.45 59.69) (xy 171.45 74.93)
+			(xy 185.42 59.69) (xy 185.42 74.93)
 		)
 		(stroke
 			(width 0)
@@ -3125,7 +3155,7 @@
 	)
 	(global_label "V_BAT"
 		(shape input)
-		(at 172.72 36.83 0)
+		(at 186.69 36.83 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -3135,13 +3165,133 @@
 		)
 		(uuid "fb6c63a1-3a03-42d3-8605-0330cbe2eee3")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 181.0876 36.83 0)
+			(at 195.0576 36.83 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 				(hide yes)
+			)
+		)
+	)
+	(symbol
+		(lib_id "MLP2520S4R7MT0S1:MLP2520S4R7MT0S1")
+		(at 152.4 36.83 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "03c4f3b7-059a-4e7d-9901-8f85f09e6d10")
+		(property "Reference" "L2"
+			(at 162.56 30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "MLP2520S4R7MT0S1"
+			(at 162.56 33.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "MLP2520S4R7MT0S1:INDC2520X100N"
+			(at 168.91 133.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://product.tdk.com/system/files/dam/doc/product/inductor/inductor/smd/catalog/inductor_commercial_power_mlp2520_en.pdf"
+			(at 168.91 233.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Description" "Inductor Power Shielded Multi-Layer 4.7uH 20% 2MHz Ferrite 1A 169mOhm DCR 1008 T/R"
+			(at 152.4 36.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Height" "1"
+			(at 168.91 433.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "810-MLP2520S4R7MT0S1"
+			(at 168.91 533.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/TDK/MLP2520S4R7MT0S1?qs=%2FPzWLGNeQ%252BgDk3obJem54g%3D%3D"
+			(at 168.91 633.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Name" "TDK"
+			(at 168.91 733.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Part_Number" "MLP2520S4R7MT0S1"
+			(at 168.91 833.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "59adafdb-ed21-456f-8f01-88d1b3f65ae2")
+		)
+		(pin "1"
+			(uuid "b4ec600b-4d45-4895-a242-8c4a6541f729")
+		)
+		(instances
+			(project ""
+				(path "/3cb3b833-c38f-47b4-b7e9-f0e6337b7613/d054e30f-93c7-4141-9b1f-3289ce35fefa"
+					(reference "L2")
+					(unit 1)
+				)
 			)
 		)
 	)
@@ -4267,7 +4417,7 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 171.45 55.88 0)
+		(at 185.42 55.88 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -4276,7 +4426,7 @@
 		(fields_autoplaced yes)
 		(uuid "95146699-1c24-4a9e-a32e-0c96e56ab846")
 		(property "Reference" "C15"
-			(at 175.26 54.6099 0)
+			(at 189.23 54.6099 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4285,7 +4435,7 @@
 			)
 		)
 		(property "Value" "47u"
-			(at 175.26 57.1499 0)
+			(at 189.23 57.1499 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4294,7 +4444,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
-			(at 172.4152 59.69 0)
+			(at 186.3852 59.69 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4303,7 +4453,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 171.45 55.88 0)
+			(at 185.42 55.88 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4312,7 +4462,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 171.45 55.88 0)
+			(at 185.42 55.88 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4330,74 +4480,6 @@
 			(project "mini-vehiculo-exploracion-pcb"
 				(path "/3cb3b833-c38f-47b4-b7e9-f0e6337b7613/d054e30f-93c7-4141-9b1f-3289ce35fefa"
 					(reference "C15")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:L")
-		(at 154.94 36.83 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "96321f5f-52ac-4bb0-ab99-7fb96b97cc05")
-		(property "Reference" "L1"
-			(at 154.94 31.75 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "4,7u"
-			(at 154.94 34.29 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 154.94 36.83 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 154.94 36.83 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Inductor"
-			(at 154.94 36.83 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "71eb389f-bed8-4207-bc2e-617dcab4e1da")
-		)
-		(pin "2"
-			(uuid "748961a3-4d0e-454e-97d8-a0739ce353eb")
-		)
-		(instances
-			(project "mini-vehiculo-exploracion-pcb"
-				(path "/3cb3b833-c38f-47b4-b7e9-f0e6337b7613/d054e30f-93c7-4141-9b1f-3289ce35fefa"
-					(reference "L1")
 					(unit 1)
 				)
 			)
@@ -4951,7 +5033,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 161.29 48.26 0)
+		(at 175.26 48.26 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -4960,7 +5042,7 @@
 		(fields_autoplaced yes)
 		(uuid "d7ff100f-0d17-4e91-b2e1-481d7d85074e")
 		(property "Reference" "R13"
-			(at 163.83 46.9899 0)
+			(at 177.8 46.9899 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4969,7 +5051,7 @@
 			)
 		)
 		(property "Value" "56,2k"
-			(at 163.83 49.5299 0)
+			(at 177.8 49.5299 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4978,7 +5060,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
-			(at 159.512 48.26 90)
+			(at 173.482 48.26 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4987,7 +5069,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 161.29 48.26 0)
+			(at 175.26 48.26 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4996,7 +5078,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 161.29 48.26 0)
+			(at 175.26 48.26 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5092,7 +5174,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 161.29 64.77 0)
+		(at 175.26 64.77 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -5101,7 +5183,7 @@
 		(fields_autoplaced yes)
 		(uuid "f8b793f8-3792-4cba-bafb-20a59f46a47d")
 		(property "Reference" "R14"
-			(at 163.83 63.4999 0)
+			(at 177.8 63.4999 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5110,7 +5192,7 @@
 			)
 		)
 		(property "Value" "10k"
-			(at 163.83 66.0399 0)
+			(at 177.8 66.0399 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5119,7 +5201,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
-			(at 159.512 64.77 90)
+			(at 173.482 64.77 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5128,7 +5210,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 161.29 64.77 0)
+			(at 175.26 64.77 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5137,7 +5219,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 161.29 64.77 0)
+			(at 175.26 64.77 0)
 			(effects
 				(font
 					(size 1.27 1.27)

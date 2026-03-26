@@ -28,4 +28,5 @@
   (lib (name "Diode_82350120560")(type "KiCad")(uri "${KIPRJMOD}/Assets/Diode_82350120560")(options "")(descr ""))
   (lib (name "B3FS-1010")(type "KiCad")(uri "${KIPRJMOD}/Assets/B3FS-1010")(options "")(descr ""))
   (lib (name "LM358AN_NOPB")(type "KiCad")(uri "${KIPRJMOD}/Assets/LM358AN_NOPB")(options "")(descr ""))
+  (lib (name "MLP2520S4R7MT0S1")(type "KiCad")(uri "${KIPRJMOD}/Assets/MLP2520S4R7MT0S1")(options "")(descr ""))
 )
