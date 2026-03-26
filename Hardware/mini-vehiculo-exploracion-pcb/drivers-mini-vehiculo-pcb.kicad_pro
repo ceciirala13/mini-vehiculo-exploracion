@@ -473,6 +473,86 @@
         "via_diameter": 0.6,
         "via_drill": 0.3,
         "wire_width": 6
+      },
+      {
+        "bus_width": 12,
+        "clearance": 0.2,
+        "diff_pair_gap": 0.25,
+        "diff_pair_width": 0.1,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1,
+        "name": "MOTOR",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 0,
+        "schematic_color": "rgb(0, 0, 255)",
+        "track_width": 1.2,
+        "via_diameter": 0.7,
+        "via_drill": 0.3,
+        "wire_width": 6
+      },
+      {
+        "bus_width": 12,
+        "clearance": 0.2,
+        "diff_pair_gap": 0.25,
+        "diff_pair_width": 0.1,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1,
+        "name": "POWER_DIST",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 4,
+        "schematic_color": "rgb(194, 0, 194)",
+        "track_width": 0.7,
+        "via_diameter": 0.7,
+        "via_drill": 0.3,
+        "wire_width": 6
+      },
+      {
+        "bus_width": 12,
+        "clearance": 0.2,
+        "diff_pair_gap": 0.25,
+        "diff_pair_width": 0.1,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1,
+        "name": "POWER_GND",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 3,
+        "schematic_color": "rgb(0, 0, 0)",
+        "track_width": 0.4,
+        "via_diameter": 0.7,
+        "via_drill": 0.3,
+        "wire_width": 6
+      },
+      {
+        "bus_width": 12,
+        "clearance": 0.2,
+        "diff_pair_gap": 0.25,
+        "diff_pair_width": 0.1,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1,
+        "name": "POWER_SUPPLY",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 2,
+        "schematic_color": "rgb(255, 0, 0)",
+        "track_width": 0.7,
+        "via_diameter": 0.7,
+        "via_drill": 0.3,
+        "wire_width": 6
+      },
+      {
+        "bus_width": 12,
+        "clearance": 0.2,
+        "diff_pair_gap": 0.25,
+        "diff_pair_width": 0.1,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1,
+        "name": "SIGNAL",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 1,
+        "schematic_color": "rgb(0, 194, 0)",
+        "track_width": 0.2,
+        "via_diameter": 0.7,
+        "via_drill": 0.3,
+        "wire_width": 6
       }
     ],
     "meta": {
@@ -480,7 +560,140 @@
     },
     "net_colors": null,
     "netclass_assignments": null,
-    "netclass_patterns": []
+    "netclass_patterns": [
+      {
+        "netclass": "POWER_SUPPLY",
+        "pattern": "V_BAT"
+      },
+      {
+        "netclass": "POWER_GND",
+        "pattern": "GND"
+      },
+      {
+        "netclass": "POWER_DIST",
+        "pattern": "+5V"
+      },
+      {
+        "netclass": "SIGNAL",
+        "pattern": "/M1_IN1"
+      },
+      {
+        "netclass": "SIGNAL",
+        "pattern": "/M1_IN2"
+      },
+      {
+        "netclass": "SIGNAL",
+        "pattern": "/M1_DISABLE"
+      },
+      {
+        "netclass": "SIGNAL",
+        "pattern": "/SERVO_CRL"
+      },
+      {
+        "netclass": "SIGNAL",
+        "pattern": "/M2_IN1"
+      },
+      {
+        "netclass": "SIGNAL",
+        "pattern": "/M2_IN2"
+      },
+      {
+        "netclass": "SIGNAL",
+        "pattern": "/M2_DISABLE"
+      },
+      {
+        "netclass": "SIGNAL",
+        "pattern": "/M1_nFAULT"
+      },
+      {
+        "netclass": "SIGNAL",
+        "pattern": "/M2_nFAULT"
+      },
+      {
+        "netclass": "POWER_DIST",
+        "pattern": "DVDD_1"
+      },
+      {
+        "netclass": "POWER_DIST",
+        "pattern": "/VCP"
+      },
+      {
+        "netclass": "POWER_DIST",
+        "pattern": "+12V"
+      },
+      {
+        "netclass": "POWER_DIST",
+        "pattern": "/CPH"
+      },
+      {
+        "netclass": "POWER_DIST",
+        "pattern": "/CPL"
+      },
+      {
+        "netclass": "POWER_DIST",
+        "pattern": "/IPROPI1"
+      },
+      {
+        "netclass": "POWER_DIST",
+        "pattern": "/IPROPI2"
+      },
+      {
+        "netclass": "MOTOR",
+        "pattern": "/M1_V+"
+      },
+      {
+        "netclass": "MOTOR",
+        "pattern": "/M1_V-"
+      },
+      {
+        "netclass": "POWER_DIST",
+        "pattern": "DVDD_2"
+      },
+      {
+        "netclass": "POWER_DIST",
+        "pattern": "/VCP2"
+      },
+      {
+        "netclass": "POWER_DIST",
+        "pattern": "/CPH2"
+      },
+      {
+        "netclass": "POWER_DIST",
+        "pattern": "/CPL2"
+      },
+      {
+        "netclass": "MOTOR",
+        "pattern": "/M2_V+"
+      },
+      {
+        "netclass": "MOTOR",
+        "pattern": "/M2_V-"
+      },
+      {
+        "netclass": "POWER_DIST",
+        "pattern": "+3.3V"
+      },
+      {
+        "netclass": "POWER_DIST",
+        "pattern": "/VCP1"
+      },
+      {
+        "netclass": "POWER_DIST",
+        "pattern": "/CPH1"
+      },
+      {
+        "netclass": "POWER_DIST",
+        "pattern": "/CPL1"
+      },
+      {
+        "netclass": "POWER_DIST",
+        "pattern": "/IPROPI1_2"
+      },
+      {
+        "netclass": "POWER_DIST",
+        "pattern": "/IPROPI2_2"
+      }
+    ]
   },
   "pcbnew": {
     "last_paths": {

@@ -3478,7 +3478,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "MLP2520S4R7MT0S1:INDC2520X100N"
 			(at 106.68 39.37 0)
 			(effects
 				(font
