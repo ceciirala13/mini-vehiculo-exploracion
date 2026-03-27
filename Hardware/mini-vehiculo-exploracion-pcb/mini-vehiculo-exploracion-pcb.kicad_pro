@@ -51,7 +51,13 @@
           "min_clearance": 0.5
         }
       },
-      "diff_pair_dimensions": [],
+      "diff_pair_dimensions": [
+        {
+          "gap": 0.0,
+          "via_gap": 0.0,
+          "width": 0.0
+        }
+      ],
       "drc_exclusions": [],
       "meta": {
         "version": 2
@@ -180,7 +186,10 @@
           "td_width_to_size_filter_ratio": 0.9
         }
       ],
-      "track_widths": [],
+      "track_widths": [
+        0.0,
+        0.2
+      ],
       "tuning_pattern_settings": {
         "diff_pair_defaults": {
           "corner_radius_percentage": 80,
@@ -207,7 +216,12 @@
           "spacing": 0.6
         }
       },
-      "via_dimensions": [],
+      "via_dimensions": [
+        {
+          "diameter": 0.0,
+          "drill": 0.0
+        }
+      ],
       "zones_allow_external_fillets": false
     },
     "ipc2581": {
@@ -476,6 +490,24 @@
       },
       {
         "bus_width": 12,
+        "line_style": 0,
+        "name": "3V3",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 1,
+        "schematic_color": "rgb(203, 34, 55)",
+        "wire_width": 6
+      },
+      {
+        "bus_width": 12,
+        "line_style": 0,
+        "name": "5V",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 0,
+        "schematic_color": "rgb(204, 102, 0)",
+        "wire_width": 6
+      },
+      {
+        "bus_width": 12,
         "clearance": 0.2,
         "diff_pair_gap": 0.25,
         "diff_pair_width": 0.2,
@@ -484,7 +516,7 @@
         "microvia_drill": 0.1,
         "name": "ANALOG",
         "pcb_color": "rgb(28, 30, 255)",
-        "priority": 0,
+        "priority": 2,
         "schematic_color": "rgb(28, 30, 255)",
         "track_width": 0.2,
         "via_diameter": 0.7,
@@ -501,7 +533,7 @@
         "microvia_drill": 0.1,
         "name": "COMMS",
         "pcb_color": "rgb(255, 169, 33)",
-        "priority": 1,
+        "priority": 3,
         "schematic_color": "rgb(255, 169, 33)",
         "track_width": 0.2,
         "via_diameter": 0.7,
@@ -518,7 +550,7 @@
         "microvia_drill": 0.1,
         "name": "CRISTAL",
         "pcb_color": "rgb(173, 22, 255)",
-        "priority": 4,
+        "priority": 6,
         "schematic_color": "rgb(173, 22, 255)",
         "track_width": 0.2,
         "via_diameter": 0.7,
@@ -535,7 +567,7 @@
         "microvia_drill": 0.1,
         "name": "POWER_DIST",
         "pcb_color": "rgb(194, 0, 194)",
-        "priority": 2,
+        "priority": 4,
         "schematic_color": "rgb(194, 0, 194)",
         "track_width": 0.7,
         "via_diameter": 0.7,
@@ -552,7 +584,7 @@
         "microvia_drill": 0.1,
         "name": "POWER_GND",
         "pcb_color": "rgb(4, 0, 0)",
-        "priority": 3,
+        "priority": 5,
         "schematic_color": "rgb(4, 0, 0)",
         "track_width": 0.4,
         "via_diameter": 0.7,
@@ -569,7 +601,7 @@
         "microvia_drill": 0.1,
         "name": "POWER_SUPPLY",
         "pcb_color": "rgb(253, 0, 0)",
-        "priority": 5,
+        "priority": 7,
         "schematic_color": "rgb(253, 0, 0)",
         "track_width": 0.7,
         "via_diameter": 0.7,
@@ -586,7 +618,7 @@
         "microvia_drill": 0.1,
         "name": "SIGNAL",
         "pcb_color": "rgb(0, 194, 0)",
-        "priority": 6,
+        "priority": 8,
         "schematic_color": "rgb(0, 194, 0)",
         "track_width": 0.2,
         "via_diameter": 0.7,
@@ -603,7 +635,7 @@
         "microvia_drill": 0.1,
         "name": "USB",
         "pcb_color": "rgb(0, 245, 255)",
-        "priority": 7,
+        "priority": 9,
         "schematic_color": "rgb(0, 245, 255)",
         "track_width": 0.16,
         "via_diameter": 0.7,
@@ -800,6 +832,26 @@
       {
         "netclass": "POWER_SUPPLY",
         "pattern": "ENT_BAT"
+      },
+      {
+        "netclass": "SIGNAL",
+        "pattern": "/SERVO_SAL"
+      },
+      {
+        "netclass": "5V",
+        "pattern": "V_SELEC"
+      },
+      {
+        "netclass": "3V3",
+        "pattern": "+3.3V"
+      },
+      {
+        "netclass": "5V",
+        "pattern": "V_BUS"
+      },
+      {
+        "netclass": "5V",
+        "pattern": "V_BAT"
       }
     ]
   },
