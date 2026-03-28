@@ -1567,7 +1567,7 @@
 		(property "Reference" "J6"
 			(at 1.27 -4.22 90)
 			(layer "F.SilkS")
-			(uuid "4a3afdb5-ea3e-4d5f-a521-bbcba7023780")
+			(uuid "937a2409-91f1-4fa9-aa2c-83120748e607")
 			(effects
 				(font
 					(size 1 1)
@@ -1578,7 +1578,7 @@
 		(property "Value" "Battery_Terminal_01x02"
 			(at 1.27 3.6 90)
 			(layer "F.Fab")
-			(uuid "c76a1d7c-6eba-4083-b7b6-663ac7c1a858")
+			(uuid "bcef95c0-b393-4b0e-987b-c5b115bb4d23")
 			(effects
 				(font
 					(size 1 1)
@@ -1590,7 +1590,7 @@
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "48c1278a-2b0a-46d8-b35e-645e55ca0714")
+			(uuid "2cedaddb-850b-4092-9f11-92214b5a5425")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1602,7 +1602,7 @@
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "6b3d061d-91e1-4f96-816c-caaa2d3aebd9")
+			(uuid "b4254400-52e5-4eb6-9c03-fe24a3c03e3f")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4613,7 +4613,7 @@
 			(at 1.27 -4.22 0)
 			(layer "F.SilkS")
 			(hide yes)
-			(uuid "a3466360-4395-47cc-8c87-f041f702c6f2")
+			(uuid "34e4a13a-e209-4bf5-b631-18d68eebe43d")
 			(effects
 				(font
 					(size 1 1)
@@ -4624,7 +4624,7 @@
 		(property "Value" "Motor1_Terminal"
 			(at 1.27 4.22 0)
 			(layer "F.Fab")
-			(uuid "812fc711-2429-4d40-b437-dade68730eaa")
+			(uuid "b6e3517d-6636-4cbc-b6b8-f7cffcd9ecb8")
 			(effects
 				(font
 					(size 1 1)
@@ -4636,7 +4636,7 @@
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "eb1b43dd-7f78-4f69-b9e4-54f859aaab8f")
+			(uuid "76025334-6175-44ca-8ade-bb53aa6d6ad1")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4648,7 +4648,7 @@
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "09a9c050-c6c1-4bae-b5c1-4f4b74c3259e")
+			(uuid "b59942de-efc5-43b8-9b0b-1c3098d32431")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8235,185 +8235,6 @@
 			)
 		)
 	)
-	(footprint "MLP2520S4R7MT0S1:INDC2520X100N"
-		(layer "F.Cu")
-		(uuid "976bb24d-3b56-4b36-99d1-51bd807a6b39")
-		(at 73.9 115.5)
-		(descr "MLP2520")
-		(tags "Inductor")
-		(property "Reference" "L1"
-			(at -0.06 2.28 0)
-			(layer "F.SilkS")
-			(uuid "7a1cd608-f47e-4520-bfcd-6b66482caff2")
-			(effects
-				(font
-					(size 1.27 1.27)
-					(thickness 0.254)
-				)
-			)
-		)
-		(property "Value" "4,7u"
-			(at 0 0 0)
-			(layer "F.SilkS")
-			(hide yes)
-			(uuid "f0f83b08-9abd-447b-9cb6-d0ec7278311a")
-			(effects
-				(font
-					(size 1.27 1.27)
-					(thickness 0.254)
-				)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 0 0 0)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "73fd7bcd-bddb-4b19-acd2-88a7c3323287")
-			(effects
-				(font
-					(size 1.27 1.27)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "Description" "Inductor"
-			(at 0 0 0)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "e80c706b-e497-4ff3-a956-0545922ee79c")
-			(effects
-				(font
-					(size 1.27 1.27)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property ki_fp_filters "Choke_* *Coil* Inductor_* L_*")
-		(path "/a0a3a615-a0eb-4e9b-a594-71f734cb4e88/96321f5f-52ac-4bb0-ab99-7fb96b97cc05")
-		(sheetname "/Electrical/")
-		(sheetfile "electrical_drivers.kicad_sch")
-		(attr smd)
-		(fp_line
-			(start 0 -0.9)
-			(end 0 0.9)
-			(stroke
-				(width 0.2)
-				(type solid)
-			)
-			(layer "F.SilkS")
-			(uuid "1d1d78c2-dee8-4f50-93f8-b70ce5e6a54d")
-		)
-		(fp_line
-			(start -1.925 -1.35)
-			(end 1.925 -1.35)
-			(stroke
-				(width 0.05)
-				(type solid)
-			)
-			(layer "F.CrtYd")
-			(uuid "e20c20e0-b41a-4972-9bd1-87b754d5f46f")
-		)
-		(fp_line
-			(start -1.925 1.35)
-			(end -1.925 -1.35)
-			(stroke
-				(width 0.05)
-				(type solid)
-			)
-			(layer "F.CrtYd")
-			(uuid "6c5f0a25-f541-4f34-a390-e451f454f528")
-		)
-		(fp_line
-			(start 1.925 -1.35)
-			(end 1.925 1.35)
-			(stroke
-				(width 0.05)
-				(type solid)
-			)
-			(layer "F.CrtYd")
-			(uuid "969f450c-8321-4604-98de-b5e3daf22493")
-		)
-		(fp_line
-			(start 1.925 1.35)
-			(end -1.925 1.35)
-			(stroke
-				(width 0.05)
-				(type solid)
-			)
-			(layer "F.CrtYd")
-			(uuid "bf867de4-2eed-4ac8-866e-8dc0d250f34d")
-		)
-		(fp_line
-			(start -1.25 -1)
-			(end 1.25 -1)
-			(stroke
-				(width 0.1)
-				(type solid)
-			)
-			(layer "F.Fab")
-			(uuid "375a8f49-60f4-4dff-a6a9-bb4f98beafd9")
-		)
-		(fp_line
-			(start -1.25 1)
-			(end -1.25 -1)
-			(stroke
-				(width 0.1)
-				(type solid)
-			)
-			(layer "F.Fab")
-			(uuid "3410d5d2-6bc4-4dec-9a35-b72e8bb0af93")
-		)
-		(fp_line
-			(start 1.25 -1)
-			(end 1.25 1)
-			(stroke
-				(width 0.1)
-				(type solid)
-			)
-			(layer "F.Fab")
-			(uuid "d035758c-6f41-45b3-aef8-d3cca0be1fc2")
-		)
-		(fp_line
-			(start 1.25 1)
-			(end -1.25 1)
-			(stroke
-				(width 0.1)
-				(type solid)
-			)
-			(layer "F.Fab")
-			(uuid "8494361a-438f-437b-b4de-619c65139134")
-		)
-		(pad "1" smd rect
-			(at -1.1 0)
-			(size 1.15 2.2)
-			(layers "F.Cu" "F.Mask" "F.Paste")
-			(net 25 "Net-(U3-SW)")
-			(pinfunction "1")
-			(pintype "passive")
-			(uuid "c23e64f6-9d13-4bbf-9669-f435c99cc557")
-		)
-		(pad "2" smd rect
-			(at 1.1 0)
-			(size 1.15 2.2)
-			(layers "F.Cu" "F.Mask" "F.Paste")
-			(net 5 "+5V")
-			(pinfunction "2")
-			(pintype "passive")
-			(uuid "06ec9b6e-07b4-4b07-9dd1-014b08b4c6c3")
-		)
-		(embedded_fonts no)
-		(model "MLP2520S4R7MT0S1.stp"
-			(offset
-				(xyz 0 0 0)
-			)
-			(scale
-				(xyz 1 1 1)
-			)
-			(rotate
-				(xyz 0 0 0)
-			)
-		)
-	)
 	(footprint "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
 		(layer "F.Cu")
 		(uuid "98d37568-6e5c-476b-bf7b-f585d21aa539")
@@ -10664,6 +10485,260 @@
 			)
 		)
 	)
+	(footprint "MLP2520S4R7MT0S1:INDC2520X100N"
+		(layer "F.Cu")
+		(uuid "da5e25b2-d87e-4af0-a53a-0e6ed0dd6db1")
+		(at 74 116.5)
+		(descr "MLP2520")
+		(tags "Inductor")
+		(property "Reference" "L1"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(uuid "1d1a6a95-d305-4416-996a-f59b030eb6ce")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.254)
+				)
+			)
+		)
+		(property "Value" "MLP2520S4R7MT0S1"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "bf37c581-0293-4365-bda6-99069d7949c2")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.254)
+				)
+			)
+		)
+		(property "Datasheet" "https://product.tdk.com/system/files/dam/doc/product/inductor/inductor/smd/catalog/inductor_commercial_power_mlp2520_en.pdf"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "a25add05-0af7-4679-afd8-4192b3870080")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Description" "Inductor Power Shielded Multi-Layer 4.7uH 20% 2MHz Ferrite 1A 169mOhm DCR 1008 T/R"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "2bc2b2fd-92e8-4002-8fc6-c4919ed1c853")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Height" "1"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "4be80383-7290-4440-a654-43b2303e9d7a")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Mouser Part Number" "810-MLP2520S4R7MT0S1"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "f016967c-4e17-4ca1-bf93-9a93691f2026")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/TDK/MLP2520S4R7MT0S1?qs=%2FPzWLGNeQ%252BgDk3obJem54g%3D%3D"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "3fb43111-ee9a-4150-9cb3-ce8e553aff30")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Manufacturer_Name" "TDK"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "b76a0f83-1624-429c-83d5-1726494754ce")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Manufacturer_Part_Number" "MLP2520S4R7MT0S1"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "7ca73a63-5f7a-4869-bd41-ed9244a7441d")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(path "/a0a3a615-a0eb-4e9b-a594-71f734cb4e88/6b3def8e-635f-45a1-94db-8e3b558ba997")
+		(sheetname "/Electrical/")
+		(sheetfile "electrical_drivers.kicad_sch")
+		(attr smd)
+		(fp_line
+			(start 0 -0.9)
+			(end 0 0.9)
+			(stroke
+				(width 0.2)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "c8d248cb-32c8-4c44-8515-8b67f6094ba9")
+		)
+		(fp_line
+			(start -1.925 -1.35)
+			(end 1.925 -1.35)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "9d7844c0-67d8-4f77-9347-74dde1ccd2d8")
+		)
+		(fp_line
+			(start -1.925 1.35)
+			(end -1.925 -1.35)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "93d24c46-88bb-4098-b6fa-0fc93115c1ff")
+		)
+		(fp_line
+			(start 1.925 -1.35)
+			(end 1.925 1.35)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "30d8374f-9137-4d1d-8524-306d7b92b6fe")
+		)
+		(fp_line
+			(start 1.925 1.35)
+			(end -1.925 1.35)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "1d479a79-b9ee-48d7-9919-5ec35ed8dabb")
+		)
+		(fp_line
+			(start -1.25 -1)
+			(end 1.25 -1)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "141b5bf0-4bb6-449a-a940-b4162a2297bd")
+		)
+		(fp_line
+			(start -1.25 1)
+			(end -1.25 -1)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "420863fc-0af2-4dfc-a6ad-9e46dbdd4fdc")
+		)
+		(fp_line
+			(start 1.25 -1)
+			(end 1.25 1)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "d924f8c5-a0f0-4eb7-b561-d449cf30b51c")
+		)
+		(fp_line
+			(start 1.25 1)
+			(end -1.25 1)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "4481d20e-d044-478e-ab61-7372651c4468")
+		)
+		(fp_text user "${REFERENCE}"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "76bfc528-2e89-4e58-8880-f4f72cb4c622")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.254)
+				)
+			)
+		)
+		(pad "1" smd rect
+			(at -1.1 0)
+			(size 1.15 2.2)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(net 25 "Net-(U3-SW)")
+			(pinfunction "1")
+			(pintype "passive")
+			(uuid "6caa8adf-2ddc-4961-aa92-785de39cee22")
+		)
+		(pad "2" smd rect
+			(at 1.1 0)
+			(size 1.15 2.2)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(net 5 "+5V")
+			(pinfunction "2")
+			(pintype "passive")
+			(uuid "df14ed5f-48d9-4bc9-84d4-d17a0e9977e8")
+		)
+		(embedded_fonts no)
+		(model "MLP2520S4R7MT0S1.stp"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
+	)
 	(footprint "LM358AN_NOPB:DIP794W53P254L959H508Q8N"
 		(layer "F.Cu")
 		(uuid "e240255f-cc3b-4fc6-b49a-d824c5c445b9")
@@ -11703,7 +11778,7 @@
 		(property "Reference" "J5"
 			(at 1.27 -4.22 0)
 			(layer "F.SilkS")
-			(uuid "8e33589e-8b50-4998-a41f-af956fdd4d70")
+			(uuid "eb84b152-ffcb-4f1e-a7f2-bdab698d2f8a")
 			(effects
 				(font
 					(size 1 1)
@@ -11714,7 +11789,7 @@
 		(property "Value" "Motor2_Terminal"
 			(at 1.27 4.22 0)
 			(layer "F.Fab")
-			(uuid "e7a2b13d-b70b-4d93-983e-1ceac5898129")
+			(uuid "e2aadd28-723e-4792-a5d6-800ba4400046")
 			(effects
 				(font
 					(size 1 1)
@@ -11726,7 +11801,7 @@
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "7d8f38fa-d28b-4dd4-b92d-e05571af83d0")
+			(uuid "5411af25-19fa-4cb4-8723-f03a831ac4aa")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11738,7 +11813,7 @@
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "26b477c8-0cfe-48d7-a6fc-f5383ddcd8f0")
+			(uuid "67fc341c-e8db-4f54-8f51-b6950785ff97")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12817,7 +12892,7 @@
 	(segment
 		(start 69.415 102.125)
 		(end 62.99 102.125)
-		(width 0.4)
+		(width 1.2)
 		(layer "F.Cu")
 		(net 2)
 		(uuid "2d32adb7-d06e-4262-81f5-ff8c129b970d")
@@ -12865,7 +12940,7 @@
 	(segment
 		(start 53.885 101.04)
 		(end 60.305 101.04)
-		(width 0.4)
+		(width 1.2)
 		(layer "F.Cu")
 		(net 2)
 		(uuid "543e5d0e-3537-4087-a1ec-dac182f8e953")
@@ -12905,7 +12980,7 @@
 	(segment
 		(start 62.99 102.125)
 		(end 62.09 101.225)
-		(width 0.4)
+		(width 1.2)
 		(layer "F.Cu")
 		(net 2)
 		(uuid "84cefda4-8691-48be-a7ad-9db64e027424")
@@ -12985,7 +13060,7 @@
 	(segment
 		(start 62.09 101.225)
 		(end 60.49 101.225)
-		(width 0.4)
+		(width 1.2)
 		(layer "F.Cu")
 		(net 2)
 		(uuid "fe54b6cc-2323-4a7d-8404-a8fa604fb880")
@@ -13293,6 +13368,22 @@
 		(layer "F.Cu")
 		(net 5)
 		(uuid "5602719c-8867-423f-82cb-5a8cc59537b8")
+	)
+	(segment
+		(start 76.949 116.5)
+		(end 79.499 119.05)
+		(width 0.4)
+		(layer "F.Cu")
+		(net 5)
+		(uuid "6c00ee85-52bb-42a9-9e09-57c33617558a")
+	)
+	(segment
+		(start 75.1 116.5)
+		(end 76.949 116.5)
+		(width 0.4)
+		(layer "F.Cu")
+		(net 5)
+		(uuid "9bf1f4d6-19e5-4b8a-a28e-9537e767dbec")
 	)
 	(segment
 		(start 81.5 118.7)
