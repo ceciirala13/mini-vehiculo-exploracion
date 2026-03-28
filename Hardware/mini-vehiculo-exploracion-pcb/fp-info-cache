@@ -1,4 +1,4 @@
-27279316409483863
+27289964877749852
 830003000
 830003000
 830003000-2
@@ -34,6 +34,13 @@ audio belton reverb
 0
 7
 7
+B3FS-1010
+B3FS-1000P
+B3FS-1000P
+Switch
+0
+4
+4
 BME690
 BME690
 3.0mm x 3.0mm x 0.95mm
@@ -70412,6 +70419,13 @@ THT
 0
 4
 2
+JST_Connectors
+JST_8PIN
+B8B-EH-A(LF)(SN)
+Connector
+0
+8
+8
 Jumper
 Jumper_Harwin_S1621_P10.9mm
 Harwin SMD jumper link, 12.3x2.3mm, 1.8mm height, 10.9mm pad pitch, https://cdn.harwin.com/pdfs/S1621R.pdf
@@ -71875,6 +71889,13 @@ Yellow 5381 Series LED
 0
 2
 2
+LM358AN_NOPB
+DIP794W53P254L959H508Q8N
+P (R-PDIP-T8)
+Integrated Circuit
+0
+8
+8
 MAX8891EXK33_V+T
 SOT65P210X110-5N
 SC70-5
@@ -71882,6 +71903,13 @@ Integrated Circuit
 0
 5
 5
+MLP2520S4R7MT0S1
+INDC2520X100N
+MLP2520
+Inductor
+0
+2
+2
 Module
 A20_OLINUXINO_LIME2
 A20 Olinuxino LIME2, 1.2GHz, 512-1024MB RAM, Micro-SD, NAND or eMMC, 1000Mbit Ethernet
@@ -108139,6 +108167,20 @@ Varistor
 Varistor_Panasonic_VF
 Panasonic VF series varistor, 6x8mm body, 3.2mm height, https://mediap.industry.panasonic.eu/assets/imported/industrial.panasonic.com/cdbs/www-data/pdf/AWA0000/AWA0000C4.pdf
 Varistor VF
+0
+2
+2
+capacitores_driver
+CAPC2012X88N
+
+
+0
+2
+2
+capacitores_driver
+CAPC2012X140N
+
+
 0
 2
 2
