@@ -2184,8 +2184,9 @@
 			(uuid "52da6e1b-d1e8-4909-9caf-0530198b6aa4")
 			(effects
 				(font
-					(size 1 1)
-					(thickness 0.15)
+					(size 1.2 1.2)
+					(thickness 0.22)
+					(bold yes)
 				)
 			)
 		)
@@ -6202,8 +6203,9 @@
 			(uuid "370080cc-4798-4f46-ae22-03c6a0b79a7d")
 			(effects
 				(font
-					(size 1 1)
-					(thickness 0.15)
+					(size 1.2 1.2)
+					(thickness 0.22)
+					(bold yes)
 				)
 			)
 		)
@@ -8342,7 +8344,8 @@
 			(effects
 				(font
 					(size 1.27 1.27)
-					(thickness 0.254)
+					(thickness 0.22)
+					(bold yes)
 				)
 			)
 		)
