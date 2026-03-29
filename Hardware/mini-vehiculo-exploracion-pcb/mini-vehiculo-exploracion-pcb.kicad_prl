@@ -4,13 +4,10 @@
     "active_layer_preset": "",
     "auto_track_width": true,
     "hidden_netclasses": [
-      "POWER_GND",
-      "POWER_SUPPLY"
+      "POWER_GND"
     ],
     "hidden_nets": [
-      "+3.3V",
-      "GND",
-      "ENT_BAT"
+      "GND"
     ],
     "high_contrast_mode": 0,
     "net_color_mode": 1,
@@ -57,7 +54,7 @@
       "conflict_shadows",
       "shapes"
     ],
-    "visible_layers": "ffffffff_ffffffff_ffffffff_ffffffff",
+    "visible_layers": "ffffffff_ffffffff_ffffffff_fffffffb",
     "zone_display_mode": 0
   },
   "git": {

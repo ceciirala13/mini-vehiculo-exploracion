@@ -1,4 +1,4 @@
-27279316409483863
+27288192044010209
 830003000
 830003000
 830003000-2
@@ -34,6 +34,13 @@ audio belton reverb
 0
 7
 7
+B3FS-1010
+B3FS-1000P
+B3FS-1000P
+Switch
+0
+4
+4
 BME690
 BME690
 3.0mm x 3.0mm x 0.95mm
@@ -62264,6 +62271,13 @@ Capacitor Polarised
 0
 2
 2
+ESP32-S3-WROOM-1-P3JLC
+ESP32-S3-WROOM-1-P3JLC
+2.4 GHz Wi-Fi and Bluetooth module  https://www.espressif.com/sites/default/files/documentation/esp32-s3-wroom-1_wroom-1u_datasheet_en.pdf
+2.4 GHz Wi-Fi and Bluetooth module
+0
+62
+41
 Ferrite_THT
 LairdTech_28C0236-0JW-10
 Ferrite, vertical, LairdTech 28C0236-0JW-10, https://assets.lairdtech.com/home/brandworld/files/28C0236-0JW-10.pdf, JW Miller core https://www.bourns.com/products/magnetic-products/j.w.-miller-through-hole-ferrite-beads-emi-filters
@@ -71875,6 +71889,13 @@ Yellow 5381 Series LED
 0
 2
 2
+LM358AN_NOPB
+DIP794W53P254L959H508Q8N
+P (R-PDIP-T8)
+Integrated Circuit
+0
+8
+8
 MAX8891EXK33_V+T
 SOT65P210X110-5N
 SC70-5
@@ -71882,6 +71903,13 @@ Integrated Circuit
 0
 5
 5
+MLP2520S4R7MT0S1
+INDC2520X100N
+MLP2520
+Inductor
+0
+2
+2
 Module
 A20_OLINUXINO_LIME2
 A20 Olinuxino LIME2, 1.2GHz, 512-1024MB RAM, Micro-SD, NAND or eMMC, 1000Mbit Ethernet
@@ -100918,6 +100946,13 @@ Integrated Circuit
 0
 6
 6
+TXU0104PWR
+SOP65P640X120-14N
+PW (R-PDSO-G14)
+Integrated Circuit
+0
+14
+14
 TerminalBlock
 TerminalBlock_MaiXu_MX126-5.0-02P_1x02_P5.00mm
 terminal block MaiXu MX126-5.0-02P, 2 pins, pitch 5mm, size 10.5x7.8mm, drill diameter 1.3mm, pad diameter 2.8mm, https://www.lcsc.com/datasheet/lcsc_datasheet_2309150913_MAX-MX126-5-0-03P-GN01-Cu-S-A_C5188435.pdf, script-generated using https://gitlab.com/kicad/libraries/kicad-footprint-generator/-/tree/master/scripts/TerminalBlock_MaiXu
@@ -107317,9 +107352,9 @@ USBLC6-2SC6
 6
 6
 USB_UJ20-C-H-G-SMT-P16-TR
-SAMESKY_UJ20-C-H-G-SMT-P16-TR
-
-
+UJ20CHGSMT5P16TR
+UJ20-C-H-G-SMT-5-P16-TR-4
+Connector
 0
 16
 16
