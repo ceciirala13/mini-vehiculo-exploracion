@@ -10065,7 +10065,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "d2ab8f36-6ec6-47b2-a52f-3c4a9a3e5535")
-		(property "Reference" "J6"
+		(property "Reference" "J5"
 			(at 90.17 166.624 0)
 			(effects
 				(font
@@ -10119,7 +10119,7 @@
 		(instances
 			(project ""
 				(path "/7776e3ee-622a-4a3e-a213-279f6f5df2cb"
-					(reference "J6")
+					(reference "J5")
 					(unit 1)
 				)
 			)
@@ -10135,7 +10135,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "d47503ae-574c-46f5-ae8f-0f2ecbc944d5")
-		(property "Reference" "J4"
+		(property "Reference" "J3"
 			(at 87.63 133.35 0)
 			(effects
 				(font
@@ -10187,7 +10187,7 @@
 		(instances
 			(project "drivers-mini-vehiculo-pcb"
 				(path "/7776e3ee-622a-4a3e-a213-279f6f5df2cb"
-					(reference "J4")
+					(reference "J3")
 					(unit 1)
 				)
 			)
@@ -10203,7 +10203,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "d7330d58-045c-486d-90f8-fc8dcdbc9192")
-		(property "Reference" "J5"
+		(property "Reference" "J4"
 			(at 88.392 145.288 0)
 			(effects
 				(font
@@ -10257,7 +10257,7 @@
 		(instances
 			(project "drivers-mini-vehiculo-pcb"
 				(path "/7776e3ee-622a-4a3e-a213-279f6f5df2cb"
-					(reference "J5")
+					(reference "J4")
 					(unit 1)
 				)
 			)
