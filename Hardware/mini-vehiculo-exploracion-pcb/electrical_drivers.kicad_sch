@@ -858,7 +858,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "SF-1206SA1500R-2:SF-1206SA1500R-2"
+		(symbol "SF-1206SA1500W-2:SF-1206SA1500W-2"
 			(pin_names
 				(hide yes)
 			)
@@ -874,7 +874,7 @@
 					(justify left top)
 				)
 			)
-			(property "Value" "SF-1206SA1500R-2"
+			(property "Value" "SF-1206SA1500W-2"
 				(at 13.97 3.81 0)
 				(effects
 					(font
@@ -883,7 +883,7 @@
 					(justify left top)
 				)
 			)
-			(property "Footprint" "SF1206SA1500R2"
+			(property "Footprint" "FUSC3217X123N"
 				(at 13.97 -96.19 0)
 				(effects
 					(font
@@ -893,7 +893,7 @@
 					(hide yes)
 				)
 			)
-			(property "Datasheet" "http://www.bourns.com/docs/Product-Datasheets/SF-1206SA-R.pdf"
+			(property "Datasheet" "https://www.mouser.es/datasheet/2/54/Bourns_01272020SF_1206SA_W_datasheet-1892135.pdf"
 				(at 13.97 -196.19 0)
 				(effects
 					(font
@@ -903,7 +903,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "1206 slow-blow met-foil. 15A Auto"
+			(property "Description" "Surface Mount Fuses 15A    32V  TIME DELAY Slow blow fusing speed n	 EIA 1206 (3216 metric) footprint n	 AEC-Q200 compliant* n	 UL 248-14 listed n	 RoHS compliant** and halogen free**"
 				(at 0 0 0)
 				(effects
 					(font
@@ -912,7 +912,7 @@
 					(hide yes)
 				)
 			)
-			(property "Height" "0.9"
+			(property "Height" "1.23"
 				(at 13.97 -396.19 0)
 				(effects
 					(font
@@ -922,7 +922,7 @@
 					(hide yes)
 				)
 			)
-			(property "Mouser Part Number" "652-SF-1206SA1500R-2"
+			(property "Mouser Part Number" "652-SF-1206SA1500W-2"
 				(at 13.97 -496.19 0)
 				(effects
 					(font
@@ -932,7 +932,7 @@
 					(hide yes)
 				)
 			)
-			(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Bourns/SF-1206SA1500R-2?qs=MyNHzdoqoQLFm73fnRlz0w%3D%3D"
+			(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Bourns/SF-1206SA1500W-2?qs=GBLSl2AkirsaorvJa1Ba8w%3D%3D"
 				(at 13.97 -596.19 0)
 				(effects
 					(font
@@ -952,7 +952,7 @@
 					(hide yes)
 				)
 			)
-			(property "Manufacturer_Part_Number" "SF-1206SA1500R-2"
+			(property "Manufacturer_Part_Number" "SF-1206SA1500W-2"
 				(at 13.97 -796.19 0)
 				(effects
 					(font
@@ -962,7 +962,7 @@
 					(hide yes)
 				)
 			)
-			(symbol "SF-1206SA1500R-2_1_1"
+			(symbol "SF-1206SA1500W-2_1_1"
 				(rectangle
 					(start 5.08 1.27)
 					(end 12.7 -1.27)
@@ -2555,126 +2555,6 @@
 		)
 	)
 	(symbol
-		(lib_id "SF-1206SA1500R-2:SF-1206SA1500R-2")
-		(at 41.91 96.52 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "013388a6-d9cf-4f43-938c-3c8288e94612")
-		(property "Reference" "F1"
-			(at 50.8 90.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "SF-1206SA1500R-2"
-			(at 50.8 92.71 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "SF-1206SA1500R-2:SF1206SA1500R2"
-			(at 55.88 192.71 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "http://www.bourns.com/docs/Product-Datasheets/SF-1206SA-R.pdf"
-			(at 55.88 292.71 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-				(hide yes)
-			)
-		)
-		(property "Description" "1206 slow-blow met-foil. 15A Auto"
-			(at 41.91 96.52 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Height" "0.9"
-			(at 55.88 492.71 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-				(hide yes)
-			)
-		)
-		(property "Mouser Part Number" "652-SF-1206SA1500R-2"
-			(at 55.88 592.71 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-				(hide yes)
-			)
-		)
-		(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Bourns/SF-1206SA1500R-2?qs=MyNHzdoqoQLFm73fnRlz0w%3D%3D"
-			(at 55.88 692.71 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer_Name" "Bourns"
-			(at 55.88 792.71 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer_Part_Number" "SF-1206SA1500R-2"
-			(at 55.88 892.71 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "7b58ecca-979c-4f0c-8c8d-44fe3566452d")
-		)
-		(pin "1"
-			(uuid "ef743864-bb8f-47ed-823d-4c3fda1f69e6")
-		)
-		(instances
-			(project ""
-				(path "/7776e3ee-622a-4a3e-a213-279f6f5df2cb/a0a3a615-a0eb-4e9b-a594-71f734cb4e88"
-					(reference "F1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:R")
 		(at 127 44.45 0)
 		(unit 1)
@@ -3848,6 +3728,126 @@
 			(project ""
 				(path "/7776e3ee-622a-4a3e-a213-279f6f5df2cb/a0a3a615-a0eb-4e9b-a594-71f734cb4e88"
 					(reference "D1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "SF-1206SA1500W-2:SF-1206SA1500W-2")
+		(at 41.91 96.52 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "b2ccba7f-df21-439b-a000-cd2e66c9c445")
+		(property "Reference" "F1"
+			(at 50.8 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "SF-1206SA1500W-2"
+			(at 50.8 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "FUSC3217X123N"
+			(at 55.88 192.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.mouser.es/datasheet/2/54/Bourns_01272020SF_1206SA_W_datasheet-1892135.pdf"
+			(at 55.88 292.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Description" "Surface Mount Fuses 15A    32V  TIME DELAY Slow blow fusing speed n	 EIA 1206 (3216 metric) footprint n	 AEC-Q200 compliant* n	 UL 248-14 listed n	 RoHS compliant** and halogen free**"
+			(at 41.91 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Height" "1.23"
+			(at 55.88 492.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "652-SF-1206SA1500W-2"
+			(at 55.88 592.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Bourns/SF-1206SA1500W-2?qs=GBLSl2AkirsaorvJa1Ba8w%3D%3D"
+			(at 55.88 692.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Name" "Bourns"
+			(at 55.88 792.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Part_Number" "SF-1206SA1500W-2"
+			(at 55.88 892.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "b8d4e9b3-4097-4f65-b47d-62af038c5e37")
+		)
+		(pin "2"
+			(uuid "aca018ef-2cc0-4f33-8e97-b1365951194e")
+		)
+		(instances
+			(project ""
+				(path "/7776e3ee-622a-4a3e-a213-279f6f5df2cb/a0a3a615-a0eb-4e9b-a594-71f734cb4e88"
+					(reference "F1")
 					(unit 1)
 				)
 			)

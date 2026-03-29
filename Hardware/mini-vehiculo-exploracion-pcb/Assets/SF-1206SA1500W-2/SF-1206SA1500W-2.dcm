@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP SF-1206SA1500W-2
+D Surface Mount Fuses 15A    32V  TIME DELAY Slow blow fusing speed n	 EIA 1206 (3216 metric) footprint n	 AEC-Q200 compliant* n	 UL 248-14 listed n	 RoHS compliant** and halogen free**
+K
+F https://www.mouser.es/datasheet/2/54/Bourns_01272020SF_1206SA_W_datasheet-1892135.pdf
+$ENDCMP
+#
+#End Doc Library

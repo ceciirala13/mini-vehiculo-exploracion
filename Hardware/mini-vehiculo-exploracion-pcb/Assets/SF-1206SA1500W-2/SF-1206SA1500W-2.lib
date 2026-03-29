@@ -1,0 +1,24 @@
+EESchema-LIBRARY Version 2.3
+#encoding utf-8
+#SamacSys ECAD Model SF-1206SA1500W-2
+#/11471970/1909854/2.50/2/3/Fuse
+DEF SF-1206SA1500W-2 F 0 30 Y Y 1 F N
+F0 "F" 550 250 50 H V L CNN
+F1 "SF-1206SA1500W-2" 550 150 50 H V L CNN
+F2 "FUSC3217X123N" 550 50 50 H I L CNN
+F3 "https://www.mouser.es/datasheet/2/54/Bourns_01272020SF_1206SA_W_datasheet-1892135.pdf" 550 -50 50 H I L CNN
+F4 "Surface Mount Fuses 15A    32V  TIME DELAY Slow blow fusing speed n	 EIA 1206 (3216 metric) footprint n	 AEC-Q200 compliant* n	 UL 248-14 listed n	 RoHS compliant** and halogen free**" 550 -150 50 H I L CNN "Description"
+F5 "1.23" 550 -250 50 H I L CNN "Height"
+F6 "652-SF-1206SA1500W-2" 550 -350 50 H I L CNN "Mouser Part Number"
+F7 "https://www.mouser.co.uk/ProductDetail/Bourns/SF-1206SA1500W-2?qs=GBLSl2AkirsaorvJa1Ba8w%3D%3D" 550 -450 50 H I L CNN "Mouser Price/Stock"
+F8 "Bourns" 550 -550 50 H I L CNN "Manufacturer_Name"
+F9 "SF-1206SA1500W-2" 550 -650 50 H I L CNN "Manufacturer_Part_Number"
+DRAW
+X ~ 1 0 0 200 R 50 50 0 0 P
+X ~ 2 700 0 200 L 50 50 0 0 P
+P 5 0 1 6 200 50 500 50 500 -50 200 -50 200 50 N
+P 2 0 1 6 200 0 500 0 N
+ENDDRAW
+ENDDEF
+#
+#End Library
