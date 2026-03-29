@@ -4,6 +4,11 @@
 	(generator_version "9.0")
 	(uuid "3f9ffc28-438b-40f2-9841-a8b74d162494")
 	(paper "A4")
+	(title_block
+		(title "Vehiculo de exploracion a escala")
+		(date "2026-03-28")
+		(rev "1.0")
+	)
 	(lib_symbols
 		(symbol "Device:C"
 			(pin_numbers

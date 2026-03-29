@@ -4,6 +4,11 @@
 	(generator_version "9.0")
 	(uuid "1a80d8d3-36f5-4184-9bbf-da3cff17b96e")
 	(paper "A4")
+	(title_block
+		(title "Vehiculo de exploracion a escala")
+		(date "2026-03-28")
+		(rev "1.0")
+	)
 	(lib_symbols
 		(symbol "B3FS-1010:B3FS-1010"
 			(exclude_from_sim no)
@@ -2492,28 +2497,6 @@
 			)
 			(embedded_fonts no)
 		)
-	)
-	(text "Planilla OK"
-		(exclude_from_sim no)
-		(at 94.488 25.146 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-				(color 245 0 255 1)
-			)
-		)
-		(uuid "1c90ec37-96f1-4a14-9ec7-4d4830e13599")
-	)
-	(text "Planilla OK"
-		(exclude_from_sim no)
-		(at 133.096 84.074 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-				(color 245 0 255 1)
-			)
-		)
-		(uuid "26bf0f3b-6da0-4a46-bfb1-1a18c7c060e7")
 	)
 	(text_box "BOOT"
 		(exclude_from_sim no)

@@ -4,6 +4,11 @@
 	(generator_version "9.0")
 	(uuid "1b06746f-ba06-49f4-ac0e-53e3870a5228")
 	(paper "A4")
+	(title_block
+		(title "Vehiculo de exploracion a escala")
+		(date "2026-03-28")
+		(rev "1.0")
+	)
 	(lib_symbols
 		(symbol "Amplifier_Operational:LM358"
 			(pin_names

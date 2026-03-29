@@ -872,6 +872,22 @@
       {
         "netclass": "ANALOG",
         "pattern": "/ADC_BAT2"
+      },
+      {
+        "netclass": "USB",
+        "pattern": "/MCU_Peripherals/D+"
+      },
+      {
+        "netclass": "USB",
+        "pattern": "/MCU_Peripherals/D-"
+      },
+      {
+        "netclass": "SIGNAL",
+        "pattern": "/MCU_Peripherals/CC1"
+      },
+      {
+        "netclass": "SIGNAL",
+        "pattern": "/MCU_Peripherals/CC2"
       }
     ]
   },
