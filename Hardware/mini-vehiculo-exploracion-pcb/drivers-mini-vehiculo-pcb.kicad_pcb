@@ -5062,6 +5062,17 @@
 				(xyz 0 0 0)
 			)
 		)
+		(model "${KIPRJMOD}/Assets/EMZR160ARA221MF61G/EMZR160ARA221MF61G.stp"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
 	)
 	(footprint "TestPoint:TestPoint_Pad_1.5x1.5mm"
 		(layer "F.Cu")
@@ -10465,6 +10476,17 @@
 		)
 		(embedded_fonts no)
 		(model "EMZR160ARA221MF61G.stp"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
+		(model "${KIPRJMOD}/Assets/EMZR160ARA221MF61G/EMZR160ARA221MF61G.stp"
 			(offset
 				(xyz 0 0 0)
 			)
