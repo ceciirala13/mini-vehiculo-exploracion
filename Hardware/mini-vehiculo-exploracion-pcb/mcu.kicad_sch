@@ -3324,7 +3324,7 @@
 		)
 		(uuid "fa7958a7-a5ad-4e69-88cd-19eabfc37116")
 	)
-	(label "D-"
+	(label "D+"
 		(at 77.47 123.19 180)
 		(effects
 			(font
@@ -3434,7 +3434,7 @@
 		)
 		(uuid "85e2ec5a-c2c0-4082-adba-051191495316")
 	)
-	(label "D+"
+	(label "D-"
 		(at 77.47 113.03 180)
 		(effects
 			(font
@@ -3454,7 +3454,7 @@
 		)
 		(uuid "d6c10667-1739-430f-905d-4110319eac0b")
 	)
-	(global_label "USB_D-"
+	(global_label "USB_D+"
 		(shape input)
 		(at 118.11 123.19 0)
 		(fields_autoplaced yes)
@@ -3564,7 +3564,7 @@
 			)
 		)
 	)
-	(global_label "USB_D+"
+	(global_label "USB_D-"
 		(shape input)
 		(at 118.11 113.03 0)
 		(fields_autoplaced yes)
