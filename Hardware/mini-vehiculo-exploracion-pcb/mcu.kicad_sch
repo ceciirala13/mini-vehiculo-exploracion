@@ -3334,7 +3334,7 @@
 		)
 		(uuid "0293f23e-9e89-42f9-8c07-c772c6912acc")
 	)
-	(label "V_BUS"
+	(label "V_BUS1"
 		(at 31.75 115.57 180)
 		(effects
 			(font
@@ -3394,7 +3394,7 @@
 		)
 		(uuid "3cc0b5fa-b116-4da7-91dd-8efb29918534")
 	)
-	(label "V_BUS"
+	(label "V_BUS1"
 		(at 31.75 100.33 180)
 		(effects
 			(font
@@ -3424,7 +3424,7 @@
 		)
 		(uuid "8294057a-d4dc-4709-b11e-03cd8ff828f9")
 	)
-	(label "V_BUS"
+	(label "V_BUS1"
 		(at 91.44 97.79 180)
 		(effects
 			(font

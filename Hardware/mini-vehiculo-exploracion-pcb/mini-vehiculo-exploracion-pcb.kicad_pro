@@ -194,7 +194,8 @@
       "track_widths": [
         0.0,
         0.14,
-        0.2
+        0.2,
+        0.3
       ],
       "tuning_pattern_settings": {
         "diff_pair_defaults": {
@@ -890,6 +891,10 @@
       {
         "netclass": "SIGNAL",
         "pattern": "/MCU_Peripherals/CC2"
+      },
+      {
+        "netclass": "5V",
+        "pattern": "/MCU_Peripherals/V_BUS1"
       }
     ]
   },
