@@ -82,7 +82,7 @@
 			(disableapertmacros no)
 			(usegerberextensions no)
 			(usegerberattributes yes)
-			(usegerberadvancedattributes yes)
+			(usegerberadvancedattributes no)
 			(creategerberjobfile yes)
 			(dashed_line_dash_ratio 12.000000)
 			(dashed_line_gap_ratio 3.000000)
