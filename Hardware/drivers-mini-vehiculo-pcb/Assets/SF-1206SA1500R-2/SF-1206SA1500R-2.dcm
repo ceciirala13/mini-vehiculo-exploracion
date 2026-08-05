@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP SF-1206SA1500R-2
+D 1206 slow-blow met-foil. 15A Auto
+K
+F http://www.bourns.com/docs/Product-Datasheets/SF-1206SA-R.pdf
+$ENDCMP
+#
+#End Doc Library

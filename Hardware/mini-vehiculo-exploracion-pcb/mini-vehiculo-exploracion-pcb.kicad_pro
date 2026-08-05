@@ -56,6 +56,11 @@
           "gap": 0.0,
           "via_gap": 0.0,
           "width": 0.0
+        },
+        {
+          "gap": 0.15,
+          "via_gap": 0.0,
+          "width": 0.23
         }
       ],
       "drc_exclusions": [],
@@ -188,7 +193,9 @@
       ],
       "track_widths": [
         0.0,
-        0.2
+        0.14,
+        0.2,
+        0.3
       ],
       "tuning_pattern_settings": {
         "diff_pair_defaults": {
@@ -489,9 +496,11 @@
         "wire_width": 6
       },
       {
+        "bus_width": 12,
         "clearance": 0.2,
         "diff_pair_gap": 0.25,
         "diff_pair_width": 0.2,
+        "line_style": 0,
         "microvia_diameter": 0.3,
         "microvia_drill": 0.1,
         "name": "3V3",
@@ -534,7 +543,8 @@
         "schematic_color": "rgb(28, 30, 255)",
         "track_width": 0.2,
         "via_diameter": 0.7,
-        "via_drill": 0.3
+        "via_drill": 0.3,
+        "wire_width": 6
       },
       {
         "bus_width": 12,
@@ -642,7 +652,7 @@
         "bus_width": 12,
         "clearance": 0.2,
         "diff_pair_gap": 0.5,
-        "diff_pair_width": 0.16,
+        "diff_pair_width": 0.14,
         "line_style": 0,
         "microvia_diameter": 0.3,
         "microvia_drill": 0.1,
@@ -650,7 +660,7 @@
         "pcb_color": "rgb(0, 245, 255)",
         "priority": 9,
         "schematic_color": "rgb(0, 245, 255)",
-        "track_width": 0.16,
+        "track_width": 0.14,
         "via_diameter": 0.7,
         "via_drill": 0.3,
         "wire_width": 6
@@ -667,11 +677,11 @@
         "pattern": "GND"
       },
       {
-        "netclass": "POWER_SUPPLY",
+        "netclass": "3V3",
         "pattern": "+3.3V"
       },
       {
-        "netclass": "POWER_SUPPLY",
+        "netclass": "3V3",
         "pattern": "/3V3"
       },
       {
@@ -855,10 +865,6 @@
         "pattern": "V_SELEC"
       },
       {
-        "netclass": "3V3",
-        "pattern": "+3.3V"
-      },
-      {
         "netclass": "5V",
         "pattern": "V_BUS"
       },
@@ -885,6 +891,10 @@
       {
         "netclass": "SIGNAL",
         "pattern": "/MCU_Peripherals/CC2"
+      },
+      {
+        "netclass": "5V",
+        "pattern": "/MCU_Peripherals/V_BUS1"
       }
     ]
   },
@@ -893,7 +903,7 @@
       "gencad": "",
       "idf": "",
       "netlist": "",
-      "plot": "",
+      "plot": "Manufacture_mini_vehiculo/",
       "pos_files": "",
       "specctra_dsn": "",
       "step": "",

@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP TPS561208DDCR
+D 4.5V to 17V Input, 2A Output, Synchronous SWIFT Step-Down Converter
+K
+F http://www.ti.com/lit/gpn/tps561208
+$ENDCMP
+#
+#End Doc Library

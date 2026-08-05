@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP NCV68061SNAIT1G
+D Operating Voltage Range up to 32 V; Immune to 60 V Load Dump Pulse; Immune to 40 V Negative Transient; Ideal Diode Function; Reverse Polarity Protection (RPP) Function; Enable Function; AECQ100 Grade 1 Qualified and PPAP Capable; These Devices are PbFree and are RoHS Compliant
+K
+F https://www.onsemi.com/pub/Collateral/NCV68061-D.PDF
+$ENDCMP
+#
+#End Doc Library

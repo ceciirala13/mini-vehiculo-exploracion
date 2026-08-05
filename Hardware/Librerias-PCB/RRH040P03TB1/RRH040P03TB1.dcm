@@ -1,9 +1,0 @@
-EESchema-DOCLIB  Version 2.0
-#
-$CMP RRH040P03TB1
-D Pch -30V -4A Power MOSFET
-K
-F https://fscdn.rohm.com//en/products/databook/datasheet/discrete/transistor/mosfet/rrh040p03tb1-e.pdf
-$ENDCMP
-#
-#End Doc Library

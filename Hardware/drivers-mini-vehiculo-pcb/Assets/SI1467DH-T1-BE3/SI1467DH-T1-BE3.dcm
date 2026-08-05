@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP SI1467DH-T1-BE3
+D P-Channel 20 V 3A (Ta), 2.7A (Tc) 1.5W (Ta), 2.78W (Tc) Surface Mount SC-70-6
+K
+F https://www.vishay.com/docs/68663/si1467dh.pdf
+$ENDCMP
+#
+#End Doc Library

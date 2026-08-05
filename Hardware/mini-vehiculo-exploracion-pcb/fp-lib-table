@@ -31,4 +31,5 @@
   (lib (name "TXU0104PWR")(type "KiCad")(uri "${KIPRJMOD}/Assets/TXU0104PWR")(options "")(descr ""))
   (lib (name "USB_UJ20-C-H-G-SMT-P16-TR")(type "KiCad")(uri "${KIPRJMOD}/Assets/USB_UJ20-C-H-G-SMT-P16-TR")(options "")(descr ""))
   (lib (name "ESP32-S3-WROOM-1-P3JLC")(type "KiCad")(uri "${KIPRJMOD}/Assets/ESP32-S3-WROOM-1-P3JLC.pretty")(options "")(descr ""))
+  (lib (name "Assets")(type "KiCad")(uri "${KIPRJMOD}/Assets")(options "")(descr ""))
 )
