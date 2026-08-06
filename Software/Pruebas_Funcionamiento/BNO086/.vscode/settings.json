@@ -1,0 +1,6 @@
+{
+    "idf.currentSetup": "C:\\esp\\v6.0.1\\esp-idf",
+    "cmake.sourceDirectory": "C:/Users/sanie/Documents/GitHub/mini-vehiculo-exploracion/Software/Pruebas_Funcionamiento/BNO086/bno086_test",
+    "idf.espIdfProjectPath": "C:\\Users\\sanie\\Documents\\GitHub\\mini-vehiculo-exploracion\\Software\\Pruebas_Funcionamiento\\BNO086\\bno086_test",
+    "idf.buildPath": "${workspaceFolder}/bno086_test/build"
+}
