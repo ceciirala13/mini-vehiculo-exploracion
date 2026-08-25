@@ -1,0 +1,25 @@
+#define RXD_PIN 4
+#define TXD_PIN 5
+
+void setup() {
+  // Initialize Serial1 on ESP32-C6 for receiving
+  // Parameters: baud-rate, protocol, RX pin, TX pin
+  Serial1.begin(115200, SERIAL_8N1, RXD_PIN, TXD_PIN);
+  
+  // Initialize standard USB serial for debugging
+  Serial.begin(115200);
+  delay(1000); // Give standard serial a moment to start
+  Serial.println("Starting UART reception on ESP32-C6...");
+}
+
+void loop() {
+  // Check if data is available to read
+  if (Serial1.available()) {
+    // Read the string until newline
+    String receivedData = Serial1.readStringUntil('\n');
+    
+    // Print to USB Serial for debugging
+    Serial.print("Received: ");
+    Serial.println(receivedData);
+  }
+}

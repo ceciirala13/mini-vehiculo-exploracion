@@ -1,0 +1,30 @@
+#define RXD_PIN 16
+#define TXD_PIN 17
+
+int counter = 0;
+
+void setup() {
+  // Initialize Serial1 on ESP32-C6
+  // Parameters: baud-rate, protocol, RX pin, TX pin
+  Serial1.begin(115200, SERIAL_8N1, RXD_PIN, TXD_PIN);
+  
+  // Initialize standard USB serial for debugging
+  Serial.begin(115200);
+  delay(1000); // Give standard serial a moment to start
+  Serial.println("Starting UART transmission on ESP32-C6...");
+}
+
+void loop() {
+  // Format the data string
+  String data = "Test data: " + String(counter++) + "\r\n";
+  
+  // Send the data over UART1 (TX on GPIO 17)
+  Serial1.print(data);
+  
+  // Also print to USB Serial for debugging so you can see what is being sent
+  Serial.print("Sent: ");
+  Serial.print(data);
+  
+  // Wait 10ms for 100Hz frequency
+  delay(10);
+}

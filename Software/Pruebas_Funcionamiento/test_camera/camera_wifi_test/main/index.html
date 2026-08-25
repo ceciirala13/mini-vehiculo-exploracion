@@ -1,0 +1,988 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rover Explorer - Control Hub & Cámara OV2640</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-primary: #0a0e17;
+            --bg-card: rgba(18, 26, 43, 0.75);
+            --border-card: rgba(0, 240, 255, 0.15);
+            --accent-cyan: #00f0ff;
+            --accent-magenta: #ff0055;
+            --accent-green: #00ff88;
+            --accent-amber: #ffaa00;
+            --accent-purple: #a855f7;
+            --text-primary: #f0f6fc;
+            --text-secondary: #8b949e;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Outfit', sans-serif;
+            user-select: none;
+            -webkit-user-select: none;
+        }
+
+        body {
+            background-color: var(--bg-primary);
+            background-image:
+                radial-gradient(circle at 15% 15%, rgba(0, 240, 255, 0.08) 0%, transparent 40%),
+                radial-gradient(circle at 85% 85%, rgba(255, 0, 85, 0.08) 0%, transparent 40%);
+            color: var(--text-primary);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 1.5rem;
+        }
+
+        header {
+            width: 100%;
+            max-width: 1100px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--border-card);
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .brand-logo {
+            width: 42px;
+            height: 42px;
+            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-magenta));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 0 15px rgba(0, 240, 255, 0.4);
+            font-weight: 700;
+            font-size: 1.3rem;
+            color: #000;
+        }
+
+        .brand h1 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            background: linear-gradient(90deg, #fff, var(--text-secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .status-badge {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 14px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border-card);
+            border-radius: 20px;
+            font-size: 0.85rem;
+            backdrop-filter: blur(10px);
+        }
+
+        .status-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: var(--accent-green);
+            box-shadow: 0 0 10px var(--accent-green);
+        }
+
+        .status-dot.offline {
+            background-color: var(--accent-magenta);
+            box-shadow: 0 0 10px var(--accent-magenta);
+        }
+
+        .main-container {
+            width: 100%;
+            max-width: 1100px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        .full-width {
+            grid-column: 1 / -1;
+        }
+
+        @media (max-width: 850px) {
+            .main-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-card);
+            border-radius: 20px;
+            padding: 1.5rem;
+            backdrop-filter: blur(12px);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+        }
+
+        .card-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            padding-bottom: 0.6rem;
+        }
+
+        /* SECCIÓN CÁMARA */
+        .camera-viewport-container {
+            width: 100%;
+            height: 420px;
+            background: #000;
+            border-radius: 14px;
+            border: 2px solid rgba(0, 240, 255, 0.3);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.8), 0 0 20px rgba(0, 240, 255, 0.15);
+        }
+
+        @media (max-width: 600px) {
+            .camera-viewport-container {
+                height: 280px;
+            }
+        }
+
+        .camera-img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            transition: filter 0.2s ease;
+        }
+
+        .camera-overlay {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            right: 12px;
+            display: flex;
+            justify-content: space-between;
+            pointer-events: none;
+        }
+
+        .camera-hud-badge {
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(8px);
+            border: 1px solid var(--border-card);
+            border-radius: 8px;
+            padding: 4px 10px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--accent-cyan);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .hud-crosshair {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            border: 1px solid rgba(0, 240, 255, 0.4);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .hud-crosshair::before, .hud-crosshair::after {
+            content: '';
+            position: absolute;
+            background: rgba(0, 240, 255, 0.4);
+        }
+
+        .hud-crosshair::before {
+            top: 50%; left: -6px; right: -6px; height: 1px;
+        }
+
+        .hud-crosshair::after {
+            left: 50%; top: -6px; bottom: -6px; width: 1px;
+        }
+
+        .camera-controls-bar {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .cam-btn-group {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .cam-btn {
+            background: rgba(0, 240, 255, 0.1);
+            border: 1px solid var(--accent-cyan);
+            color: #fff;
+            padding: 8px 16px;
+            border-radius: 10px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.2s ease;
+        }
+
+        .cam-btn:hover {
+            background: var(--accent-cyan);
+            color: #000;
+            box-shadow: 0 0 15px var(--accent-cyan);
+        }
+
+        .cam-btn.active {
+            background: var(--accent-magenta);
+            border-color: var(--accent-magenta);
+            color: #fff;
+            box-shadow: 0 0 15px var(--accent-magenta);
+        }
+
+        .cam-btn.save-btn {
+            background: rgba(0, 255, 136, 0.1);
+            border-color: var(--accent-green);
+            color: var(--accent-green);
+        }
+
+        .cam-btn.save-btn:hover {
+            background: var(--accent-green);
+            color: #000;
+            box-shadow: 0 0 15px var(--accent-green);
+        }
+
+        .cam-select {
+            background: rgba(18, 26, 43, 0.9);
+            border: 1px solid var(--border-card);
+            color: var(--text-primary);
+            padding: 8px 12px;
+            border-radius: 10px;
+            font-size: 0.85rem;
+            outline: none;
+            cursor: pointer;
+        }
+
+        .cam-select:focus {
+            border-color: var(--accent-cyan);
+        }
+
+        /* TELEMETRÍA Y CONTROL GRID */
+        .telemetry-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+            gap: 12px;
+        }
+
+        .metric-box {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 14px;
+            padding: 12px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .metric-icon {
+            font-size: 1.3rem;
+            margin-bottom: 4px;
+        }
+
+        .metric-label {
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+            margin-bottom: 4px;
+        }
+
+        .metric-value {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+
+        .metric-unit {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            margin-left: 2px;
+        }
+
+        .iaq-badge {
+            display: inline-block;
+            padding: 3px 8px;
+            border-radius: 8px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-top: 4px;
+        }
+
+        .iaq-excellent {
+            background: rgba(0, 255, 136, 0.2);
+            color: var(--accent-green);
+            border: 1px solid var(--accent-green);
+        }
+
+        .iaq-good {
+            background: rgba(0, 240, 255, 0.2);
+            color: var(--accent-cyan);
+            border: 1px solid var(--accent-cyan);
+        }
+
+        .iaq-moderate {
+            background: rgba(255, 170, 0, 0.2);
+            color: var(--accent-amber);
+            border: 1px solid var(--accent-amber);
+        }
+
+        .iaq-poor {
+            background: rgba(255, 0, 85, 0.2);
+            color: var(--accent-magenta);
+            border: 1px solid var(--accent-magenta);
+        }
+
+        /* Visual Rover Steering & Speed */
+        .rover-vis {
+            width: 100%;
+            height: 180px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 14px;
+            border: 1px dashed rgba(255, 255, 255, 0.1);
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .rover-chassis {
+            width: 70px;
+            height: 110px;
+            background: linear-gradient(180deg, #1e293b, #0f172a);
+            border: 2px solid var(--accent-cyan);
+            border-radius: 12px;
+            position: relative;
+            box-shadow: 0 0 15px rgba(0, 240, 255, 0.2);
+            transition: transform 0.1s ease-out;
+        }
+
+        .front-wheels {
+            position: absolute;
+            top: -8px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 4px;
+            transition: transform 0.15s ease-out;
+            transform-origin: center center;
+        }
+
+        .rear-wheels {
+            position: absolute;
+            bottom: -8px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 4px;
+        }
+
+        .wheel {
+            width: 12px;
+            height: 24px;
+            background: #475569;
+            border-radius: 4px;
+            border: 1px solid #94a3b8;
+            transition: background 0.2s, box-shadow 0.2s;
+        }
+
+        .wheel.active {
+            background: var(--accent-green);
+            box-shadow: 0 0 10px var(--accent-green);
+        }
+
+        .wheel.reverse {
+            background: var(--accent-magenta);
+            box-shadow: 0 0 10px var(--accent-magenta);
+        }
+
+        /* Controls Section */
+        .dpad-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            gap: 10px;
+            width: 220px;
+            height: 220px;
+            margin: 0 auto;
+        }
+
+        .btn-ctrl {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border-card);
+            border-radius: 14px;
+            color: var(--text-primary);
+            font-size: 1.2rem;
+            font-weight: 700;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.15s ease;
+            outline: none;
+            touch-action: manipulation;
+        }
+
+        .btn-ctrl:hover {
+            background: rgba(0, 240, 255, 0.15);
+            border-color: var(--accent-cyan);
+            box-shadow: 0 0 12px rgba(0, 240, 255, 0.3);
+        }
+
+        .btn-ctrl:active,
+        .btn-ctrl.pressed {
+            background: var(--accent-cyan);
+            color: #000;
+            box-shadow: 0 0 20px var(--accent-cyan);
+            transform: scale(0.95);
+        }
+
+        .btn-ctrl.reverse:active,
+        .btn-ctrl.reverse.pressed {
+            background: var(--accent-magenta);
+            color: #fff;
+            box-shadow: 0 0 20px var(--accent-magenta);
+        }
+
+        .btn-subtext {
+            font-size: 0.65rem;
+            font-weight: 400;
+            color: var(--text-secondary);
+            margin-top: 2px;
+        }
+
+        .slider-group {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .slider-header {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+
+        .custom-slider {
+            width: 100%;
+            height: 8px;
+            border-radius: 4px;
+            background: #1e293b;
+            outline: none;
+            -webkit-appearance: none;
+            cursor: pointer;
+        }
+
+        .custom-slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            background: var(--accent-cyan);
+            cursor: pointer;
+            box-shadow: 0 0 10px var(--accent-cyan);
+            transition: transform 0.1s;
+        }
+
+        .kbd-badge {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 4px;
+            padding: 2px 6px;
+            font-family: monospace;
+            font-size: 0.75rem;
+        }
+
+        .speed-presets {
+            display: flex;
+            gap: 8px;
+        }
+
+        .preset-btn {
+            flex: 1;
+            padding: 6px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border-card);
+            border-radius: 8px;
+            color: #fff;
+            font-size: 0.8rem;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .preset-btn.active,
+        .preset-btn:hover {
+            background: rgba(0, 240, 255, 0.2);
+            border-color: var(--accent-cyan);
+            color: var(--accent-cyan);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="brand">
+            <div class="brand-logo">R</div>
+            <div>
+                <h1>ROVER EXPLORER</h1>
+                <p style="font-size: 0.75rem; color: var(--text-secondary);">Control Hub + Cámara OV2640 2MP PLUS</p>
+            </div>
+        </div>
+        <div class="status-badge">
+            <div class="status-dot" id="netStatusDot"></div>
+            <span id="netStatusText">CONECTADO: AP 192.168.4.1</span>
+        </div>
+    </header>
+
+    <div class="main-container">
+        <!-- SECCIÓN CÁMARA ARDUCAM OV2640 -->
+        <div class="card full-width">
+            <div class="card-title">
+                <span>📷 Cámara ArduCAM OV2640 (2 Megapíxeles)</span>
+                <span id="camStatusBadge" style="font-size: 0.75rem; font-weight: 400; color: var(--accent-green);">● Listo para captura</span>
+            </div>
+
+            <!-- VIEWPORT DEL FEED -->
+            <div class="camera-viewport-container">
+                <img id="cameraFeed" class="camera-img" src="/capture" alt="Feed de Cámara OV2640" onerror="onImgError()" onload="onImgLoaded()">
+                <div class="hud-crosshair"></div>
+
+                <div class="camera-overlay">
+                    <div class="camera-hud-badge">
+                        <span id="hudModeDot" style="width: 8px; height: 8px; border-radius: 50%; background: var(--accent-green);"></span>
+                        <span id="hudModeText">MODO: SNAPSHOT</span>
+                    </div>
+                    <div class="camera-hud-badge" id="hudMetricText">
+                        TAM: -- KB
+                    </div>
+                </div>
+            </div>
+
+            <!-- BARRA DE CONTROLES DE CÁMARA -->
+            <div class="camera-controls-bar">
+                <div class="cam-btn-group">
+                    <button class="cam-btn" id="btnSnapshot" onclick="captureSnapshot()">
+                        📸 Tomar Foto
+                    </button>
+                    <button class="cam-btn" id="btnStream" onclick="toggleStreaming()">
+                        ▶ Iniciar Streaming
+                    </button>
+                    <button class="cam-btn save-btn" id="btnDownload" onclick="downloadCurrentPhoto()">
+                        💾 Guardar en PC
+                    </button>
+                </div>
+
+                <div style="display: flex; align-items: center; gap: 8px;">
+                    <span style="font-size: 0.8rem; color: var(--text-secondary);">Resolución:</span>
+                    <select class="cam-select" id="resSelector" onchange="onResolutionChange(this.value)">
+                        <option value="2">QVGA (320x240)</option>
+                        <option value="4" selected>VGA (640x480)</option>
+                        <option value="5">SVGA (800x600)</option>
+                        <option value="6">XGA (1024x768)</option>
+                        <option value="7">SXGA (1280x1024)</option>
+                        <option value="8">UXGA 2MP (1600x1200)</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECCIÓN BME690: Datos Ambientales -->
+        <div class="card full-width">
+            <div class="card-title">
+                Sensor Ambiental Bosch BME690
+                <span style="font-size: 0.75rem; font-weight: 400; color: var(--accent-green);">● Lecturas Activas</span>
+            </div>
+
+            <div class="telemetry-grid">
+                <div class="metric-box">
+                    <span class="metric-icon">🌡️</span>
+                    <div class="metric-label">Temperatura</div>
+                    <div class="metric-value" id="bmeTemp">24.5<span class="metric-unit">°C</span></div>
+                </div>
+
+                <div class="metric-box">
+                    <span class="metric-icon">💧</span>
+                    <div class="metric-label">Humedad</div>
+                    <div class="metric-value" id="bmeHum">52.0<span class="metric-unit">%</span></div>
+                </div>
+
+                <div class="metric-box">
+                    <span class="metric-icon">⏲️</span>
+                    <div class="metric-label">Presión</div>
+                    <div class="metric-value" id="bmePress">1013.2<span class="metric-unit">hPa</span></div>
+                </div>
+
+                <div class="metric-box">
+                    <span class="metric-icon">🍃</span>
+                    <div class="metric-label">Gas VOC</div>
+                    <div class="metric-value" id="bmeGas">145.8<span class="metric-unit">kΩ</span></div>
+                    <div class="iaq-badge iaq-excellent" id="bmeIaqBadge">Calidad: Excelente</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Columna Izquierda: Telemetría de Tracción -->
+        <div class="card">
+            <div class="card-title">
+                Telemetría de Tracción
+                <span style="font-size: 0.75rem; font-weight: 400; color: var(--text-secondary);">DRV8873 Dual</span>
+            </div>
+
+            <div class="telemetry-grid">
+                <div class="metric-box">
+                    <div class="metric-label">Tracción / Velocidad</div>
+                    <div class="metric-value" id="valSpeed">0<span class="metric-unit">%</span></div>
+                </div>
+                <div class="metric-box">
+                    <div class="metric-label">Dirección / Ángulo</div>
+                    <div class="metric-value" id="valAngle">0<span class="metric-unit">°</span></div>
+                </div>
+            </div>
+
+            <div class="rover-vis">
+                <div class="rover-chassis" id="roverChassis">
+                    <div class="front-wheels" id="frontWheels">
+                        <div class="wheel" id="wFL"></div>
+                        <div class="wheel" id="wFR"></div>
+                    </div>
+                    <div class="rear-wheels">
+                        <div class="wheel" id="wRL"></div>
+                        <div class="wheel" id="wRR"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slider-group">
+                <div class="slider-header">
+                    <span>Límite de Velocidad Máxima</span>
+                    <span id="speedLimitText">40%</span>
+                </div>
+                <div class="speed-presets">
+                    <button class="preset-btn" onclick="setSpeedLimit(20)">20%</button>
+                    <button class="preset-btn active" onclick="setSpeedLimit(40)">40%</button>
+                    <button class="preset-btn" onclick="setSpeedLimit(60)">60%</button>
+                    <button class="preset-btn" onclick="setSpeedLimit(80)">80%</button>
+                    <button class="preset-btn" onclick="setSpeedLimit(100)">100%</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Columna Derecha: Controles de Dirección (D-PAD) -->
+        <div class="card">
+            <div class="card-title">
+                Panel de Control
+                <span>
+                    <span class="kbd-badge">W</span> <span class="kbd-badge">A</span> <span class="kbd-badge">S</span>
+                    <span class="kbd-badge">D</span>
+                </span>
+            </div>
+
+            <div class="dpad-container">
+                <button class="btn-ctrl up" id="btnW" onmousedown="handlePress('W')" onmouseup="handleRelease('W')"
+                    ontouchstart="handlePress('W'); event.preventDefault();"
+                    ontouchend="handleRelease('W'); event.preventDefault();">
+                    ▲
+                    <span class="btn-subtext">W (Avance)</span>
+                </button>
+
+                <button class="btn-ctrl left" id="btnA" onmousedown="handlePress('A')" onmouseup="handleRelease('A')"
+                    ontouchstart="handlePress('A'); event.preventDefault();"
+                    ontouchend="handleRelease('A'); event.preventDefault();">
+                    ◀
+                    <span class="btn-subtext">A (Izq)</span>
+                </button>
+
+                <button class="btn-ctrl stop" id="btnStop" onclick="emergencyStop()">
+                    ■
+                    <span class="btn-subtext">PARAR</span>
+                </button>
+
+                <button class="btn-ctrl right" id="btnD" onmousedown="handlePress('D')" onmouseup="handleRelease('D')"
+                    ontouchstart="handlePress('D'); event.preventDefault();"
+                    ontouchend="handleRelease('D'); event.preventDefault();">
+                    ▶
+                    <span class="btn-subtext">D (Der)</span>
+                </button>
+
+                <button class="btn-ctrl down reverse" id="btnS" onmousedown="handlePress('S')"
+                    onmouseup="handleRelease('S')" ontouchstart="handlePress('S'); event.preventDefault();"
+                    ontouchend="handleRelease('S'); event.preventDefault();">
+                    ▼
+                    <span class="btn-subtext">S (Reversa)</span>
+                </button>
+            </div>
+
+            <div class="slider-group" style="margin-top: 10px;">
+                <div class="slider-header">
+                    <span>Ángulo de Servomotor</span>
+                    <span id="servoSliderVal">0°</span>
+                </div>
+                <input type="range" min="-45" max="45" value="0" class="custom-slider" id="servoSlider"
+                    oninput="onServoSliderChange(this.value)">
+                <div style="display: flex; justify-content: space-between; font-size: 0.75rem; color: var(--text-secondary);">
+                    <span>-45° (Izquierda)</span>
+                    <span style="cursor: pointer; color: var(--accent-cyan);" onclick="recenterServo()">[ Centrar 0° ]</span>
+                    <span>+45° (Derecha)</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // ================= GESTIÓN DE CÁMARA =================
+        let isStreaming = false;
+        let lastBlobUrl = null;
+
+        function captureSnapshot() {
+            if (isStreaming) {
+                toggleStreaming();
+            }
+
+            const img = document.getElementById('cameraFeed');
+            const hudText = document.getElementById('hudMetricText');
+            const statusBadge = document.getElementById('camStatusBadge');
+            statusBadge.innerText = '● Capturando foto...';
+            statusBadge.style.color = 'var(--accent-amber)';
+
+            const startTime = performance.now();
+            fetch('/capture?t=' + Date.now())
+                .then(res => {
+                    if (!res.ok) throw new Error('Error en captura');
+                    return res.blob();
+                })
+                .then(blob => {
+                    const elapsed = Math.round(performance.now() - startTime);
+                    const sizeKb = (blob.size / 1024).toFixed(1);
+
+                    if (lastBlobUrl) URL.revokeObjectURL(lastBlobUrl);
+                    lastBlobUrl = URL.createObjectURL(blob);
+                    img.src = lastBlobUrl;
+
+                    hudText.innerText = `${sizeKb} KB (${elapsed}ms)`;
+                    statusBadge.innerText = '● Foto capturada con éxito';
+                    statusBadge.style.color = 'var(--accent-green)';
+                })
+                .catch(err => {
+                    console.error(err);
+                    statusBadge.innerText = '● Error al capturar';
+                    statusBadge.style.color = 'var(--accent-magenta)';
+                });
+        }
+
+        function toggleStreaming() {
+            const img = document.getElementById('cameraFeed');
+            const btn = document.getElementById('btnStream');
+            const hudMode = document.getElementById('hudModeText');
+            const hudDot = document.getElementById('hudModeDot');
+
+            if (!isStreaming) {
+                isStreaming = true;
+                btn.innerText = '⏸ Pausar Stream';
+                btn.classList.add('active');
+                hudMode.innerText = 'MODO: LIVE STREAM';
+                hudDot.style.background = 'var(--accent-magenta)';
+                img.src = '/stream';
+            } else {
+                isStreaming = false;
+                btn.innerText = '▶ Iniciar Streaming';
+                btn.classList.remove('active');
+                hudMode.innerText = 'MODO: SNAPSHOT';
+                hudDot.style.background = 'var(--accent-green)';
+                img.src = '/capture?t=' + Date.now();
+            }
+        }
+
+        function downloadCurrentPhoto() {
+            const img = document.getElementById('cameraFeed');
+            const a = document.createElement('a');
+            const now = new Date();
+            const dateStr = now.getFullYear() +
+                String(now.getMonth() + 1).padStart(2, '0') +
+                String(now.getDate()).padStart(2, '0') + '_' +
+                String(now.getHours()).padStart(2, '0') +
+                String(now.getMinutes()).padStart(2, '0') +
+                String(now.getSeconds()).padStart(2, '0');
+
+            if (lastBlobUrl) {
+                a.href = lastBlobUrl;
+                a.download = `rover_capture_${dateStr}.jpg`;
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+            } else {
+                // Descargar directamente desde endpoint
+                fetch('/capture?t=' + Date.now())
+                    .then(res => res.blob())
+                    .then(blob => {
+                        const url = URL.createObjectURL(blob);
+                        a.href = url;
+                        a.download = `rover_capture_${dateStr}.jpg`;
+                        document.body.appendChild(a);
+                        a.click();
+                        document.body.removeChild(a);
+                        setTimeout(() => URL.revokeObjectURL(url), 1000);
+                    });
+            }
+        }
+
+        function onResolutionChange(res) {
+            fetch(`/resolution?res=${res}`)
+                .then(r => r.json())
+                .then(data => {
+                    captureSnapshot();
+                })
+                .catch(err => console.error(err));
+        }
+
+        function onImgError() {
+            document.getElementById('camStatusBadge').innerText = '● Sin señal de cámara';
+            document.getElementById('camStatusBadge').style.color = 'var(--accent-magenta)';
+        }
+
+        function onImgLoaded() {
+            document.getElementById('camStatusBadge').innerText = '● Imagen cargada';
+            document.getElementById('camStatusBadge').style.color = 'var(--accent-green)';
+        }
+
+        // ================= CONTROL DE MOVIMIENTO ROVER =================
+        let maxSpeedLimit = 40;
+        let activeKeys = { W: false, S: false, A: false, D: false };
+        let currentSpeed = 0;
+        let currentAngle = 0;
+
+        function sendControl(speed, angle) {
+            currentSpeed = speed;
+            currentAngle = angle;
+
+            document.getElementById('valSpeed').innerHTML = `${speed}<span class="metric-unit">%</span>`;
+            document.getElementById('valAngle').innerHTML = `${angle}<span class="metric-unit">°</span>`;
+            document.getElementById('servoSlider').value = angle;
+            document.getElementById('servoSliderVal').innerText = `${angle}°`;
+
+            const frontWheels = document.getElementById('frontWheels');
+            frontWheels.style.transform = `rotate(${angle}deg)`;
+
+            const wheels = [document.getElementById('wFL'), document.getElementById('wFR'), document.getElementById('wRL'), document.getElementById('wRR')];
+            wheels.forEach(w => {
+                w.className = 'wheel';
+                if (speed > 0) w.classList.add('active');
+                else if (speed < 0) w.classList.add('reverse');
+            });
+        }
+
+        function updateStateFromKeys() {
+            let targetSpeed = 0;
+            let targetAngle = 0;
+
+            if (activeKeys.W && !activeKeys.S) targetSpeed = maxSpeedLimit;
+            else if (activeKeys.S && !activeKeys.W) targetSpeed = -maxSpeedLimit;
+
+            if (activeKeys.A && !activeKeys.D) targetAngle = -35;
+            else if (activeKeys.D && !activeKeys.A) targetAngle = 35;
+
+            sendControl(targetSpeed, targetAngle);
+        }
+
+        function handlePress(key) {
+            key = key.toUpperCase();
+            if (activeKeys.hasOwnProperty(key)) {
+                activeKeys[key] = true;
+                const btn = document.getElementById('btn' + key);
+                if (btn) btn.classList.add('pressed');
+                updateStateFromKeys();
+            }
+        }
+
+        function handleRelease(key) {
+            key = key.toUpperCase();
+            if (activeKeys.hasOwnProperty(key)) {
+                activeKeys[key] = false;
+                const btn = document.getElementById('btn' + key);
+                if (btn) btn.classList.remove('pressed');
+                updateStateFromKeys();
+            }
+        }
+
+        function emergencyStop() {
+            activeKeys = { W: false, S: false, A: false, D: false };
+            document.querySelectorAll('.btn-ctrl').forEach(b => b.classList.remove('pressed'));
+            sendControl(0, 0);
+        }
+
+        function setSpeedLimit(limit) {
+            maxSpeedLimit = limit;
+            document.getElementById('speedLimitText').innerText = `${limit}%`;
+            document.querySelectorAll('.preset-btn').forEach(btn => {
+                btn.classList.toggle('active', btn.innerText === `${limit}%`);
+            });
+            updateStateFromKeys();
+        }
+
+        function onServoSliderChange(val) {
+            const angle = parseInt(val);
+            sendControl(currentSpeed, angle);
+        }
+
+        function recenterServo() {
+            sendControl(currentSpeed, 0);
+        }
+
+        window.addEventListener('keydown', (e) => {
+            if (e.repeat) return;
+            const k = e.key.toUpperCase();
+            if (k === 'W' || k === 'ARROWUP') handlePress('W');
+            else if (k === 'S' || k === 'ARROWDOWN') handlePress('S');
+            else if (k === 'A' || k === 'ARROWLEFT') handlePress('A');
+            else if (k === 'D' || k === 'ARROWRIGHT') handlePress('D');
+            else if (e.code === 'Space') {
+                e.preventDefault();
+                emergencyStop();
+            }
+        });
+
+        window.addEventListener('keyup', (e) => {
+            const k = e.key.toUpperCase();
+            if (k === 'W' || k === 'ARROWUP') handleRelease('W');
+            else if (k === 'S' || k === 'ARROWDOWN') handleRelease('S');
+            else if (k === 'A' || k === 'ARROWLEFT') handleRelease('A');
+            else if (k === 'D' || k === 'ARROWRIGHT') handleRelease('D');
+        });
+    </script>
+</body>
+
+</html>
