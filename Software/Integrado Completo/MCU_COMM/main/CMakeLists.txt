@@ -1,0 +1,27 @@
+idf_component_register(
+    SRCS
+        "main.c"
+        "rover_proto.c"
+        "uart_link.c"
+        "drive_command.c"
+        "telemetry_store.c"
+        "camera_service.c"
+        "arducam_ov2640.c"
+        "wifi_ap.c"
+        "web_server.c"
+    INCLUDE_DIRS
+        "."
+    REQUIRES
+        esp_wifi
+        esp_netif
+        esp_event
+        nvs_flash
+        esp_http_server
+        esp_driver_gpio
+        esp_driver_spi
+        esp_driver_i2c
+        esp_driver_uart
+        esp_timer
+    EMBED_TXTFILES
+        "index.html"
+)

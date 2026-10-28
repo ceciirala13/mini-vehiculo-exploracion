@@ -1,0 +1,17 @@
+# MCU_COMM (ESP32 Dev Board) defaults
+CONFIG_IDF_TARGET="esp32"
+
+# App is large (Wi-Fi + embedded GUI)
+CONFIG_PARTITION_TABLE_SINGLE_APP_LARGE=y
+CONFIG_ESPTOOLPY_FLASHSIZE_4MB=y
+
+# 1 ms tick
+CONFIG_FREERTOS_HZ=1000
+
+# WebSocket support in esp_http_server
+CONFIG_HTTPD_WS_SUPPORT=y
+CONFIG_HTTPD_MAX_REQ_HDR_LEN=1024
+CONFIG_HTTPD_MAX_URI_LEN=512
+
+# Two HTTP servers (GUI/WebSocket + MJPEG) need more sockets
+CONFIG_LWIP_MAX_SOCKETS=20

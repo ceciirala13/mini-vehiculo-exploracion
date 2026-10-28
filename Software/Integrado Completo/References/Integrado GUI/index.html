@@ -1,0 +1,2612 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rover Explorer - Centro de Mando y Telemetría</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --bg-primary: #060911;
+            --bg-card: rgba(12, 19, 34, 0.82);
+            --bg-card-hover: rgba(16, 26, 46, 0.9);
+            --border-card: rgba(0, 240, 255, 0.16);
+            --border-card-bright: rgba(0, 240, 255, 0.45);
+            --accent-cyan: #00f0ff;
+            --accent-cyan-dim: rgba(0, 240, 255, 0.14);
+            --accent-magenta: #ff0055;
+            --accent-magenta-dim: rgba(255, 0, 85, 0.14);
+            --accent-green: #00ff88;
+            --accent-green-dim: rgba(0, 255, 136, 0.14);
+            --accent-amber: #ffaa00;
+            --accent-amber-dim: rgba(255, 170, 0, 0.14);
+            --accent-purple: #a855f7;
+            --accent-purple-dim: rgba(168, 85, 247, 0.14);
+            --text-primary: #f0f6fc;
+            --text-secondary: #8b949e;
+            --text-dim: #485466;
+            --font-mono: 'JetBrains Mono', monospace;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Outfit', sans-serif;
+            user-select: none;
+            -webkit-user-select: none;
+        }
+
+        body {
+            background-color: var(--bg-primary);
+            background-image:
+                radial-gradient(circle at 5% 5%, rgba(0, 240, 255, 0.08) 0%, transparent 40%),
+                radial-gradient(circle at 95% 95%, rgba(255, 0, 85, 0.07) 0%, transparent 40%),
+                linear-gradient(180deg, #060911 0%, #090e1a 100%);
+            color: var(--text-primary);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0.8rem 1rem 1.5rem;
+            overflow-x: hidden;
+        }
+
+        header {
+            width: 100%;
+            max-width: 1680px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.8rem;
+            padding-bottom: 0.6rem;
+            border-bottom: 1px solid var(--border-card);
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .brand-logo {
+            width: 38px;
+            height: 38px;
+            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-magenta));
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 0 16px rgba(0, 240, 255, 0.4);
+            font-weight: 800;
+            font-size: 1.25rem;
+            color: #000;
+        }
+
+        .brand-title {
+            font-size: 1.2rem;
+            font-weight: 800;
+            letter-spacing: 1.2px;
+            background: linear-gradient(90deg, #ffffff, #a5b4fc, var(--accent-cyan));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .brand-sub {
+            font-size: 0.68rem;
+            color: var(--text-secondary);
+            letter-spacing: 0.5px;
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .status-badge {
+            display: flex;
+            align-items: center;
+            gap: 7px;
+            padding: 5px 12px;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid var(--border-card);
+            border-radius: 16px;
+            font-size: 0.76rem;
+            font-weight: 600;
+            backdrop-filter: blur(8px);
+        }
+
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: #555;
+            transition: all 0.3s ease;
+        }
+
+        .status-dot.online {
+            background-color: var(--accent-green);
+            box-shadow: 0 0 8px var(--accent-green);
+        }
+
+        .status-dot.sim {
+            background-color: var(--accent-amber);
+            box-shadow: 0 0 8px var(--accent-amber);
+        }
+
+        .sim-toggle-btn {
+            background: rgba(255, 170, 0, 0.12);
+            border: 1px solid var(--accent-amber);
+            color: var(--accent-amber);
+            padding: 5px 12px;
+            border-radius: 16px;
+            font-size: 0.74rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .sim-toggle-btn:hover {
+            background: var(--accent-amber);
+            color: #000;
+            box-shadow: 0 0 10px var(--accent-amber);
+        }
+
+        /* ================= COCKPIT GRID 3 COLUMNAS ================= */
+        .cockpit-container {
+            width: 100%;
+            max-width: 1680px;
+            display: grid;
+            grid-template-columns: 270px 1fr 310px;
+            gap: 0.9rem;
+            align-items: start;
+        }
+
+        @media (max-width: 1300px) {
+            .cockpit-container {
+                grid-template-columns: 260px 1fr;
+            }
+
+            .cockpit-right {
+                grid-column: 1 / -1;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 0.9rem;
+            }
+        }
+
+        @media (max-width: 900px) {
+            .cockpit-container {
+                grid-template-columns: 1fr;
+            }
+
+            .cockpit-right {
+                grid-column: 1 / -1;
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-card);
+            border-radius: 16px;
+            padding: 1rem;
+            backdrop-filter: blur(14px);
+            box-shadow: 0 6px 24px 0 rgba(0, 0, 0, 0.45);
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+
+        .card:hover {
+            border-color: var(--border-card-bright);
+            box-shadow: 0 6px 28px 0 rgba(0, 240, 255, 0.08);
+        }
+
+        .card-title {
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--accent-cyan);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            padding-bottom: 0.45rem;
+        }
+
+        .card-title-tag {
+            font-size: 0.68rem;
+            font-weight: 600;
+            color: var(--text-secondary);
+            text-transform: none;
+            letter-spacing: 0;
+        }
+
+        /* ================= COLUMNA IZQUIERDA: BME690 VERTICAL ================= */
+        .cockpit-left {
+            display: flex;
+            flex-direction: column;
+            gap: 0.9rem;
+        }
+
+        .bme-vertical-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.65rem;
+        }
+
+        .metric-card-vertical {
+            background: rgba(255, 255, 255, 0.025);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            padding: 0.75rem 0.9rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: all 0.2s;
+        }
+
+        .metric-card-vertical:hover {
+            background: rgba(255, 255, 255, 0.05);
+            border-color: var(--border-card);
+        }
+
+        .metric-info-left {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .metric-icon-small {
+            font-size: 1.35rem;
+        }
+
+        .metric-label-v {
+            font-size: 0.7rem;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .metric-val-v {
+            font-size: 1.25rem;
+            font-weight: 700;
+            font-family: var(--font-mono);
+            color: #fff;
+            text-align: right;
+        }
+
+        .metric-unit-v {
+            font-size: 0.72rem;
+            color: var(--text-secondary);
+            font-family: 'Outfit', sans-serif;
+            font-weight: 500;
+            margin-left: 2px;
+        }
+
+        .iaq-badge {
+            display: inline-block;
+            padding: 3px 8px;
+            border-radius: 6px;
+            font-size: 0.68rem;
+            font-weight: 700;
+            text-align: center;
+            width: 100%;
+            margin-top: 4px;
+        }
+
+        .iaq-excellent {
+            background: var(--accent-green-dim);
+            color: var(--accent-green);
+            border: 1px solid var(--accent-green);
+        }
+
+        .iaq-good {
+            background: var(--accent-cyan-dim);
+            color: var(--accent-cyan);
+            border: 1px solid var(--accent-cyan);
+        }
+
+        .iaq-moderate {
+            background: var(--accent-amber-dim);
+            color: var(--accent-amber);
+            border: 1px solid var(--accent-amber);
+        }
+
+        .iaq-poor {
+            background: var(--accent-magenta-dim);
+            color: var(--accent-magenta);
+            border: 1px solid var(--accent-magenta);
+        }
+
+        .iaq-severe {
+            background: rgba(239, 68, 68, 0.22);
+            color: #f87171;
+            border: 1px solid #ef4444;
+            box-shadow: 0 0 10px rgba(239, 68, 68, 0.35);
+        }
+
+        .system-info-box {
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            padding: 0.7rem;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            font-size: 0.72rem;
+            font-family: var(--font-mono);
+            color: var(--text-secondary);
+        }
+
+        .sys-row {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .sys-val {
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        /* ================= COLUMNA CENTRAL: CÁMARA + CONTROLES ================= */
+        .cockpit-center {
+            display: flex;
+            flex-direction: column;
+            gap: 0.9rem;
+        }
+
+        .camera-viewport-container {
+            width: 100%;
+            height: 350px;
+            background: #000;
+            border-radius: 12px;
+            border: 2px solid rgba(0, 240, 255, 0.3);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.9), 0 0 16px rgba(0, 240, 255, 0.1);
+        }
+
+        @media (max-width: 650px) {
+            .camera-viewport-container {
+                height: 250px;
+            }
+        }
+
+        .camera-img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+
+        .camera-overlay {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            right: 10px;
+            display: flex;
+            justify-content: space-between;
+            pointer-events: none;
+        }
+
+        .camera-hud-badge {
+            background: rgba(6, 12, 24, 0.8);
+            backdrop-filter: blur(8px);
+            border: 1px solid var(--border-card);
+            border-radius: 6px;
+            padding: 4px 10px;
+            font-size: 0.72rem;
+            font-weight: 700;
+            font-family: var(--font-mono);
+            color: var(--accent-cyan);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .hud-crosshair {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            border: 1px solid rgba(0, 240, 255, 0.4);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .hud-crosshair::before,
+        .hud-crosshair::after {
+            content: '';
+            position: absolute;
+            background: rgba(0, 240, 255, 0.45);
+        }
+
+        .hud-crosshair::before {
+            top: 50%;
+            left: -6px;
+            right: -6px;
+            height: 1px;
+        }
+
+        .hud-crosshair::after {
+            left: 50%;
+            top: -6px;
+            bottom: -6px;
+            width: 1px;
+        }
+
+        .camera-controls-bar {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .cam-btn-group {
+            display: flex;
+            gap: 6px;
+            flex-wrap: wrap;
+        }
+
+        .cam-btn {
+            background: var(--accent-cyan-dim);
+            border: 1px solid var(--accent-cyan);
+            color: #fff;
+            padding: 6px 12px;
+            border-radius: 8px;
+            font-size: 0.78rem;
+            font-weight: 700;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            transition: all 0.2s ease;
+        }
+
+        .cam-btn:hover {
+            background: var(--accent-cyan);
+            color: #000;
+            box-shadow: 0 0 12px var(--accent-cyan);
+        }
+
+        .cam-btn.active {
+            background: var(--accent-magenta);
+            border-color: var(--accent-magenta);
+            color: #fff;
+            box-shadow: 0 0 12px var(--accent-magenta);
+        }
+
+        .cam-btn.save-btn {
+            background: var(--accent-green-dim);
+            border-color: var(--accent-green);
+            color: var(--accent-green);
+        }
+
+        .cam-btn.save-btn:hover {
+            background: var(--accent-green);
+            color: #000;
+            box-shadow: 0 0 12px var(--accent-green);
+        }
+
+        .cam-select {
+            background: rgba(18, 26, 43, 0.9);
+            border: 1px solid var(--border-card);
+            color: var(--text-primary);
+            padding: 6px 10px;
+            border-radius: 8px;
+            font-size: 0.78rem;
+            font-weight: 600;
+            outline: none;
+            cursor: pointer;
+        }
+
+        /* Sub-Grid Central: Tracción + Controles */
+        .controls-subgrid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.9rem;
+        }
+
+        @media (max-width: 750px) {
+            .controls-subgrid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Chasis Rover */
+        .rover-vis {
+            width: 100%;
+            height: 140px;
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 12px;
+            border: 1px dashed rgba(0, 240, 255, 0.2);
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .rover-chassis {
+            width: 66px;
+            height: 100px;
+            background: linear-gradient(180deg, #1e293b, #0f172a);
+            border: 2px solid var(--accent-cyan);
+            border-radius: 10px;
+            position: relative;
+            box-shadow: 0 0 14px rgba(0, 240, 255, 0.2);
+            transition: transform 0.1s ease-out;
+        }
+
+        .rover-chassis::before {
+
+            position: absolute;
+            top: 4px;
+            left: 0;
+            right: 0;
+            text-align: center;
+            font-size: 0.52rem;
+            font-weight: 800;
+            color: var(--accent-cyan);
+            letter-spacing: 1px;
+        }
+
+        .front-wheels {
+            position: absolute;
+            top: -7px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 3px;
+            transition: transform 0.15s ease-out;
+            transform-origin: center center;
+        }
+
+        .middle-wheels {
+            position: absolute;
+            bottom: 38px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 3px;
+        }
+
+        .rear-wheels {
+            position: absolute;
+            bottom: -7px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 3px;
+        }
+
+        .wheel {
+            width: 11px;
+            height: 22px;
+            background: #334155;
+            border-radius: 3px;
+            border: 1px solid #64748b;
+            transition: background 0.2s, box-shadow 0.2s;
+        }
+
+        .wheel.active {
+            background: var(--accent-green);
+            box-shadow: 0 0 8px var(--accent-green);
+        }
+
+        .wheel.reverse {
+            background: var(--accent-magenta);
+            box-shadow: 0 0 8px var(--accent-magenta);
+        }
+
+        .speed-presets {
+            display: flex;
+            gap: 4px;
+        }
+
+        .preset-btn {
+            flex: 1;
+            padding: 5px 2px;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid var(--border-card);
+            border-radius: 6px;
+            color: #fff;
+            font-size: 0.72rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .preset-btn.active,
+        .preset-btn:hover {
+            background: var(--accent-cyan-dim);
+            border-color: var(--accent-cyan);
+            color: var(--accent-cyan);
+        }
+
+        .fault-alert {
+            display: none;
+            background: var(--accent-magenta-dim);
+            border: 1px solid var(--accent-magenta);
+            border-radius: 8px;
+            padding: 6px 10px;
+            color: #ff88a8;
+            font-size: 0.76rem;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .fault-alert.show {
+            display: flex;
+        }
+
+        /* ================= BATERÍAS (MONITOREO UNIFICADO IZQUIERDA) ================= */
+        .battery-card-content {
+            display: flex;
+            flex-direction: column;
+            gap: 0.55rem;
+        }
+
+        .battery-sub-block {
+            display: flex;
+            flex-direction: column;
+            gap: 0.35rem;
+            background: rgba(255, 255, 255, 0.025);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            padding: 0.55rem 0.75rem;
+            transition: all 0.2s;
+        }
+
+        .battery-sub-block:hover {
+            background: rgba(255, 255, 255, 0.045);
+            border-color: var(--border-card);
+        }
+
+        .battery-sub-title {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.72rem;
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+
+        .battery-main-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+        }
+
+        .battery-icon-wrap {
+            display: flex;
+            align-items: center;
+            flex: 1;
+        }
+
+        .battery-shell {
+            width: 100%;
+            max-width: 120px;
+            height: 20px;
+            border: 2px solid var(--accent-cyan);
+            border-radius: 5px;
+            padding: 2px;
+            position: relative;
+            background: rgba(0, 0, 0, 0.5);
+            box-shadow: 0 0 10px rgba(0, 240, 255, 0.2);
+        }
+
+        .battery-shell.esp-shell {
+            border-color: var(--accent-purple);
+            box-shadow: 0 0 10px rgba(168, 85, 247, 0.2);
+        }
+
+        .battery-cap {
+            position: absolute;
+            right: -5px;
+            top: 3px;
+            width: 3px;
+            height: 10px;
+            background: var(--accent-cyan);
+            border-radius: 0 2px 2px 0;
+        }
+
+        .battery-shell.esp-shell .battery-cap {
+            background: var(--accent-purple);
+        }
+
+        .battery-level-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--accent-cyan), var(--accent-green));
+            border-radius: 2px;
+            transition: width 0.3s ease, background 0.3s ease;
+            box-shadow: 0 0 8px var(--accent-green);
+        }
+
+        .battery-level-fill.esp-fill {
+            background: linear-gradient(90deg, var(--accent-purple), var(--accent-cyan));
+            box-shadow: 0 0 8px var(--accent-cyan);
+        }
+
+        .battery-level-fill.warn {
+            background: linear-gradient(90deg, var(--accent-amber), #ffcc00) !important;
+            box-shadow: 0 0 8px var(--accent-amber) !important;
+        }
+
+        .battery-level-fill.danger {
+            background: linear-gradient(90deg, var(--accent-magenta), #ff4466) !important;
+            box-shadow: 0 0 10px var(--accent-magenta) !important;
+            animation: pulse-danger 0.8s infinite alternate;
+        }
+
+        .battery-readout {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            min-width: 65px;
+        }
+
+        .battery-pct {
+            font-size: 1.15rem;
+            font-weight: 800;
+            font-family: var(--font-mono);
+            color: #fff;
+            line-height: 1;
+        }
+
+        .battery-voltage {
+            font-size: 0.72rem;
+            font-weight: 600;
+            font-family: var(--font-mono);
+            color: var(--accent-cyan);
+        }
+
+        .battery-voltage.esp-volt {
+            color: var(--accent-purple);
+        }
+
+        .battery-sub-foot {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.65rem;
+            font-family: var(--font-mono);
+            color: var(--text-secondary);
+        }
+
+        .bat-info-lbl {
+            color: var(--text-dim);
+            font-size: 0.62rem;
+            text-transform: uppercase;
+        }
+
+        .bat-info-val {
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        .bat-info-val.optimal {
+            color: var(--accent-green);
+        }
+
+        .bat-info-val.warn {
+            color: var(--accent-amber);
+        }
+
+        .bat-info-val.danger {
+            color: var(--accent-magenta);
+            font-weight: 700;
+        }
+
+        /* ================= JOYSTICK ANALÓGICO ================= */
+        .joystick-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 0.2rem 0;
+        }
+
+        .joystick-base {
+            width: 176px;
+            height: 176px;
+            border-radius: 50%;
+            background: radial-gradient(circle at center, rgba(16, 26, 48, 0.95) 0%, rgba(7, 12, 24, 0.98) 100%);
+            border: 2px solid rgba(0, 240, 255, 0.35);
+            box-shadow: 0 0 20px rgba(0, 240, 255, 0.12), inset 0 0 22px rgba(0, 0, 0, 0.9);
+            position: relative;
+            touch-action: none;
+            cursor: crosshair;
+            user-select: none;
+            overflow: hidden;
+        }
+
+        .joy-axis-x {
+            position: absolute;
+            top: 50%;
+            left: 8px;
+            right: 8px;
+            height: 1px;
+            background: rgba(0, 240, 255, 0.2);
+            pointer-events: none;
+        }
+
+        .joy-axis-y {
+            position: absolute;
+            left: 50%;
+            top: 8px;
+            bottom: 8px;
+            width: 1px;
+            background: rgba(0, 240, 255, 0.2);
+            pointer-events: none;
+        }
+
+        .joy-ring-inner {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 60px;
+            height: 60px;
+            transform: translate(-50%, -50%);
+            border: 1px dashed rgba(0, 240, 255, 0.22);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .joy-ring-middle {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 118px;
+            height: 118px;
+            transform: translate(-50%, -50%);
+            border: 1px solid rgba(0, 240, 255, 0.12);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .joy-angle-labels {
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+        }
+
+        .joy-lbl {
+            position: absolute;
+            font-size: 0.52rem;
+            font-weight: 800;
+            color: rgba(0, 240, 255, 0.45);
+            letter-spacing: 0.5px;
+            font-family: var(--font-mono);
+        }
+
+        .joy-lbl.top {
+            top: 5px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .joy-lbl.bottom {
+            bottom: 5px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .joy-lbl.left {
+            left: 5px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .joy-lbl.right {
+            right: 5px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .joystick-knob {
+            width: 58px;
+            height: 58px;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            cursor: grab;
+            z-index: 10;
+            touch-action: none;
+        }
+
+        .knob-cap {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: radial-gradient(circle at 35% 35%, #22d3ee 0%, #0284c7 60%, #034870 100%);
+            border: 2px solid rgba(255, 255, 255, 0.85);
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.6), 0 0 16px rgba(0, 240, 255, 0.45), inset 0 2px 4px rgba(255, 255, 255, 0.6);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.1s, box-shadow 0.15s;
+        }
+
+        .joystick-knob:hover .knob-cap {
+            box-shadow: 0 4px 18px rgba(0, 0, 0, 0.7), 0 0 22px rgba(0, 240, 255, 0.7), inset 0 2px 5px rgba(255, 255, 255, 0.8);
+        }
+
+        .joystick-knob.dragging {
+            cursor: grabbing;
+        }
+
+        .joystick-knob.dragging .knob-cap {
+            transform: scale(1.08);
+            background: radial-gradient(circle at 35% 35%, #67e8f9 0%, #0284c7 60%, #083344 100%);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.8), 0 0 28px rgba(0, 240, 255, 0.9), inset 0 2px 6px rgba(255, 255, 255, 0.9);
+        }
+
+
+
+        .custom-slider {
+            width: 100%;
+            height: 6px;
+            border-radius: 3px;
+            background: #1e293b;
+            outline: none;
+            -webkit-appearance: none;
+            cursor: pointer;
+        }
+
+        .custom-slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            background: var(--accent-cyan);
+            cursor: pointer;
+            box-shadow: 0 0 10px var(--accent-cyan);
+            transition: transform 0.1s;
+        }
+
+        .custom-slider::-webkit-slider-thumb:hover {
+            transform: scale(1.2);
+        }
+
+        /* ================= COLUMNA DERECHA: MPU6050 IMU VERTICAL ================= */
+        .cockpit-right {
+            display: flex;
+            flex-direction: column;
+            gap: 0.9rem;
+        }
+
+        .horizon-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .artificial-horizon {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            border: 3px solid var(--accent-cyan);
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 0 16px rgba(0, 240, 255, 0.25), inset 0 0 12px rgba(0, 0, 0, 0.8);
+            background: #000;
+        }
+
+        .horizon-sphere {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            top: -60px;
+            left: -60px;
+            transform-origin: center center;
+            transition: transform 0.08s linear;
+        }
+
+        .horizon-sky {
+            position: absolute;
+            width: 100%;
+            height: 50%;
+            top: 0;
+            background: linear-gradient(180deg, #1e3a8a, #0284c7);
+        }
+
+        .horizon-ground {
+            position: absolute;
+            width: 100%;
+            height: 50%;
+            bottom: 0;
+            background: linear-gradient(180deg, #78350f, #451a03);
+        }
+
+        .horizon-line {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            height: 2px;
+            background: #ffffff;
+            box-shadow: 0 0 6px #fff;
+        }
+
+        .pitch-ladder {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            pointer-events: none;
+        }
+
+        .ladder-rung {
+            height: 1px;
+            background: rgba(255, 255, 255, 0.7);
+            box-shadow: 0 0 3px rgba(255, 255, 255, 0.8);
+        }
+
+        .ladder-rung.deg20 {
+            width: 44px;
+        }
+
+        .ladder-rung.deg10 {
+            width: 26px;
+        }
+
+        .ladder-rung.deg0 {
+            width: 60px;
+            height: 2px;
+            background: #fff;
+        }
+
+        .horizon-aircraft-reticle {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 70px;
+            height: 20px;
+            pointer-events: none;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .reticle-wing {
+            width: 24px;
+            height: 3px;
+            background: var(--accent-amber);
+            box-shadow: 0 0 6px var(--accent-amber);
+            border-radius: 2px;
+        }
+
+        .reticle-center {
+            width: 6px;
+            height: 6px;
+            background: var(--accent-amber);
+            border-radius: 50%;
+            box-shadow: 0 0 6px var(--accent-amber);
+        }
+
+        .horizon-roll-indicator {
+            position: absolute;
+            top: 5px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 0;
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-top: 7px solid var(--accent-amber);
+            z-index: 2;
+        }
+
+        .rollover-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            padding: 4px 10px;
+            border-radius: 8px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            width: fit-content;
+        }
+
+        .roll-safe {
+            background: var(--accent-green-dim);
+            border: 1px solid var(--accent-green);
+            color: var(--accent-green);
+        }
+
+        .roll-warn {
+            background: var(--accent-amber-dim);
+            border: 1px solid var(--accent-amber);
+            color: var(--accent-amber);
+        }
+
+        .roll-danger {
+            background: var(--accent-magenta-dim);
+            border: 1px solid var(--accent-magenta);
+            color: var(--accent-magenta);
+            animation: pulse-danger 1s infinite alternate;
+        }
+
+        @keyframes pulse-danger {
+            from {
+                box-shadow: 0 0 4px var(--accent-magenta);
+            }
+
+            to {
+                box-shadow: 0 0 14px var(--accent-magenta);
+            }
+        }
+
+        .imu-subhead {
+            font-size: 0.72rem;
+            font-weight: 700;
+            color: var(--accent-cyan);
+            text-transform: uppercase;
+            letter-spacing: 0.6px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .axis-bar-group {
+            display: flex;
+            flex-direction: column;
+            gap: 3px;
+        }
+
+        .axis-bar-header {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.7rem;
+            font-family: var(--font-mono);
+            color: var(--text-secondary);
+        }
+
+        .axis-bar-val {
+            font-weight: 700;
+            color: #fff;
+        }
+
+        .axis-meter-bg {
+            width: 100%;
+            height: 6px;
+            background: rgba(255, 255, 255, 0.06);
+            border-radius: 3px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .axis-meter-fill {
+            position: absolute;
+            height: 100%;
+            background: var(--accent-cyan);
+            border-radius: 3px;
+            transition: width 0.08s ease, left 0.08s ease, background-color 0.2s;
+        }
+
+        .axis-meter-center {
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 1px;
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        .kbd-badge {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 4px;
+            padding: 1px 5px;
+            font-family: var(--font-mono);
+            font-size: 0.68rem;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="brand">
+            <div class="brand-logo">R</div>
+            <div>
+                <div class="brand-title">ROVER EXPLORER</div>
+            </div>
+        </div>
+        <div class="header-actions">
+            <button class="sim-toggle-btn" id="simToggleBtn" onclick="toggleSimulationMode()">
+                ⚡ Simulación: OFF
+            </button>
+            <div class="status-badge">
+                <div class="status-dot" id="statusDot"></div>
+                <span id="statusText">CONECTANDO...</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- COCKPIT CONTAINER 3 COLUMNAS OPTIMIZADO PARA PC -->
+    <div class="cockpit-container">
+
+        <!-- ================= COLUMNA 1 (IZQUIERDA): BME690 + BATERÍA POTENCIA ================= -->
+        <div class="cockpit-left">
+            <div class="card">
+                <div class="card-title">
+                    <span>🍃 Sensor Ambiental</span>
+                </div>
+
+                <div class="bme-vertical-list">
+                    <!-- Temperatura -->
+                    <div class="metric-card-vertical">
+                        <div class="metric-info-left">
+                            <span class="metric-icon-small">🌡️</span>
+                            <div>
+                                <div class="metric-label-v">Temperatura</div>
+                                <div style="font-size: 0.65rem; color: var(--text-dim);">Ambiente</div>
+                            </div>
+                        </div>
+                        <div class="metric-val-v" id="bmeTemp">--<span class="metric-unit-v">°C</span></div>
+                    </div>
+
+                    <!-- Humedad -->
+                    <div class="metric-card-vertical">
+                        <div class="metric-info-left">
+                            <span class="metric-icon-small">💧</span>
+                            <div>
+                                <div class="metric-label-v">Humedad</div>
+                                <div style="font-size: 0.65rem; color: var(--text-dim);">Relativa</div>
+                            </div>
+                        </div>
+                        <div class="metric-val-v" id="bmeHum">--<span class="metric-unit-v">%</span></div>
+                    </div>
+
+                    <!-- Presión -->
+                    <div class="metric-card-vertical">
+                        <div class="metric-info-left">
+                            <span class="metric-icon-small">⏲️</span>
+                            <div>
+                                <div class="metric-label-v">Presión</div>
+                                <div style="font-size: 0.65rem; color: var(--text-dim);">Barométrica</div>
+                            </div>
+                        </div>
+                        <div class="metric-val-v" id="bmePress">--<span class="metric-unit-v">hPa</span></div>
+                    </div>
+
+                    <!-- Gas / Calidad del Aire (IAQ) -->
+                    <div class="metric-card-vertical" style="flex-direction: column; align-items: stretch; gap: 5px;">
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <div class="metric-info-left">
+                                <span class="metric-icon-small">🧪</span>
+                                <div>
+                                    <div class="metric-label-v">Calidad del Aire</div>
+                                    <div style="font-size: 0.65rem; color: var(--text-dim);">Índice</div>
+                                </div>
+                            </div>
+                            <div class="metric-val-v" id="bmeGas">--<span class="metric-unit-v">IAQ</span></div>
+                        </div>
+                        <div
+                            style="display: flex; justify-content: space-between; font-size: 0.64rem; color: var(--text-secondary); font-family: var(--font-mono); background: rgba(0,0,0,0.25); padding: 3px 6px; border-radius: 4px; border: 1px solid rgba(255,255,255,0.03);">
+                            <span>Cociente: <strong id="bmeIaqRatio"
+                                    style="color: var(--accent-cyan);">--</strong></span>
+                            <span>R_gas: <strong id="bmeGasRaw" style="color: var(--text-primary);">--
+                                    kΩ</strong></span>
+                        </div>
+                        <div class="iaq-badge iaq-excellent" id="bmeIaqBadge">Calidad: -- </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TARJETA SISTEMA DE BATERÍAS (POTENCIA Y ESP32) -->
+            <div class="card">
+                <div class="card-title">
+                    <span>🔋 Estado de Baterías</span>
+                </div>
+                <div class="battery-card-content">
+                    <!-- 1. Batería de Potencia (Motores) -->
+                    <div class="battery-sub-block">
+                        <div class="battery-sub-title">
+                            <span>Motores</span>
+                        </div>
+                        <div class="battery-main-header">
+                            <div class="battery-icon-wrap">
+                                <div class="battery-shell">
+                                    <div class="battery-level-fill" id="batMotorsBar" style="width: 85%;"></div>
+                                    <div class="battery-cap"></div>
+                                </div>
+                            </div>
+                            <div class="battery-readout">
+                                <div class="battery-pct" id="batMotorsPct">85<span class="metric-unit-v">%</span></div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- 2. Batería Lógica (ESP32) -->
+                    <div class="battery-sub-block">
+                        <div class="battery-sub-title">
+                            <span>Control</span>
+                        </div>
+                        <div class="battery-main-header">
+                            <div class="battery-icon-wrap">
+                                <div class="battery-shell esp-shell">
+                                    <div class="battery-level-fill esp-fill" id="batEspBar" style="width: 92%;"></div>
+                                    <div class="battery-cap"></div>
+                                </div>
+                            </div>
+                            <div class="battery-readout">
+                                <div class="battery-pct" id="batEspPct">92<span class="metric-unit-v">%</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Caja de Estado del Sistema -->
+            <div class="system-info-box">
+                <div class="sys-row"><span>Rover IP:</span><span class="sys-val">192.168.4.1</span></div>
+                <div class="sys-row"><span>Enlace:</span><span class="sys-val" id="sysLinkMode">WebSocket / AP</span>
+                </div>
+                <div class="sys-row"><span>Tasa Refresco:</span><span class="sys-val">~20 Hz</span></div>
+            </div>
+        </div>
+
+        <!-- ================= COLUMNA 2 (CENTRAL): CÁMARA + CONTROLES ================= -->
+        <div class="cockpit-center">
+
+            <!-- TARJETA CÁMARA ARDUCAM OV2640 -->
+            <div class="card">
+                <div class="card-title">
+                    <span>📷 Cámara ArduCAM OV2640</span>
+                    <span class="card-title-tag" id="camStatusBadge" style="color: var(--accent-green);">● Listo</span>
+                </div>
+
+                <div class="camera-viewport-container">
+                    <img id="cameraFeed" class="camera-img" src="/capture" alt="Feed Cámara" onerror="onImgError()"
+                        onload="onImgLoaded()">
+                    <div class="hud-crosshair"></div>
+
+                    <div class="camera-overlay">
+                        <div class="camera-hud-badge">
+                            <span id="hudModeDot"
+                                style="width: 7px; height: 7px; border-radius: 50%; background: var(--accent-green);"></span>
+                            <span id="hudModeText">MODO: SNAPSHOT</span>
+                        </div>
+                        <div class="camera-hud-badge" id="hudMetricText">
+                            TAM: -- KB
+                        </div>
+                    </div>
+                </div>
+
+                <div class="camera-controls-bar">
+                    <div class="cam-btn-group">
+                        <button class="cam-btn" id="btnSnapshot" onclick="captureSnapshot()">
+                            📸 Tomar Foto
+                        </button>
+                        <button class="cam-btn" id="btnStream" onclick="toggleStreaming()">
+                            ▶ Iniciar Stream
+                        </button>
+                        <button class="cam-btn save-btn" id="btnDownload" onclick="downloadCurrentPhoto()">
+                            💾 Guardar PC
+                        </button>
+                    </div>
+
+                    <div style="display: flex; align-items: center; gap: 6px;">
+                        <span style="font-size: 0.74rem; color: var(--text-secondary);">Resolución:</span>
+                        <select class="cam-select" id="resSelector" onchange="onResolutionChange(this.value)">
+                            <option value="2">QVGA (320x240)</option>
+                            <option value="4" selected>VGA (640x480)</option>
+                            <option value="5">SVGA (800x600)</option>
+                            <option value="6">XGA (1024x768)</option>
+                            <option value="7">SXGA (1280x1024)</option>
+                            <option value="8">UXGA 2MP (1600x1200)</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TARJETA OPERACIONES Y CONTROL DEL ROVER -->
+            <div class="card">
+                <div class="controls-subgrid">
+
+                    <!-- Lado Izquierdo: Telemetría de Tracción y Chasis -->
+                    <div style="display: flex; flex-direction: column; gap: 0.7rem;">
+                        <div class="card-title" style="padding-bottom: 0.3rem;">
+                            <span>Telemetría Tracción</span>
+                        </div>
+
+                        <div class="fault-alert" id="faultAlert">
+                            <span>⚠️ <strong>nFAULT:</strong> Motores detenidos.</span>
+                            <button class="preset-btn" style="flex:0; padding:2px 6px;"
+                                onclick="toggleFaultSimulation()">Reset</button>
+                        </div>
+
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem;">
+                            <div
+                                style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06); border-radius: 8px; padding: 0.5rem; text-align: center;">
+                                <div
+                                    style="font-size: 0.65rem; color: var(--text-secondary); text-transform: uppercase;">
+                                    Velocidad</div>
+                                <div style="font-size: 1.2rem; font-weight: 700; font-family: var(--font-mono); color: #fff;"
+                                    id="valSpeed">0<span
+                                        style="font-size: 0.7rem; color: var(--text-secondary);">%</span></div>
+                            </div>
+                            <div
+                                style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06); border-radius: 8px; padding: 0.5rem; text-align: center;">
+                                <div
+                                    style="font-size: 0.65rem; color: var(--text-secondary); text-transform: uppercase;">
+                                    Dirección</div>
+                                <div style="font-size: 1.2rem; font-weight: 700; font-family: var(--font-mono); color: #fff;"
+                                    id="valAngle">0<span
+                                        style="font-size: 0.7rem; color: var(--text-secondary);">°</span></div>
+                            </div>
+                        </div>
+
+                        <div class="rover-vis">
+                            <div class="rover-chassis" id="roverChassis">
+                                <div class="front-wheels" id="frontWheels">
+                                    <div class="wheel" id="wFL"></div>
+                                    <div class="wheel" id="wFR"></div>
+                                </div>
+                                <div class="middle-wheels">
+                                    <div class="wheel" id="wML"></div>
+                                    <div class="wheel" id="wMR"></div>
+                                </div>
+                                <div class="rear-wheels">
+                                    <div class="wheel" id="wRL"></div>
+                                    <div class="wheel" id="wRR"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div
+                                style="display: flex; justify-content: space-between; font-size: 0.72rem; color: var(--text-secondary); margin-bottom: 4px;">
+                                <span>Velocidad Máxima:</span>
+                                <span id="speedLimitText"
+                                    style="color: var(--accent-cyan); font-weight: 700;">40%</span>
+                            </div>
+                            <div class="speed-presets">
+                                <button class="preset-btn" onclick="setSpeedLimit(20)">20%</button>
+                                <button class="preset-btn active" onclick="setSpeedLimit(40)">40%</button>
+                                <button class="preset-btn" onclick="setSpeedLimit(60)">60%</button>
+                                <button class="preset-btn" onclick="setSpeedLimit(80)">80%</button>
+                                <button class="preset-btn" onclick="setSpeedLimit(100)">100%</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Lado Derecho: Mando Joystick Analógico Arrastrable -->
+                    <div style="display: flex; flex-direction: column; gap: 0.6rem;">
+                        <div class="card-title" style="padding-bottom: 0.3rem; display: flex; justify-content: space-between; align-items: center;">
+                            <span>Joystick</span>
+                            <span class="card-title-tag" id="gamepadStatusTag" style="color: var(--text-dim); font-size: 0.68rem;">🎮 Xbox: Esperando conexión...</span>
+                        </div>
+
+                        <div class="joystick-container">
+                            <div class="joystick-base" id="joystickBase">
+                                <div class="joy-axis-x"></div>
+                                <div class="joy-axis-y"></div>
+                                <div class="joy-ring-inner"></div>
+                                <div class="joy-ring-middle"></div>
+                                <div class="joy-angle-labels">
+                                    <span class="joy-lbl top">▲ AVANCE</span>
+                                    <span class="joy-lbl bottom">▼ REVERSA</span>
+                                    <span class="joy-lbl left">◀ IZQ</span>
+                                    <span class="joy-lbl right">DER ▶</span>
+                                </div>
+                                <div class="joystick-knob" id="joystickKnob">
+                                    <div class="knob-cap">
+                                        <div class="knob-center-dot"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ================= COLUMNA 3 (DERECHA): MPU6050 IMU VERTICAL ================= -->
+        <div class="cockpit-right">
+            <div class="card">
+                <div class="card-title">
+                    <span>🧭 Inercial</span>
+                </div>
+
+                <!-- Horizonte Artificial -->
+                <div class="horizon-box">
+                    <div class="artificial-horizon">
+                        <div class="horizon-roll-indicator"></div>
+                        <div class="horizon-sphere" id="horizonSphere">
+                            <div class="horizon-sky"></div>
+                            <div class="horizon-ground"></div>
+                            <div class="horizon-line"></div>
+                            <div class="pitch-ladder">
+                                <div class="ladder-rung deg20"></div>
+                                <div class="ladder-rung deg10"></div>
+                                <div class="ladder-rung deg0"></div>
+                                <div class="ladder-rung deg10"></div>
+                                <div class="ladder-rung deg20"></div>
+                            </div>
+                        </div>
+                        <div class="horizon-aircraft-reticle">
+                            <div class="reticle-wing"></div>
+                            <div class="reticle-center"></div>
+                            <div class="reticle-wing"></div>
+                        </div>
+                    </div>
+
+                    <div style="display: flex; gap: 10px; font-family: var(--font-mono); font-size: 0.76rem;">
+                        <div>ROLL: <strong id="txtRollVal" style="color: var(--accent-cyan);">0.0°</strong></div>
+                        <div>PITCH: <strong id="txtPitchVal" style="color: var(--accent-amber);">0.0°</strong></div>
+                    </div>
+
+                    <div class="rollover-badge roll-safe" id="rolloverBadge">
+                        🛡️ Inclinación Segura
+                    </div>
+                </div>
+
+                <!-- Acelerómetro Triaxial -->
+                <div style="display: flex; flex-direction: column; gap: 6px; margin-top: 4px;">
+                    <div class="imu-subhead">
+                        <span>Acelerómetro (g)</span>
+                        <span id="txtTotalAcc">|a|: 1.00g</span>
+                    </div>
+
+                    <div class="axis-bar-group">
+                        <div class="axis-bar-header">
+                            <span>Eje X (Lat)</span>
+                            <span class="axis-bar-val" id="valAccX">0.00 g</span>
+                        </div>
+                        <div class="axis-meter-bg">
+                            <div class="axis-meter-center"></div>
+                            <div class="axis-meter-fill" id="barAccX" style="left: 50%; width: 0%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="axis-bar-group">
+                        <div class="axis-bar-header">
+                            <span>Eje Y (Long)</span>
+                            <span class="axis-bar-val" id="valAccY">0.00 g</span>
+                        </div>
+                        <div class="axis-meter-bg">
+                            <div class="axis-meter-center"></div>
+                            <div class="axis-meter-fill" id="barAccY" style="left: 50%; width: 0%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="axis-bar-group">
+                        <div class="axis-bar-header">
+                            <span>Eje Z (Vert)</span>
+                            <span class="axis-bar-val" id="valAccZ">1.00 g</span>
+                        </div>
+                        <div class="axis-meter-bg">
+                            <div class="axis-meter-center"></div>
+                            <div class="axis-meter-fill" id="barAccZ" style="left: 50%; width: 25%;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Giroscopio Triaxial -->
+                <div style="display: flex; flex-direction: column; gap: 6px; margin-top: 4px;">
+                    <div class="imu-subhead">
+                        <span>Giroscopio (°/s)</span>
+                        <span>Vel. Angular</span>
+                    </div>
+
+                    <div class="axis-bar-group">
+                        <div class="axis-bar-header">
+                            <span>Giro X (Roll Rate)</span>
+                            <span class="axis-bar-val" id="valGyroX">0.0 °/s</span>
+                        </div>
+                        <div class="axis-meter-bg">
+                            <div class="axis-meter-center"></div>
+                            <div class="axis-meter-fill" id="barGyroX"
+                                style="left: 50%; width: 0%; background: var(--accent-purple);"></div>
+                        </div>
+                    </div>
+
+                    <div class="axis-bar-group">
+                        <div class="axis-bar-header">
+                            <span>Giro Y (Pitch Rate)</span>
+                            <span class="axis-bar-val" id="valGyroY">0.0 °/s</span>
+                        </div>
+                        <div class="axis-meter-bg">
+                            <div class="axis-meter-center"></div>
+                            <div class="axis-meter-fill" id="barGyroY"
+                                style="left: 50%; width: 0%; background: var(--accent-purple);"></div>
+                        </div>
+                    </div>
+
+                    <div class="axis-bar-group">
+                        <div class="axis-bar-header">
+                            <span>Giro Z (Yaw Rate)</span>
+                            <span class="axis-bar-val" id="valGyroZ">0.0 °/s</span>
+                        </div>
+                        <div class="axis-meter-bg">
+                            <div class="axis-meter-center"></div>
+                            <div class="axis-meter-fill" id="barGyroZ"
+                                style="left: 50%; width: 0%; background: var(--accent-purple);"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // ================= ESTADO Y CONECTIVIDAD =================
+        let isSimulation = false;
+        let simInterval = null;
+        let ws = null;
+        let useHttpFallback = true;
+        let sendingHttp = false;
+
+        let maxSpeedLimit = 40;
+        let activeKeys = { W: false, S: false, A: false, D: false };
+        let currentSpeed = 0;
+        let currentAngle = 0;
+        let simulatedFault = false;
+
+        // Estado Cámara
+        let isStreaming = false;
+        let lastBlobUrl = null;
+
+        // Telemetría BME690 y Calibración IAQ
+        let rCleanMaxKohm = 75.0; // 75 kΩ: Resistencia base en ambiente limpio (calibrable)
+        let bmeData = { temp: 24.5, hum: 50.0, press: 1013.2, gas: 75.0, iaq: 50, iaqRatio: 1.0 };
+
+        // Telemetría IMU MPU6050
+        let imuData = { ax: 0.0, ay: 0.0, az: 1.0, gx: 0.0, gy: 0.0, gz: 0.0, roll: 0.0, pitch: 0.0 };
+
+        // Telemetría Baterías Duales
+        let batteryData = {
+            motors: { volt: 11.8, pct: 85 },
+            esp: { volt: 4.12, pct: 92 }
+        };
+
+        // Estado Joystick Analógico
+        let isJoyDragging = false;
+        let joyCenter = { x: 0, y: 0 };
+        const joyMaxRadius = 58; // Radio máximo de desplazamiento en px
+        let lastJoySendTime = 0;
+        let joyNormX = 0;
+        let joyNormY = 0;
+
+        // ================= CONTROL DE CÁMARA =================
+        function captureSnapshot() {
+            if (isStreaming) {
+                toggleStreaming();
+            }
+
+            const img = document.getElementById('cameraFeed');
+            const hudText = document.getElementById('hudMetricText');
+            const statusBadge = document.getElementById('camStatusBadge');
+            statusBadge.innerText = '● Capturando...';
+            statusBadge.style.color = 'var(--accent-amber)';
+
+            const startTime = performance.now();
+            fetch('/capture?t=' + Date.now())
+                .then(res => {
+                    if (!res.ok) throw new Error('Error en captura');
+                    return res.blob();
+                })
+                .then(blob => {
+                    const elapsed = Math.round(performance.now() - startTime);
+                    const sizeKb = (blob.size / 1024).toFixed(1);
+
+                    if (lastBlobUrl) URL.revokeObjectURL(lastBlobUrl);
+                    lastBlobUrl = URL.createObjectURL(blob);
+                    img.src = lastBlobUrl;
+
+                    hudText.innerText = `${sizeKb} KB (${elapsed}ms)`;
+                    statusBadge.innerText = '● Capturada';
+                    statusBadge.style.color = 'var(--accent-green)';
+                })
+                .catch(err => {
+                    if (isSimulation) {
+                        hudText.innerText = `42.5 KB (MOCK)`;
+                        statusBadge.innerText = '● Foto Simulada';
+                        statusBadge.style.color = 'var(--accent-green)';
+                    } else {
+                        statusBadge.innerText = '● Error al capturar';
+                        statusBadge.style.color = 'var(--accent-magenta)';
+                    }
+                });
+        }
+
+        function toggleStreaming() {
+            const img = document.getElementById('cameraFeed');
+            const btn = document.getElementById('btnStream');
+            const hudMode = document.getElementById('hudModeText');
+            const hudDot = document.getElementById('hudModeDot');
+
+            if (!isStreaming) {
+                isStreaming = true;
+                btn.innerText = '⏸ Pausar Stream';
+                btn.classList.add('active');
+                hudMode.innerText = 'MODO: LIVE STREAM';
+                hudDot.style.background = 'var(--accent-magenta)';
+                img.src = '/stream';
+            } else {
+                isStreaming = false;
+                btn.innerText = '▶ Iniciar Stream';
+                btn.classList.remove('active');
+                hudMode.innerText = 'MODO: SNAPSHOT';
+                hudDot.style.background = 'var(--accent-green)';
+                img.src = '/capture?t=' + Date.now();
+            }
+        }
+
+        function downloadCurrentPhoto() {
+            const a = document.createElement('a');
+            const now = new Date();
+            const dateStr = now.getFullYear() +
+                String(now.getMonth() + 1).padStart(2, '0') +
+                String(now.getDate()).padStart(2, '0') + '_' +
+                String(now.getHours()).padStart(2, '0') +
+                String(now.getMinutes()).padStart(2, '0') +
+                String(now.getSeconds()).padStart(2, '0');
+
+            if (lastBlobUrl) {
+                a.href = lastBlobUrl;
+                a.download = `rover_capture_${dateStr}.jpg`;
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+            } else {
+                fetch('/capture?t=' + Date.now())
+                    .then(res => res.blob())
+                    .then(blob => {
+                        const url = URL.createObjectURL(blob);
+                        a.href = url;
+                        a.download = `rover_capture_${dateStr}.jpg`;
+                        document.body.appendChild(a);
+                        a.click();
+                        document.body.removeChild(a);
+                        setTimeout(() => URL.revokeObjectURL(url), 1000);
+                    })
+                    .catch(() => alert('No se pudo descargar la imagen del Rover.'));
+            }
+        }
+
+        function onResolutionChange(res) {
+            fetch(`/resolution?res=${res}`)
+                .then(r => r.json())
+                .then(() => captureSnapshot())
+                .catch(err => console.error(err));
+        }
+
+        function onImgError() {
+            if (!isSimulation) {
+                document.getElementById('camStatusBadge').innerText = '● Sin señal';
+                document.getElementById('camStatusBadge').style.color = 'var(--accent-magenta)';
+            }
+        }
+
+        function onImgLoaded() {
+            document.getElementById('camStatusBadge').innerText = '● Imagen cargada';
+            document.getElementById('camStatusBadge').style.color = 'var(--accent-green)';
+        }
+
+        // ================= ACTUALIZACIÓN IMU MPU6050 =================
+        function updateIMU_UI(ax, ay, az, gx, gy, gz, roll, pitch) {
+            if (ax !== undefined) imuData.ax = ax;
+            if (ay !== undefined) imuData.ay = ay;
+            if (az !== undefined) imuData.az = az;
+            if (gx !== undefined) imuData.gx = gx;
+            if (gy !== undefined) imuData.gy = gy;
+            if (gz !== undefined) imuData.gz = gz;
+            if (roll !== undefined) imuData.roll = roll;
+            if (pitch !== undefined) imuData.pitch = pitch;
+
+            // 1. Horizonte Artificial: Pitch y Roll
+            const sphere = document.getElementById('horizonSphere');
+            const pitchPixels = Math.max(-45, Math.min(45, imuData.pitch * 1.4));
+            sphere.style.transform = `rotate(${-imuData.roll}deg) translateY(${pitchPixels}px)`;
+
+            document.getElementById('txtRollVal').innerText = `${imuData.roll.toFixed(1)}°`;
+            document.getElementById('txtPitchVal').innerText = `${imuData.pitch.toFixed(1)}°`;
+
+            // 2. Alerta Inclinación
+            const badge = document.getElementById('rolloverBadge');
+            const absRoll = Math.abs(imuData.roll);
+            const absPitch = Math.abs(imuData.pitch);
+
+            if (absRoll > 35 || absPitch > 35) {
+                badge.className = 'rollover-badge roll-danger';
+                badge.innerHTML = '🚨 ¡PELIGRO VUELCO!';
+            } else if (absRoll > 18 || absPitch > 18) {
+                badge.className = 'rollover-badge roll-warn';
+                badge.innerHTML = '⚠️ Inclinación Alta';
+            } else {
+                badge.className = 'rollover-badge roll-safe';
+                badge.innerHTML = '🛡️ Inclinación Segura';
+            }
+
+            // 3. Acelerómetro
+            const totalAcc = Math.sqrt(imuData.ax * imuData.ax + imuData.ay * imuData.ay + imuData.az * imuData.az);
+            document.getElementById('txtTotalAcc').innerText = `|a|: ${totalAcc.toFixed(2)}g`;
+
+            document.getElementById('valAccX').innerText = `${imuData.ax.toFixed(2)} g`;
+            document.getElementById('valAccY').innerText = `${imuData.ay.toFixed(2)} g`;
+            document.getElementById('valAccZ').innerText = `${imuData.az.toFixed(2)} g`;
+
+            setMeterBar('barAccX', imuData.ax, 2.0);
+            setMeterBar('barAccY', imuData.ay, 2.0);
+            setMeterBar('barAccZ', imuData.az, 2.0);
+
+            // 4. Giroscopio
+            document.getElementById('valGyroX').innerText = `${imuData.gx.toFixed(1)} °/s`;
+            document.getElementById('valGyroY').innerText = `${imuData.gy.toFixed(1)} °/s`;
+            document.getElementById('valGyroZ').innerText = `${imuData.gz.toFixed(1)} °/s`;
+
+            setMeterBar('barGyroX', imuData.gx, 250.0);
+            setMeterBar('barGyroY', imuData.gy, 250.0);
+            setMeterBar('barGyroZ', imuData.gz, 250.0);
+        }
+
+        function setMeterBar(elementId, val, maxRange) {
+            const bar = document.getElementById(elementId);
+            if (!bar) return;
+            const pct = Math.min(50, Math.abs(val) / maxRange * 50);
+            if (val >= 0) {
+                bar.style.left = '50%';
+                bar.style.width = `${pct}%`;
+            } else {
+                bar.style.left = `${50 - pct}%`;
+                bar.style.width = `${pct}%`;
+            }
+        }
+
+        // ================= ACTUALIZACIÓN BME690 =================
+        function updateBME690UI(temp, hum, press, gas) {
+            if (temp !== undefined) {
+                bmeData.temp = temp;
+                document.getElementById('bmeTemp').innerHTML = `${temp.toFixed(1)}<span class="metric-unit-v">°C</span>`;
+            }
+            if (hum !== undefined) {
+                bmeData.hum = hum;
+                document.getElementById('bmeHum').innerHTML = `${hum.toFixed(1)}<span class="metric-unit-v">%</span>`;
+            }
+            if (press !== undefined) {
+                bmeData.press = press;
+                document.getElementById('bmePress').innerHTML = `${press.toFixed(1)}<span class="metric-unit-v">hPa</span>`;
+            }
+            if (gas !== undefined) {
+                const gasKohm = gas > 1000 ? (gas / 1000.0) : gas;
+                bmeData.gas = gasKohm;
+
+                // Cociente IAQ: (R_clean_max / R_gas)
+                // En aire limpio (75 kΩ): Cociente = 1.00
+                // En presencia de gases reductores (COV), la resistencia cae y el cociente aumenta
+                const iaqRatio = gasKohm > 0 ? (rCleanMaxKohm / gasKohm) : 1.0;
+
+                // Índice IAQ escala 0-500 (según Datasheet BME690 Tabla 6)
+                // Ratio 1.00 => IAQ 50 (Excelente)
+                const iaqIndex = Math.min(500, Math.max(0, Math.round(iaqRatio * 50)));
+                bmeData.iaq = iaqIndex;
+                bmeData.iaqRatio = iaqRatio;
+
+                const elIaq = document.getElementById('bmeGas');
+                if (elIaq) {
+                    elIaq.innerHTML = `${iaqIndex}<span class="metric-unit-v">IAQ</span>`;
+                }
+
+                const elRatio = document.getElementById('bmeIaqRatio');
+                if (elRatio) {
+                    elRatio.innerText = `${iaqRatio.toFixed(2)}x`;
+                }
+
+                const elRaw = document.getElementById('bmeGasRaw');
+                if (elRaw) {
+                    elRaw.innerText = `${gasKohm.toFixed(1)} kΩ`;
+                }
+
+                const badge = document.getElementById('bmeIaqBadge');
+                if (badge) {
+                    if (iaqIndex <= 50) {
+                        badge.className = 'iaq-badge iaq-excellent';
+                        badge.innerText = `● Excelente`;
+                    } else if (iaqIndex <= 100) {
+                        badge.className = 'iaq-badge iaq-good';
+                        badge.innerText = `● Buena`;
+                    } else if (iaqIndex <= 150) {
+                        badge.className = 'iaq-badge iaq-moderate';
+                        badge.innerText = `● Lig. Contaminada`;
+                    } else if (iaqIndex <= 200) {
+                        badge.className = 'iaq-badge iaq-moderate';
+                        badge.innerText = `⚠️ Mod. Contaminada`;
+                    } else if (iaqIndex <= 350) {
+                        badge.className = 'iaq-badge iaq-poor';
+                        badge.innerText = `🚨 Muy Contaminada`;
+                    } else {
+                        badge.className = 'iaq-badge iaq-severe';
+                        badge.innerText = `☣️ Severamente Contaminada`;
+                    }
+                }
+            }
+        }
+
+        // ================= ACTUALIZACIÓN BATERÍAS DUALES =================
+        function updateBatteryUI(motorsData, espData) {
+            // 1. Batería de Potencia (Motores)
+            if (motorsData) {
+                if (motorsData.volt !== undefined) batteryData.motors.volt = motorsData.volt;
+                if (motorsData.pct !== undefined) batteryData.motors.pct = Math.max(0, Math.min(100, Math.round(motorsData.pct)));
+
+                const pct = batteryData.motors.pct;
+                const volt = batteryData.motors.volt;
+
+                const elPct = document.getElementById('batMotorsPct');
+                const elVolt = document.getElementById('batMotorsVolt');
+                const fill = document.getElementById('batMotorsBar');
+                const meter = document.getElementById('batMotorsMeterBar');
+                const status = document.getElementById('batMotorsStatus');
+                const cellTxt = document.getElementById('batMotorsCells');
+
+                if (elPct) elPct.innerHTML = `${pct}<span class="metric-unit-v">%</span>`;
+                if (elVolt) elVolt.innerText = `${volt.toFixed(1)} V`;
+                if (fill) fill.style.width = `${pct}%`;
+
+                const cellVolt = (volt / 3.0).toFixed(2);
+                if (cellTxt) cellTxt.innerText = `3S ~ ${cellVolt} V/c`;
+
+                if (fill && status) {
+                    fill.classList.remove('warn', 'danger');
+                    status.className = 'bat-info-val';
+
+                    if (pct > 50) {
+                        status.classList.add('optimal');
+                        status.innerText = 'Nominal (Óptimo)';
+                    } else if (pct > 20) {
+                        fill.classList.add('warn');
+                        status.classList.add('warn');
+                        status.innerText = 'Carga Media';
+                    } else {
+                        fill.classList.add('danger');
+                        status.classList.add('danger');
+                        status.innerText = '⚠️ BATERÍA BAJA';
+                    }
+                }
+            }
+
+            // 2. Batería Lógica (ESP32)
+            if (espData) {
+                if (espData.volt !== undefined) batteryData.esp.volt = espData.volt;
+                if (espData.pct !== undefined) batteryData.esp.pct = Math.max(0, Math.min(100, Math.round(espData.pct)));
+
+                const pct = batteryData.esp.pct;
+                const volt = batteryData.esp.volt;
+
+                const elPct = document.getElementById('batEspPct');
+                const elVolt = document.getElementById('batEspVolt');
+                const fill = document.getElementById('batEspBar');
+                const status = document.getElementById('batEspStatus');
+
+                if (elPct) elPct.innerHTML = `${pct}<span class="metric-unit-v">%</span>`;
+                if (elVolt) elVolt.innerText = `${volt.toFixed(2)} V`;
+                if (fill) fill.style.width = `${pct}%`;
+
+                if (fill && status) {
+                    fill.classList.remove('warn', 'danger');
+                    status.className = 'bat-info-val';
+
+                    if (pct > 40) {
+                        status.classList.add('optimal');
+                        status.innerText = 'Regulada (Nominal)';
+                    } else if (pct > 15) {
+                        fill.classList.add('warn');
+                        status.classList.add('warn');
+                        status.innerText = 'Nivel Bajo';
+                    } else {
+                        fill.classList.add('danger');
+                        status.classList.add('danger');
+                        status.innerText = '⚠️ CRÍTICO ESP';
+                    }
+                }
+            }
+        }
+
+        // ================= CONTROL DEL VEHÍCULO =================
+        function sendControl(speed, angle) {
+            if (simulatedFault) {
+                speed = 0;
+            }
+
+            currentSpeed = speed;
+            currentAngle = angle;
+
+            // Actualizar UI general
+            document.getElementById('valSpeed').innerHTML = `${speed}<span style="font-size: 0.7rem; color: var(--text-secondary);">%</span>`;
+            document.getElementById('valAngle').innerHTML = `${angle}<span style="font-size: 0.7rem; color: var(--text-secondary);">°</span>`;
+
+            // Animación de chasis y ruedas del rover
+            const frontWheels = document.getElementById('frontWheels');
+            if (frontWheels) frontWheels.style.transform = `rotate(${angle}deg)`;
+
+            const wheels = [document.getElementById('wFL'), document.getElementById('wFR'), document.getElementById('wML'), document.getElementById('wMR'), document.getElementById('wRL'), document.getElementById('wRR')];
+            wheels.forEach(w => {
+                if (!w) return;
+                w.className = 'wheel';
+                if (speed > 0) w.classList.add('active');
+                else if (speed < 0) w.classList.add('reverse');
+            });
+
+            if (!isSimulation) {
+                if (ws && ws.readyState === WebSocket.OPEN && !useHttpFallback) {
+                    ws.send(JSON.stringify({ speed: speed, angle: angle }));
+                } else if (!sendingHttp) {
+                    sendingHttp = true;
+                    fetch(`/api/control?speed=${speed}&angle=${angle}`)
+                        .then(r => r.json())
+                        .then(data => {
+                            if (data.fault) document.getElementById('faultAlert').classList.add('show');
+                            else document.getElementById('faultAlert').classList.remove('show');
+                        })
+                        .catch(() => { })
+                        .finally(() => { sendingHttp = false; });
+                }
+            }
+        }
+
+        // ================= JOYSTICK ANALÓGICO ARRASTRABLE =================
+        function initJoystick() {
+            const base = document.getElementById('joystickBase');
+            const knob = document.getElementById('joystickKnob');
+            if (!base || !knob) return;
+
+            const onPointerDown = (e) => {
+                isJoyDragging = true;
+                const rect = base.getBoundingClientRect();
+                joyCenter = {
+                    x: rect.left + rect.width / 2,
+                    y: rect.top + rect.height / 2
+                };
+                knob.classList.add('dragging');
+                knob.style.transition = 'none';
+                handleJoyPointer(e.clientX, e.clientY);
+            };
+
+            const onPointerMove = (e) => {
+                if (!isJoyDragging) return;
+                handleJoyPointer(e.clientX, e.clientY);
+            };
+
+            const onPointerUp = (e) => {
+                if (!isJoyDragging) return;
+                isJoyDragging = false;
+                recenterJoystick();
+            };
+
+            base.addEventListener('pointerdown', onPointerDown);
+            knob.addEventListener('pointerdown', onPointerDown);
+            window.addEventListener('pointermove', onPointerMove);
+            window.addEventListener('pointerup', onPointerUp);
+            window.addEventListener('pointercancel', onPointerUp);
+        }
+
+        function handleJoyPointer(clientX, clientY) {
+            let dx = clientX - joyCenter.x;
+            let dy = clientY - joyCenter.y;
+            let dist = Math.sqrt(dx * dx + dy * dy);
+
+            if (dist > joyMaxRadius) {
+                const angleRad = Math.atan2(dy, dx);
+                dx = Math.cos(angleRad) * joyMaxRadius;
+                dy = Math.sin(angleRad) * joyMaxRadius;
+            }
+
+            const knob = document.getElementById('joystickKnob');
+            if (knob) {
+                knob.style.transform = `translate(calc(-50% + ${dx}px), calc(-50% + ${dy}px))`;
+            }
+
+            // Normalizados: normX (-1.0 a +1.0 giro), normY (-1.0 a +1.0 velocidad, arriba es +)
+            const normX = dx / joyMaxRadius;
+            const normY = -dy / joyMaxRadius;
+            joyNormX = normX;
+            joyNormY = normY;
+
+            const targetSpeed = Math.round(normY * maxSpeedLimit);
+            const targetAngle = Math.round(normX * 45); // -45° a +45°
+
+            const now = performance.now();
+            if (now - lastJoySendTime > 35) { // Tasa de refresco de comando ~28 Hz
+                lastJoySendTime = now;
+                sendControl(targetSpeed, targetAngle);
+            }
+        }
+
+        function recenterJoystick() {
+            const knob = document.getElementById('joystickKnob');
+            if (knob) {
+                knob.classList.remove('dragging');
+                knob.style.transition = 'transform 0.22s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
+                knob.style.transform = 'translate(-50%, -50%)';
+            }
+
+            joyNormX = 0;
+            joyNormY = 0;
+
+            sendControl(0, 0);
+        }
+
+        function updateStateFromKeys() {
+            let targetSpeed = 0;
+            let targetAngle = 0;
+
+            if (activeKeys.W && !activeKeys.S) {
+                targetSpeed = maxSpeedLimit;
+            } else if (activeKeys.S && !activeKeys.W) {
+                targetSpeed = -maxSpeedLimit;
+            }
+
+            if (activeKeys.A && !activeKeys.D) {
+                targetAngle = -35;
+            } else if (activeKeys.D && !activeKeys.A) {
+                targetAngle = 35;
+            }
+
+            // Reflejar posición visual en el knob del joystick
+            const knob = document.getElementById('joystickKnob');
+            if (knob && !isJoyDragging) {
+                const normX = targetAngle / 45.0;
+                const normY = targetSpeed / (maxSpeedLimit || 1);
+                joyNormX = normX;
+                joyNormY = normY;
+                const dx = normX * joyMaxRadius;
+                const dy = -normY * joyMaxRadius;
+
+                knob.style.transition = 'transform 0.1s ease-out';
+                knob.style.transform = `translate(calc(-50% + ${dx}px), calc(-50% + ${dy}px))`;
+            }
+
+            sendControl(targetSpeed, targetAngle);
+        }
+
+        function handlePress(key) {
+            key = key.toUpperCase();
+            if (activeKeys.hasOwnProperty(key)) {
+                activeKeys[key] = true;
+                updateStateFromKeys();
+            }
+        }
+
+        function handleRelease(key) {
+            key = key.toUpperCase();
+            if (activeKeys.hasOwnProperty(key)) {
+                activeKeys[key] = false;
+                updateStateFromKeys();
+            }
+        }
+
+        function emergencyStop() {
+            activeKeys = { W: false, S: false, A: false, D: false };
+            isGamepadActive = false;
+            recenterJoystick();
+        }
+
+        function setSpeedLimit(limit) {
+            maxSpeedLimit = limit;
+            document.getElementById('speedLimitText').innerText = `${limit}%`;
+            document.querySelectorAll('.preset-btn').forEach(btn => {
+                btn.classList.toggle('active', btn.innerText === `${limit}%`);
+            });
+            if (isJoyDragging || isGamepadActive) {
+                // Re-calcular velocidad proporcional
+                const newSpeed = Math.round(joyNormY * maxSpeedLimit);
+                sendControl(newSpeed, currentAngle);
+            }
+        }
+
+        // ================= CONTROL POR GAMEPAD (XBOX ONE S) =================
+        let gamepadIndex = null;
+        const GAMEPAD_DEADZONE = 0.12;
+        let lastGamepadSendTime = 0;
+        let isGamepadActive = false;
+        let lastButtonLB = false;
+        let lastButtonRB = false;
+        const speedPresets = [20, 40, 60, 80, 100];
+
+        function updateGamepadStatus(connected, idText = '') {
+            const tag = document.getElementById('gamepadStatusTag');
+            if (!tag) return;
+            if (connected) {
+                tag.style.color = 'var(--accent-green)';
+                let shortId = 'Xbox Conectado';
+                if (idText) {
+                    if (idText.toLowerCase().includes('xbox')) shortId = 'Xbox One S';
+                    else if (idText.length > 18) shortId = idText.substring(0, 16) + '...';
+                    else shortId = idText;
+                }
+                tag.innerHTML = `🎮 ${shortId}`;
+            } else {
+                tag.style.color = 'var(--text-dim)';
+                tag.innerHTML = '🎮 Xbox: Esperando conexión...';
+            }
+        }
+
+        window.addEventListener('gamepadconnected', (e) => {
+            gamepadIndex = e.gamepad.index;
+            updateGamepadStatus(true, e.gamepad.id);
+        });
+
+        window.addEventListener('gamepaddisconnected', (e) => {
+            if (gamepadIndex === e.gamepad.index) {
+                gamepadIndex = null;
+                updateGamepadStatus(false);
+                if (isGamepadActive) {
+                    isGamepadActive = false;
+                    recenterJoystick();
+                }
+            }
+        });
+
+        function getXboxRightStick(gp) {
+            if (!gp || !gp.axes || gp.axes.length < 2) return { x: 0, y: 0 };
+
+            let rawX = 0;
+            let rawY = 0;
+
+            // En Windows con mandos Xbox One / Series vía Bluetooth o DirectInput:
+            // axes[0]: Stick Izq X, axes[1]: Stick Izq Y
+            // axes[2]: Gatillo LT (reposa en -1.0 cuando no se presiona)
+            // axes[3]: Stick Der X (Horizontal: -1 Izq, +1 Der)
+            // axes[4]: Stick Der Y (Vertical: -1 Arriba, +1 Abajo)
+            // axes[5]: Gatillo RT
+            if (gp.axes.length >= 5 && (gp.mapping !== 'standard' || gp.axes[2] < -0.6)) {
+                rawX = gp.axes[3] !== undefined ? gp.axes[3] : 0;
+                rawY = gp.axes[4] !== undefined ? gp.axes[4] : 0;
+            } else if (gp.axes.length >= 4) {
+                // Mapeo estándar (USB / XInput nativo)
+                rawX = gp.axes[2] !== undefined ? gp.axes[2] : 0;
+                rawY = gp.axes[3] !== undefined ? gp.axes[3] : 0;
+            }
+
+            return { x: rawX, y: rawY };
+        }
+
+        function pollGamepad() {
+            const gamepads = navigator.getGamepads ? navigator.getGamepads() : [];
+            let gp = null;
+
+            if (gamepadIndex !== null && gamepads[gamepadIndex]) {
+                gp = gamepads[gamepadIndex];
+            } else {
+                for (let i = 0; i < gamepads.length; i++) {
+                    if (gamepads[i]) {
+                        gamepadIndex = i;
+                        gp = gamepads[i];
+                        updateGamepadStatus(true, gp.id);
+                        break;
+                    }
+                }
+            }
+
+            if (gp) {
+                // Obtener ejes reales del Stick Analógico Derecho
+                const stick = getXboxRightStick(gp);
+                const rawX = stick.x;
+                const rawY = stick.y;
+
+                // Filtrar zona muerta y reescalar suavemente
+                let normX = 0;
+                let normY = 0;
+
+                if (Math.abs(rawX) > GAMEPAD_DEADZONE) {
+                    normX = Math.sign(rawX) * ((Math.abs(rawX) - GAMEPAD_DEADZONE) / (1.0 - GAMEPAD_DEADZONE));
+                }
+                if (Math.abs(rawY) > GAMEPAD_DEADZONE) {
+                    // En Gamepad API Y negativo es hacia arriba, invertimos signo para que positivo sea avance
+                    normY = -Math.sign(rawY) * ((Math.abs(rawY) - GAMEPAD_DEADZONE) / (1.0 - GAMEPAD_DEADZONE));
+                }
+
+                // Botón B (índice 1) -> Parada de emergencia instantánea
+                if (gp.buttons && gp.buttons[1] && gp.buttons[1].pressed) {
+                    emergencyStop();
+                }
+
+                // Botones LB / RB para cambiar preset de velocidad
+                const lbPressed = !!(gp.buttons && gp.buttons[4] && gp.buttons[4].pressed);
+                const rbPressed = !!(gp.buttons && gp.buttons[5] && gp.buttons[5].pressed);
+                if (lbPressed && !lastButtonLB) {
+                    let idx = speedPresets.indexOf(maxSpeedLimit);
+                    if (idx > 0) setSpeedLimit(speedPresets[idx - 1]);
+                }
+                if (rbPressed && !lastButtonRB) {
+                    let idx = speedPresets.indexOf(maxSpeedLimit);
+                    if (idx < speedPresets.length - 1 && idx !== -1) setSpeedLimit(speedPresets[idx + 1]);
+                }
+                lastButtonLB = lbPressed;
+                lastButtonRB = rbPressed;
+
+                // Controlar movimiento si no hay arrastre táctil ni teclas WASD
+                const isKeyActive = activeKeys.W || activeKeys.S || activeKeys.A || activeKeys.D;
+                if (!isJoyDragging && !isKeyActive) {
+                    const stickMoved = (normX !== 0 || normY !== 0);
+
+                    if (stickMoved) {
+                        isGamepadActive = true;
+                        joyNormX = normX;
+                        joyNormY = normY;
+
+                        const targetSpeed = Math.round(normY * maxSpeedLimit);
+                        const targetAngle = Math.round(normX * 45); // -45° a +45°
+
+                        // Mover visualmente el knob del joystick
+                        const knob = document.getElementById('joystickKnob');
+                        if (knob) {
+                            const dx = normX * joyMaxRadius;
+                            const dy = -normY * joyMaxRadius;
+                            knob.style.transition = 'none';
+                            knob.style.transform = `translate(calc(-50% + ${dx}px), calc(-50% + ${dy}px))`;
+                            knob.classList.add('dragging');
+                        }
+
+                        const now = performance.now();
+                        if (now - lastGamepadSendTime > 35) { // Tasa ~28 Hz
+                            lastGamepadSendTime = now;
+                            sendControl(targetSpeed, targetAngle);
+                        }
+                    } else if (isGamepadActive) {
+                        // El stick físico volvió a la zona muerta central
+                        isGamepadActive = false;
+                        recenterJoystick();
+                    }
+                }
+            } else if (gamepadIndex !== null) {
+                updateGamepadStatus(false);
+                gamepadIndex = null;
+            }
+
+            requestAnimationFrame(pollGamepad);
+        }
+
+        function toggleFaultSimulation() {
+            simulatedFault = !simulatedFault;
+            const alert = document.getElementById('faultAlert');
+            if (simulatedFault) {
+                alert.classList.add('show');
+                sendControl(0, currentAngle);
+            } else {
+                alert.classList.remove('show');
+            }
+        }
+
+        // ================= CONECTIVIDAD REAL Y FALLBACK =================
+        function pollTelemetry() {
+            if (isSimulation) return;
+
+            fetch('/api/telemetry')
+                .then(r => r.json())
+                .then(data => {
+                    if (data.temp !== undefined) {
+                        updateBME690UI(data.temp, data.hum, data.press, data.gas);
+                    }
+                    if (data.imu) {
+                        updateIMU_UI(data.imu.ax, data.imu.ay, data.imu.az,
+                            data.imu.gx, data.imu.gy, data.imu.gz,
+                            data.imu.roll, data.imu.pitch);
+                    }
+                    if (data.battery) {
+                        updateBatteryUI(data.battery.motors, data.battery.esp);
+                    } else if (data.v_motors !== undefined || data.pct_motors !== undefined) {
+                        updateBatteryUI(
+                            { volt: data.v_motors, pct: data.pct_motors },
+                            { volt: data.v_esp, pct: data.pct_esp }
+                        );
+                    }
+                    if (data.fault !== undefined) {
+                        const alert = document.getElementById('faultAlert');
+                        if (data.fault) alert.classList.add('show');
+                        else alert.classList.remove('show');
+                    }
+                })
+                .catch(() => { });
+        }
+
+        function connectWebSocket() {
+            if (isSimulation) return;
+
+            const host = window.location.host || '192.168.4.1';
+            try {
+                ws = new WebSocket('ws://' + host + '/ws');
+
+                ws.onopen = () => {
+                    useHttpFallback = false;
+                    document.getElementById('statusDot').className = 'status-dot online';
+                    document.getElementById('statusText').innerText = 'CONECTADO (PC-Server)';
+                    document.getElementById('sysLinkMode').innerText = 'PC / WebSocket';
+                };
+
+                ws.onclose = () => {
+                    useHttpFallback = true;
+                    if (!isSimulation) {
+                        document.getElementById('statusDot').className = 'status-dot danger';
+                        document.getElementById('statusText').innerText = 'DESCONECTADO (PC)';
+                        document.getElementById('sysLinkMode').innerText = 'Sin Enlace';
+                    }
+                };
+
+                ws.onerror = () => {
+                    useHttpFallback = true;
+                    if (!isSimulation) {
+                        document.getElementById('statusDot').className = 'status-dot danger';
+                        document.getElementById('statusText').innerText = 'DESCONECTADO (PC)';
+                        document.getElementById('sysLinkMode').innerText = 'Sin Enlace';
+                    }
+                };
+
+                ws.onmessage = (event) => {
+                    try {
+                        const data = JSON.parse(event.data);
+                        if (data.rover_connected !== undefined) {
+                            const dot = document.getElementById('statusDot');
+                            const txt = document.getElementById('statusText');
+                            if (data.rover_connected) {
+                                dot.className = 'status-dot online';
+                                txt.innerText = 'ROVER ONLINE (PC-Link)';
+                            } else {
+                                dot.className = 'status-dot warn';
+                                txt.innerText = 'ESPERANDO ROVER (Wi-Fi)';
+                            }
+                        }
+                        if (data.temp !== undefined) {
+                            updateBME690UI(data.temp, data.hum, data.press, data.gas);
+                        }
+                        if (data.imu) {
+                            updateIMU_UI(data.imu.ax, data.imu.ay, data.imu.az,
+                                data.imu.gx, data.imu.gy, data.imu.gz,
+                                data.imu.roll, data.imu.pitch);
+                        }
+                        if (data.battery) {
+                            updateBatteryUI(data.battery.motors, data.battery.esp);
+                        } else if (data.v_motors !== undefined || data.pct_motors !== undefined) {
+                            updateBatteryUI(
+                                { volt: data.v_motors, pct: data.pct_motors },
+                                { volt: data.v_esp, pct: data.pct_esp }
+                            );
+                        }
+                        if (data.fault !== undefined) {
+                            const alert = document.getElementById('faultAlert');
+                            if (data.fault) alert.classList.add('show');
+                            else alert.classList.remove('show');
+                        }
+                    } catch (e) { }
+                };
+            } catch (e) {
+                useHttpFallback = true;
+            }
+        }
+
+        // ================= MODO SIMULACIÓN OFFLINE =================
+        function toggleSimulationMode() {
+            isSimulation = !isSimulation;
+            const btn = document.getElementById('simToggleBtn');
+            const dot = document.getElementById('statusDot');
+            const txt = document.getElementById('statusText');
+
+            if (isSimulation) {
+                btn.innerText = '⚡ Simulación: ON';
+                btn.style.background = 'var(--accent-amber)';
+                btn.style.color = '#000';
+                dot.className = 'status-dot sim';
+                txt.innerText = 'MODO SIMULACIÓN (DEMO)';
+                document.getElementById('sysLinkMode').innerText = 'Simulación Local';
+
+                let simTime = 0;
+                simInterval = setInterval(() => {
+                    simTime += 0.05;
+
+                    // Dinámica simulada de inclinación e inercia
+                    const simRoll = Math.sin(simTime * 0.7) * 14 + (currentAngle * 0.2);
+                    const simPitch = Math.cos(simTime * 0.5) * 8 + (currentSpeed * 0.1);
+                    const simAx = Math.sin(simTime * 0.7) * 0.25;
+                    const simAy = (currentSpeed / 100.0) * 0.35 + Math.cos(simTime * 0.5) * 0.15;
+                    const simAz = 0.98 + (Math.random() - 0.5) * 0.03;
+                    const simGx = Math.cos(simTime * 0.7) * 10;
+                    const simGy = -Math.sin(simTime * 0.5) * 7;
+                    const simGz = (currentAngle / 45.0) * 22;
+
+                    updateIMU_UI(simAx, simAy, simAz, simGx, simGy, simGz, simRoll, simPitch);
+
+                    // Variación ambiental
+                    bmeData.temp = 24.5 + Math.sin(simTime * 0.1) * 0.6;
+                    bmeData.hum = 52.0 + Math.cos(simTime * 0.1) * 1.8;
+                    bmeData.press = 1013.2 + Math.sin(simTime * 0.05) * 0.3;
+                    bmeData.gas = 73.0 + Math.cos(simTime * 0.08) * 6.0;
+                    updateBME690UI(bmeData.temp, bmeData.hum, bmeData.press, bmeData.gas);
+
+                    // Dinámica de descarga y carga de baterías
+                    const loadFactor = Math.abs(currentSpeed) / 100.0;
+                    const motorVoltSag = loadFactor * 0.45;
+                    const simBatMotorsVolt = 11.9 - motorVoltSag + Math.sin(simTime * 0.05) * 0.1;
+                    const simBatMotorsPct = Math.max(10, Math.min(100, Math.round(85 - (simTime * 0.1) % 60 - loadFactor * 5)));
+                    
+                    const simBatEspVolt = 4.14 - (simTime * 0.002) % 0.3;
+                    const simBatEspPct = Math.max(15, Math.min(100, Math.round(92 - (simTime * 0.05) % 40)));
+                
+
+                    updateBatteryUI(
+                        { volt: simBatMotorsVolt, pct: simBatMotorsPct },
+                        { volt: simBatEspVolt, pct: simBatEspPct }
+                    );
+                }, 50);
+            } else {
+                btn.innerText = '⚡ Simulación: OFF';
+                btn.style.background = 'rgba(255, 170, 0, 0.12)';
+                btn.style.color = 'var(--accent-amber)';
+                clearInterval(simInterval);
+                connectWebSocket();
+            }
+        }
+
+        // ================= EVENTOS TECLADO =================
+        window.addEventListener('keydown', (e) => {
+            if (e.repeat) return;
+            const k = e.key.toUpperCase();
+            if (k === 'W' || k === 'ARROWUP') handlePress('W');
+            else if (k === 'S' || k === 'ARROWDOWN') handlePress('S');
+            else if (k === 'A' || k === 'ARROWLEFT') handlePress('A');
+            else if (k === 'D' || k === 'ARROWRIGHT') handlePress('D');
+            else if (e.code === 'Space') {
+                e.preventDefault();
+                emergencyStop();
+            }
+        });
+
+        window.addEventListener('keyup', (e) => {
+            const k = e.key.toUpperCase();
+            if (k === 'W' || k === 'ARROWUP') handleRelease('W');
+            else if (k === 'S' || k === 'ARROWDOWN') handleRelease('S');
+            else if (k === 'A' || k === 'ARROWLEFT') handleRelease('A');
+            else if (k === 'D' || k === 'ARROWRIGHT') handleRelease('D');
+        });
+
+        window.onload = () => {
+            // Inicializar joystick táctil/mouse
+            initJoystick();
+
+            // Iniciar ciclo de lectura del Gamepad Xbox
+            requestAnimationFrame(pollGamepad);
+
+            // Inicializar vistas con valores por defecto
+            updateIMU_UI(0, 0, 1.0, 0, 0, 0, 0, 0);
+            updateBME690UI(24.5, 50.0, 1013.2, 120.0);
+            updateBatteryUI({ volt: 11.8, pct: 85 }, { volt: 4.12, pct: 92 });
+
+            // Si se ejecuta en local (file://), activar simulación automáticamente
+            if (window.location.protocol === 'file:') {
+                toggleSimulationMode();
+            } else {
+                connectWebSocket();
+                setInterval(pollTelemetry, 1500);
+            }
+        };
+    </script>
+</body>
+
+</html>

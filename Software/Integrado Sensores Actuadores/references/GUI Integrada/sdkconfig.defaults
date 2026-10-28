@@ -1,0 +1,5 @@
+# Habilitar soporte para WebSockets en esp_http_server
+CONFIG_HTTPD_WS_SUPPORT=y
+
+# Desactivar Brownout Detector para evitar reinicios por caídas de tensión USB durante RF Calibration
+CONFIG_ESP_BROWNOUT_DET=n

@@ -1,0 +1,24 @@
+idf_component_register(
+    SRCS
+        "main.c"
+        "rover_proto.c"
+        "uart_link.c"
+        "motion_control.c"
+        "kinematics.c"
+        "dc_motors.c"
+        "servo.c"
+        "vehicle_state.c"
+        "mpu6050.c"
+        "bme690.c"
+        "BME690_SensorAPI/bme69x.c"
+    INCLUDE_DIRS
+        "."
+        "BME690_SensorAPI"
+    REQUIRES
+        esp_driver_gpio
+        esp_driver_i2c
+        esp_driver_mcpwm
+        esp_driver_ledc
+        esp_driver_uart
+        esp_timer
+)

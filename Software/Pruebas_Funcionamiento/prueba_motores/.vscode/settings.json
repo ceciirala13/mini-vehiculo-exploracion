@@ -15,5 +15,6 @@
     "--query-driver=**",
     "--compile-commands-dir=c:\\STAY AWAY MUGGLE\\FIUNA\\Proyecto 3\\Programacion_2\\prueba_motores\\build"
   ],
-  "idf.flashType": "UART"
+  "idf.flashType": "UART",
+  "idf.port": "COM13"
 }

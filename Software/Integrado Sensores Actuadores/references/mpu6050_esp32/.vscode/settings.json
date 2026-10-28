@@ -1,0 +1,17 @@
+{
+    "idf.currentSetup": "C:\\esp\\v6.0.1\\esp-idf",
+    "idf.port": "COM13",
+    "idf.openOcdConfigs": [
+        "board/esp32s3-builtin.cfg"
+    ],
+    "idf.customExtraVars": {
+        "IDF_TARGET": "esp32s3",
+        "OPENOCD_USB_ADAPTER_LOCATION": "1-4"
+    },
+    "clangd.path": "C:\\Espressif\\tools\\esp-clang\\esp-20.1.1_20250829\\esp-clang\\bin\\clangd.exe",
+    "clangd.arguments": [
+        "--background-index",
+        "--query-driver=**",
+        "--compile-commands-dir=c:\\Users\\sanie\\Documents\\GitHub\\mini-vehiculo-exploracion\\Software\\Pruebas_Funcionamiento\\MPU6050\\mpu6050_interfacing_with_ESP32_using_ESP-IDF-main\\build"
+    ]
+}

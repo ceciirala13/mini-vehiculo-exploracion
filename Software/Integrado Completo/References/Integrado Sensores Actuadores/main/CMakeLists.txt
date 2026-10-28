@@ -1,0 +1,22 @@
+idf_component_register(
+    SRCS
+        "main.c"
+        "bme690.c"
+        "mpu6050.c"
+        "servo.c"
+        "dc_motors.c"
+        "uart_comm.c"
+        "../references/BME690_SensorAPI/bme69x.c"
+    INCLUDE_DIRS
+        "."
+        "../references/BME690_SensorAPI"
+    REQUIRES
+        driver
+        esp_driver_gpio
+        esp_driver_i2c
+        esp_driver_mcpwm
+        esp_driver_ledc
+        esp_driver_uart
+        esp_timer
+        freertos
+)
