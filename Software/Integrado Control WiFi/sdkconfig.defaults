@@ -1,0 +1,33 @@
+# Single-board rover: ESP32-S3-WROOM-1-N8R8 (8 MB quad flash, 8 MB octal PSRAM)
+CONFIG_IDF_TARGET="esp32s3"
+
+# Flash: 8 MB, one large app partition (Wi-Fi + embedded GUI do not fit in 1 MB)
+CONFIG_ESPTOOLPY_FLASHSIZE_8MB=y
+CONFIG_PARTITION_TABLE_SINGLE_APP_LARGE=y
+
+# Octal PSRAM (camera frame buffers, Wi-Fi/lwIP buffers)
+CONFIG_SPIRAM=y
+CONFIG_SPIRAM_MODE_OCT=y
+CONFIG_SPIRAM_SPEED_80M=y
+CONFIG_SPIRAM_USE_MALLOC=y
+CONFIG_SPIRAM_TRY_ALLOCATE_WIFI_LWIP=y
+
+# 1 ms tick so 20 ms control periods are exact
+CONFIG_FREERTOS_HZ=1000
+
+# Task watchdog (motion task subscribes to it)
+CONFIG_ESP_TASK_WDT_EN=y
+CONFIG_ESP_TASK_WDT_INIT=y
+CONFIG_ESP_TASK_WDT_TIMEOUT_S=3
+CONFIG_ESP_TASK_WDT_PANIC=y
+
+# Console on the native USB (same port used for flashing)
+CONFIG_ESP_CONSOLE_USB_SERIAL_JTAG=y
+
+# WebSocket support in esp_http_server
+CONFIG_HTTPD_WS_SUPPORT=y
+CONFIG_HTTPD_MAX_REQ_HDR_LEN=1024
+CONFIG_HTTPD_MAX_URI_LEN=512
+
+# Two HTTP servers (GUI/WebSocket + MJPEG) need more sockets
+CONFIG_LWIP_MAX_SOCKETS=20

@@ -1,0 +1,37 @@
+idf_component_register(
+    SRCS
+        "main.c"
+        "motion_control.c"
+        "kinematics.c"
+        "dc_motors.c"
+        "encoders.c"
+        "servo.c"
+        "vehicle_state.c"
+        "mpu6050.c"
+        "bme690.c"
+        "BME690_SensorAPI/bme69x.c"
+        "drive_command.c"
+        "telemetry.c"
+        "camera_service.c"
+        "arducam_ov2640.c"
+        "wifi_ap.c"
+        "web_server.c"
+    INCLUDE_DIRS
+        "."
+        "BME690_SensorAPI"
+    REQUIRES
+        esp_driver_gpio
+        esp_driver_i2c
+        esp_driver_mcpwm
+        esp_driver_pcnt
+        esp_driver_ledc
+        esp_driver_spi
+        esp_timer
+        esp_wifi
+        esp_netif
+        esp_event
+        nvs_flash
+        esp_http_server
+    EMBED_TXTFILES
+        "index.html"
+)

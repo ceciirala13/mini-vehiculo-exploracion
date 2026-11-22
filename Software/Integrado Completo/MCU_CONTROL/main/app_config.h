@@ -151,6 +151,28 @@ extern "C" {
 #define TASK_TLM_STACK                  4096
 #define TASK_TLM_PERIOD_MS              50      /* 20 Hz */
 
+/* =========================================================================
+ * 7. WHEEL ENCODERS (8-Pin Header / Encoders)
+ * ========================================================================= */
+/* Left motor encoder */
+#define ENC_LEFT_PIN_A                  GPIO_NUM_10     /* Header Pin 1 */
+#define ENC_LEFT_PIN_B                  GPIO_NUM_11     /* Header Pin 2 */
+
+/* Right motor encoder */
+#define ENC_RIGHT_PIN_A                 GPIO_NUM_13     /* Header Pin 3 */
+#define ENC_RIGHT_PIN_B                 GPIO_NUM_12     /* Header Pin 4 */
+
+/* Spare pins on 8-pin header (Pins 7 & 8) */
+#define SPARE_PIN_SDA                   GPIO_NUM_47     /* Header Pin 7 */
+#define SPARE_PIN_SCL                   GPIO_NUM_48     /* Header Pin 8 */
+#define SPARE_CAM_PIN_SDA               SPARE_PIN_SDA   /* Backward-compatibility alias */
+#define SPARE_CAM_PIN_SCL               SPARE_PIN_SCL   /* Backward-compatibility alias */
+
+/* Encoder configuration */
+#define ENC_PULSES_PER_REV              20              /* CPR (counts per revolution) */
+#define ENC_PCNT_HIGH_LIMIT             30000
+#define ENC_PCNT_LOW_LIMIT             -30000
+
 #ifdef __cplusplus
 }
 #endif

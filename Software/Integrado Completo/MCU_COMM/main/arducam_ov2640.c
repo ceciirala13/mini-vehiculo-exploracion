@@ -87,7 +87,14 @@ esp_err_t arducam_write_sensor_reg(uint8_t reg, uint8_t val) {
 }
 
 esp_err_t arducam_read_sensor_reg(uint8_t reg, uint8_t *val) {
-    esp_err_t ret = i2c_master_transmit_receive(s_i2c_dev, &reg, 1, val, 1, SCCB_TIMEOUT_MS);
+    // Pure SCCB protocol requires a 3-phase write (reg + STOP), then a 2-phase read (START + read + STOP).
+    // i2c_master_transmit_receive sends Repeated Start without STOP, which OV2640 SCCB does not support.
+    esp_err_t ret = i2c_master_transmit(s_i2c_dev, &reg, 1, SCCB_TIMEOUT_MS);
+    if (ret != ESP_OK) {
+        return ret;
+    }
+    esp_rom_delay_us(1000);
+    ret = i2c_master_receive(s_i2c_dev, val, 1, SCCB_TIMEOUT_MS);
     esp_rom_delay_us(1000);
     return ret;
 }

@@ -1374,6 +1374,7 @@
 			)
 		)
 		(model "${KIPRJMOD}/Assets/JST B3B-XH-A-LF-SN-/JST_XH_B3B-XH-A_1x03_P2.50mm_Vertical.step"
+			(hide yes)
 			(offset
 				(xyz 0 -5 0)
 			)
@@ -4269,6 +4270,7 @@
 			)
 		)
 		(model "${KIPRJMOD}/Assets/JST B2B-XH-A-LF-SN-/JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical.step"
+			(hide yes)
 			(offset
 				(xyz -0.3 0 0)
 			)
@@ -4546,6 +4548,7 @@
 			)
 		)
 		(model "${KIPRJMOD}/Assets/JST B4B-XH-A-LF-SN-/JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical.step"
+			(hide yes)
 			(offset
 				(xyz 0 0 0)
 			)
@@ -5693,6 +5696,7 @@
 			)
 		)
 		(model "${KIPRJMOD}/Assets/JST B4B-XH-A-LF-SN-/JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical.step"
+			(hide yes)
 			(offset
 				(xyz 0 0 0)
 			)
@@ -8877,6 +8881,7 @@
 		)
 		(embedded_fonts no)
 		(model "${KICAD9_3DMODEL_DIR}/Connector_Molex.3dshapes/Molex_KK-254_AE-6410-08A_1x08_P2.54mm_Vertical.step"
+			(hide yes)
 			(offset
 				(xyz 0 0 0)
 			)
@@ -9708,6 +9713,7 @@
 			)
 		)
 		(model "${KIPRJMOD}/Assets/JST B4B-XH-A-LF-SN-/JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical.step"
+			(hide yes)
 			(offset
 				(xyz 0 -7.5 0)
 			)
@@ -12307,6 +12313,7 @@
 			)
 		)
 		(model "${KIPRJMOD}/Assets/JST B3B-XH-A-LF-SN-/JST_XH_B3B-XH-A_1x03_P2.50mm_Vertical.step"
+			(hide yes)
 			(offset
 				(xyz 0 0 0)
 			)

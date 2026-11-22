@@ -90,13 +90,13 @@ The definition is in `rover_proto.h`, which **must stay identical in both projec
 
 | ESP32-S3 (CONTROL) | | ESP32 (COMM) |
 |---|---|---|
-| GPIO17 (TX) | → | GPIO16 (RX) |
-| GPIO18 (RX) | ← | GPIO17 (TX) |
+| GPIO43 (TX) | → | GPIO16 (RX) |
+| GPIO44 (RX) | ← | GPIO17 (TX) |
 | GND | — | GND |
 
-- TX always goes to the other board's RX.
-- **Grounds must be connected.** Without a common GND the UART won't work.
-- Both boards use 3.3 V logic. If each board has its own power supply, connect only the GND, not the 3V3 or 5V rails.
+See detailed pinout guides:
+- [MCU_CONTROL Pinout (ESP32-S3)](MCU_CONTROL/ESP32S3_PINOUT.md)
+- [MCU_COMM Pinout (ESP32 DevKit)](MCU_COMM/ESP32_PINOUT.md)
 
 ### ArduCAM Mini 2MP Plus → ESP32 (COMM)
 
@@ -119,6 +119,9 @@ The definition is in `rover_proto.h`, which **must stay identical in both projec
 | Steering servo signal | 39 |
 | Motor 1 IN1 / IN2 / DISABLE / nFAULT | 7 / 8 / 9 / 21 |
 | Motor 2 IN1 / IN2 / DISABLE / nFAULT | 14 / 15 / 16 / 38 |
+| Left Motor Encoder (A / B) | 10 / 11 (8-Pin Header Pins 1 & 2) |
+| Right Motor Encoder (A / B) | 13 / 12 (8-Pin Header Pins 3 & 4) |
+| Expansion Header Spare (SDA / SCL) | 47 / 48 (8-Pin Header Pins 7 & 8) |
 
 ---
 
@@ -175,8 +178,8 @@ Do the steps in order. Each one checks one layer before the next.
 This tests the protocol, the motors and the failsafe without Wi-Fi.
 
 1. Connect a USB-UART adapter (3.3 V):
-   - adapter TX → S3 GPIO18
-   - adapter RX ← S3 GPIO17
+   - adapter TX → S3 GPIO44 (RXD0 pad)
+   - adapter RX ← S3 GPIO43 (TXD0 pad)
    - GND ↔ GND
 2. Install pyserial: `pip install pyserial`
 3. Run:
